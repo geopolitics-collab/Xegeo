@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>GéoPolitique & Science politique</title>
+  <meta name="description" content="Analyse géopolitique et science politique par continent : Afrique, Amérique, Europe, Asie, Proche‑Orient.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Analyses GéoPolitique</h1>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/afr.html">Afrique</a></li>
+        <li><a href="/ame.html">Amérique</a></li>
+        <li><a href="/eu.html">Europe</a></li>
+        <li><a href="/asie.html">Asie</a></li>
+        <li><a href="/proche-or.html">Proche‑Orient</a></li>
+        <li><a href="/abonnement.html">Abonnement</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Géopolitique & sciences politiques</h2>
+      <p>
+        Un site indépendant dédié à l’analyse stratégique des conflits, alliances, systèmes politiques et enjeux mondiaux, par continent.
+      </p>
+    </section>
+
+    <section class="premium-teaser">
+      <h3>Accès réservé aux abonnés</h3>
+      <p>
+        Abonnez-vous à partir de 5 € / mois pour accéder à nos dossiers longs, analyses approfondies et PDF mensuels.
+      </p>
+      <a href="/abonnement.html" class="btn">S’abonner maintenant</a>
+    </section>
+
+    <section class="continents">
+      <h3>Par continent</h3>
+      <div class="card-grid">
+        <article class="card">
+          <h4><a href="/afr.html">Afrique</a></h4>
+          <p>Conflits, sécurité, migrations, énergies, rôle de la France, Chine, Russie et États‑Unis.</p>
+        </article>
+
+        <article class="card">
+          <h4><a href="/ame.html">Amérique</a></h4>
+          <p>Politique US, Amérique latine, élections, alliances, sécurité, migration.</p>
+        </article>
+
+        <article class="card">
+          <h4><a href="/eu.html">Europe</a></h4>
+          <p>UE, NATO, Russie, crises internes, identité politique, souveraineté numérique.</p>
+        </article>
+
+        <article class="card">
+          <h4><a href="/asie.html">Asie</a></h4>
+          <p>Chine, Inde, Asie du Sud‑Est, tensions US‑Chine, sécurité maritime.</p>
+        </article>
+
+        <article class="card">
+          <h4><a href="/proche-or.html">Proche‑Orient</a></h4>
+          <p>Israël/Palestine, Iran, Arabie saoudite, Turquie, tensions régionales.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="latest-articles">
+      <h3>Dernières analyses (gratuites)</h3>
+      <ul>
+        <li><a href="/articles/a1-sahel.html">Crise au Sahel : causes structurelles et enjeux régionaux</a></li>
+        <li><a href="/articles/a2-ukraine.html">Guéerre en Ukraine : bilan politique et perspectives stratégiques</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Analyses GéoPolitique – Site indépendant en géopolitique et sciences politiques.</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
