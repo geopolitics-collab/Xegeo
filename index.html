@@ -1,74 +1,150 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>GéoPolitique & Science politique</title>
-  <meta name="description" content="Analyse géopolitique et science politique par continent : Afrique, Amérique, Europe, Asie, Proche‑Orient.">
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <h1>Analyses GéoPolitique</h1>
-      <ul>
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/afr.html">Afrique</a></li>
-        <li><a href="/ame.html">Amérique</a></li>
-        <li><a href="/eu.html">Europe</a></li>
-        <li><a href="/asie.html">Asie</a></li>
-        <li><a href="/proche-or.html">Proche‑Orient</a></li>
-        <li><a href="/abonnement.html">Abonnement</a></li>
-      </ul>
-    </nav>
-  </header>
+<meta charset="UTF-8">
+<title>Analyses Géopolitiques</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"><style>
 
-  <main>
-    <section class="hero">
-      <h2>Géopolitique & sciences politiques</h2>
-      <p>
-        Un site indépendant dédié à l’analyse stratégique des conflits, alliances, systèmes politiques et enjeux mondiaux, par continent.
-      </p>
-    </section>
+body{
+font-family:'Inter',sans-serif;
+margin:0;
+background:#f4f6f8;
+color:#111;
+}
 
-    <section class="premium-teaser">
-      <h3>Accès réservé aux abonnés</h3>
-      <p>
-        Abonnez-vous à partir de 5 € / mois pour accéder à nos dossiers longs, analyses approfondies et PDF mensuels.
-      </p>
-      <a href="/abonnement.html" class="btn">S’abonner maintenant</a>
-    </section>
+.nav{
+background:#0b1f3a;
+color:white;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    <section class="continents">
-      <h3>Par continent</h3>
-      <div class="card-grid">
-        <article class="card">
-          <h4><a href="/afr.html">Afrique</a></h4>
-          <p>Conflits, sécurité, migrations, énergies, rôle de la France, Chine, Russie et États‑Unis.</p>
-        </article>
+.nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:600;
+}
 
-        <article class="card">
-          <h4><a href="/ame.html">Amérique</a></h4>
-          <p>Politique US, Amérique latine, élections, alliances, sécurité, migration.</p>
-        </article>
+.hero{
+background:url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=2070') center/cover;
+color:white;
+padding:140px 20px;
+text-align:center;
+}
 
-        <article class="card">
-          <h4><a href="/eu.html">Europe</a></h4>
-          <p>UE, NATO, Russie, crises internes, identité politique, souveraineté numérique.</p>
-        </article>
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+font-weight:800;
+}
 
-        <article class="card">
-          <h4><a href="/asie.html">Asie</a></h4>
-          <p>Chine, Inde, Asie du Sud‑Est, tensions US‑Chine, sécurité maritime.</p>
-        </article>
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
 
-        <article class="card">
-          <h4><a href="/proche-or.html">Proche‑Orient</a></h4>
-          <p>Israël/Palestine, Iran, Arabie saoudite, Turquie, tensions régionales.</p>
-        </article>
-      </div>
-    </section>
+.cta{
+background:#ff3b3b;
+padding:14px 28px;
+display:inline-block;
+margin-top:30px;
+border-radius:8px;
+color:white;
+font-weight:700;
+text-decoration:none;
+}
 
-    <section class="latest-articles">
+.section{
+max-width:1200px;
+margin:auto;
+padding:60px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.articles{
+max-width:900px;
+margin:auto;
+}
+
+.article-link{
+display:block;
+background:white;
+padding:20px;
+margin-bottom:15px;
+border-radius:12px;
+text-decoration:none;
+color:#111;
+font-weight:600;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.footer{
+background:#0b1f3a;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
+
+</style></head><body><div class="nav">
+<div><strong>Analyses Géopolitiques</strong></div>
+<div>
+<a href="#">Accueil</a>
+<a href="afr.html">Afrique</a>
+<a href="ame.html">Amérique</a>
+<a href="eu.html">Europe</a>
+<a href="asie.html">Asie</a>
+<a href="proche-or.html">Proche-Orient</a>
+<a href="abonnement.html">Abonnement</a>
+</div>
+</div><div class="hero">
+<h1>Comprendre les puissances et conflits du XXIe siècle</h1>
+<p>Analyses stratégiques approfondies sur les rivalités globales, crises régionales et transformations politiques.</p>
+<a class="cta" href="abonnement.html">Accès Premium</a>
+</div><div class="section">
+<h2>Analyses par région</h2><div class="grid"><div class="card">
+<h3>Afrique</h3>
+<p>Sahel, migrations, influences française, russe et chinoise.</p>
+</div><div class="card">
+<h3>Amérique</h3>
+<p>Politique US, Amérique latine, alliances et sécurité.</p>
+</div><div class="card">
+<h3>Europe</h3>
+<p>UE, OTAN, Russie et tensions souverainistes.</p>
+</div><div class="card">
+<h3>Asie</h3>
+<p>Rivalité Chine-USA, Indo-Pacifique, routes maritimes.</p>
+</div><div class="card">
+<h3>Proche-Orient</h3>
+<p>Iran, Israël, Golfe et recompositions stratégiques.</p>
+</div></div>
+</div><div class="section articles">
+<h2>Dernières analyses</h2><a class="article-link" href="articles/a1-sahel.html">Crise au Sahel : causes structurelles</a>
+<a class="article-link" href="articles/a3-ukraine.html">Guerre en Ukraine : bilan stratégique</a>
+
+</div><div class="footer">
+© 2026 Analyses Géopolitiques
+</div></body>
+</html>    <section class="latest-articles">
       <h3>Dernières analyses (gratuites)</h3>
       <ul>
         <li><a href="/articles/a1-sahel.html">Crise au Sahel : causes structurelles et enjeux régionaux</a></li>
