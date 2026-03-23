@@ -1,40 +1,72 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Afrique – Analyses GéoPolitique</title>
-  <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <h1>Analyses GéoPolitique</h1>
-      <ul>
-        <li><a href="/">Accueil</a></li>
-        <li><a href="/afr.html">Afrique</a></li>
-        <li><a href="/ame.html">Amérique</a></li>
-        <li><a href="/eu.html">Europe</a></li>
-        <li><a href="/asie.html">Asie</a></li>
-        <li><a href="/proche-or.html">Proche‑Orient</a></li>
-        <li><a href="/abonnement.html">Abonnement</a></li>
-      </ul>
-    </nav>
-  </header>
+<meta charset="UTF-8">
+<title>Afrique</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet"><style>
 
-  <main>
-    <section class="hero">
-      <h2>Afrique : géopolitique continentale</h2>
-      <p>
-        Conflits, sécurité, énergies, migrations, rôle de la France, Chine, Russie, États‑Unis, Afrique du Nord vs Afrique subsaharienne.
-      </p>
-    </section>
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f2f4f7;
+}
 
-    <section class="articles-grid">
-      <article>
-        <h3><a href="/articles/a1-sahel.html">Crise au Sahel</a></h3>
-        <p>Analyse des dynamiques jihadistes, interventions militaires, enjeux de sécurité régionale.</p>
-      </article>
+.hero{
+height:300px;
+background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070') center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:42px;
+font-weight:800;
+}
 
+.container{
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card a{
+text-decoration:none;
+color:#111;
+font-weight:700;
+}
+
+</style></head><body><div class="hero">
+Afrique
+</div><div class="container"><h2>Analyses récentes</h2><div class="grid"><div class="card">
+<a href="articles/a1-sahel.html">
+Crise au Sahel : rivalités et fragmentation
+</a>
+</div><div class="card">
+<a href="#">
+Influence chinoise en Afrique centrale
+</a>
+</div><div class="card">
+<a href="#">
+Transitions militaires en Afrique de l’Ouest
+</a>
+</div></div></div></body>
+</html>
       <article>
         <h3><a href="/articles/a2-migration-afrique.html">Migrations africaines et Europe</a></h3>
         <p>Cartographie des flux, stratégies de contrôle, politiques de réception.</p>
