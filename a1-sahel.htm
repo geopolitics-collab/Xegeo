@@ -1,22 +1,64 @@
-<div class="free">
-<p>Depuis une décennie, la région du Sahel...</p>
-<p>Les coups d'État successifs...</p>
-</div><div class="premium">
-<p>Analyse complète des scénarios militaires...</p>
-<p>Projection stratégique sur 10 ans...</p>
-<p>Carte des zones d’influence...</p>
-</div><div class="paywall-box">
-<h3>Contenu réservé</h3>
-<a href="../abonnement.html">S’abonner</a>
-</div></div><img class="hero-img" src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a4?q=80&w=2070"><p>
-Depuis une décennie, la région du Sahel est devenue un espace central des rivalités sécuritaires et des recompositions politiques en Afrique.
-</p><p>
-Les coups d'État successifs, l’affaiblissement des institutions et la progression des groupes armés ont profondément transformé l’équilibre stratégique régional.
-</p><p>
-Les puissances extérieures, notamment la Russie, la France et la Turquie, cherchent à y renforcer leur influence.
-</p><div class="paywall"><h3>Contenu réservé aux abonnés</h3><p>
-Accédez à l’analyse complète (4000 mots, cartes stratégiques, scénarios futurs).
-</p><a class="btn" href="../abonnement.html">S’abonner maintenant</a>
+<!DOCTYPE html><html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Crise au Sahel</title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet"><style>
 
-</div></div></body>
+body{
+font-family:'Inter',sans-serif;
+background:#f4f6f8;
+margin:0;
+}
+
+.container{
+max-width:850px;
+margin:60px auto;
+background:white;
+padding:50px;
+border-radius:14px;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+h1{
+font-size:40px;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+}
+
+.premium{
+display:none;
+}
+
+.paywall-box{
+background:#fff0f0;
+padding:25px;
+border-radius:12px;
+margin-top:40px;
+text-align:center;
+}
+
+.btn{
+background:#ff3b3b;
+color:white;
+padding:12px 22px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+</style></head><body><div class="container"><h1>Crise au Sahel : enjeux géopolitiques</h1><div class="free">
+<p>Depuis une décennie, la région du Sahel connaît une instabilité profonde liée à la fragilité institutionnelle et aux rivalités internationales.</p><p>Les coups d’État successifs ont modifié l’équilibre stratégique régional.</p>
+</div><div class="premium"><p>La projection stratégique montre une possible fragmentation sécuritaire durable.</p><p>La Russie cherche à renforcer son influence via des accords militaires et sécuritaires.</p><p>Les scénarios futurs incluent une régionalisation des conflits.</p></div><div class="paywall-box">
+<h3>Contenu réservé aux abonnés</h3>
+<a class="btn" href="../abonnement.html">S’abonner</a>
+</div></div><script>
+
+if(localStorage.getItem("premiumUser")==="yes"){
+document.querySelector(".premium").style.display="block";
+document.querySelector(".paywall-box").style.display="none";
+}
+
+</script></body>
 </html>
