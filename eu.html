@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Europe — Analyses Géopolitiques</title>
-  <meta name="description" content="UE, OTAN, Russie, tensions souverainistes. Analyses stratégiques approfondies sur le continent européen." />
+  <title>Amérique — Analyses Géopolitiques</title>
+  <meta name="description" content="Politique US, Amérique latine, alliances et sécurité. Analyses stratégiques sur le continent américain." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,7 +13,7 @@
       --ink:#0d0e12;--paper:#f5f2eb;--offwhite:#faf8f3;
       --mid:#6b6860;--rule:#d8d3c8;
       --afrique:#c8821a;--amerique:#b83232;--europe:#1e5fa8;--asie:#1a8a6e;--orient:#8b3a8b;
-      --accent:#1e5fa8;
+      --accent:#b83232;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
@@ -32,7 +32,7 @@
     nav a[data-r="afrique"] .dot{background:var(--afrique)}nav a[data-r="amerique"] .dot{background:var(--amerique)}nav a[data-r="europe"] .dot{background:var(--europe)}nav a[data-r="asie"] .dot{background:var(--asie)}nav a[data-r="orient"] .dot{background:var(--orient)}
     nav a.nav-cta{margin-left:auto;background:var(--amerique);color:#fff;border:none;font-weight:500}nav a.nav-cta:hover{background:#9e2020}
     .rubrique-banner{background:var(--accent);padding:3rem 2rem 2.5rem;position:relative;overflow:hidden}
-    .rubrique-banner::before{content:'EUROPE';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:clamp(3.5rem,10vw,9rem);font-weight:900;color:rgba(255,255,255,.08);line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
+    .rubrique-banner::before{content:'AMÉRIQUE';position:absolute;right:-1rem;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:clamp(3.5rem,10vw,9rem);font-weight:900;color:rgba(255,255,255,.08);line-height:1;pointer-events:none;user-select:none;white-space:nowrap}
     .rubrique-banner__inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
     .rubrique-banner__breadcrumb{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:.8rem}
     .rubrique-banner__breadcrumb a{color:rgba(255,255,255,.65);transition:color .2s}.rubrique-banner__breadcrumb a:hover{color:#fff}
@@ -105,8 +105,8 @@
 <nav>
   <a href="/index.html">Accueil</a>
   <a href="/afr.html"        data-r="afrique"><span class="dot"></span>Afrique</a>
-  <a href="/ame.html"        data-r="amerique"><span class="dot"></span>Amérique</a>
-  <a href="/eu.html"         data-r="europe" class="active"><span class="dot"></span>Europe</a>
+  <a href="/ame.html"        data-r="amerique" class="active"><span class="dot"></span>Amérique</a>
+  <a href="/eu.html"         data-r="europe"><span class="dot"></span>Europe</a>
   <a href="/asie.html"       data-r="asie"><span class="dot"></span>Asie</a>
   <a href="/proche-or.html"  data-r="orient"><span class="dot"></span>Proche-Orient</a>
   <a href="/abonnement.html" class="nav-cta">Accès Premium →</a>
@@ -114,13 +114,13 @@
 
 <div class="rubrique-banner">
   <div class="rubrique-banner__inner">
-    <div class="rubrique-banner__breadcrumb"><a href="/index.html">Accueil</a> &nbsp;/&nbsp; Europe</div>
-    <h1>Europe</h1>
-    <p>Union européenne, OTAN, Russie, tensions souverainistes et recomposition de l'ordre atlantique.</p>
+    <div class="rubrique-banner__breadcrumb"><a href="/index.html">Accueil</a> &nbsp;/&nbsp; Amérique</div>
+    <h1>Amérique</h1>
+    <p>Politique étrangère américaine, Amérique latine, alliances hemisphériques et recompositions du leadership mondial.</p>
     <div class="rubrique-banner__stats">
-      <span><strong>18</strong> analyses publiées</span>
-      <span><strong>6</strong> pays couverts</span>
-      <span>Mis à jour le <strong>22 mars 2026</strong></span>
+      <span><strong>11</strong> analyses publiées</span>
+      <span><strong>5</strong> pays couverts</span>
+      <span>Mis à jour le <strong>19 mars 2026</strong></span>
     </div>
   </div>
 </div>
@@ -128,21 +128,20 @@
 <div class="page-body">
   <div class="filters fade-up">
     <button class="filter-btn active" onclick="filterArticles('tous',event)">Tous</button>
-    <button class="filter-btn" onclick="filterArticles('otan',event)">OTAN</button>
-    <button class="filter-btn" onclick="filterArticles('russie',event)">Russie</button>
-    <button class="filter-btn" onclick="filterArticles('ue',event)">Union Européenne</button>
-    <button class="filter-btn" onclick="filterArticles('balkans',event)">Balkans</button>
-    <button class="filter-btn" onclick="filterArticles('ukraine',event)">Ukraine</button>
+    <button class="filter-btn" onclick="filterArticles('usa',event)">États-Unis</button>
+    <button class="filter-btn" onclick="filterArticles('amerique-latine',event)">Amérique latine</button>
+    <button class="filter-btn" onclick="filterArticles('canada',event)">Canada</button>
+    <button class="filter-btn" onclick="filterArticles('bresil',event)">Brésil</button>
   </div>
 
   <div class="featured fade-up">
-    <img class="featured__img" src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=900&auto=format&fit=crop&q=70" alt="Europe" />
+    <img class="featured__img" src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=900&auto=format&fit=crop&q=70" alt="Amérique" />
     <div class="featured__body">
       <span class="featured__badge">Article à la une</span>
-      <h2>Guerre en Ukraine : bilan stratégique après trois ans de conflit</h2>
-      <p>Les lignes de front se sont figées dans une guerre d'attrition. Analyse des dynamiques militaires, des sanctions et des scénarios diplomatiques qui structureront la suite du conflit.</p>
-      <span class="meta">18 mars 2026 · Lecture : 12 min</span>
-      <a href="/articles/guerre-ukraine.html" class="read-more">Lire l'analyse complète →</a>
+      <h2>La doctrine Trump 2.0 : isolationnisme ou réalisme offensif ?</h2>
+      <p>Le retour de Trump à la Maison-Blanche redéfinit les contours de la politique étrangère américaine. Tarifs, OTAN, Chine, Ukraine : décryptage d'une stratégie qui bouscule les alliances historiques.</p>
+      <span class="meta">7 mars 2026 · Lecture : 12 min</span>
+      <a href="/articles/doctrine-trump.html" class="read-more">Lire l'analyse complète →</a>
     </div>
   </div>
 
@@ -151,64 +150,64 @@
       <div class="grid-title fade-up">Toutes les analyses <span class="count">6 articles</span></div>
       <div class="articles-grid" id="articles-grid">
 
-        <a href="/articles/guerre-ukraine.html" class="article-card fade-up" data-topic="ukraine">
+        <a href="/articles/doctrine-trump.html" class="article-card fade-up" data-topic="usa">
           <div class="article-card__stripe"></div>
-          <img class="article-card__img" src="https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&auto=format&fit=crop&q=60" alt="Ukraine" />
+          <img class="article-card__img" src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?w=600&auto=format&fit=crop&q=60" alt="États-Unis" />
           <div class="article-card__body">
-            <span class="topic-tag">Ukraine</span>
-            <h3>Guerre en Ukraine : bilan stratégique après trois ans</h3>
-            <p>Lignes de front, fatigue des alliés occidentaux et scénarios de sortie de crise.</p>
-            <div class="article-card__footer"><span class="meta">18 mars 2026 · 15 min</span><span class="arrow">→</span></div>
+            <span class="topic-tag">États-Unis</span>
+            <h3>La doctrine Trump 2.0 : isolationnisme ou réalisme offensif ?</h3>
+            <p>Tarifs, alliances, dissuasion : la recomposition de la stratégie américaine en 2025–2026.</p>
+            <div class="article-card__footer"><span class="meta">7 mars 2026 · 13 min</span><span class="arrow">→</span></div>
           </div>
         </a>
-        <a href="/articles/otan-ere-post-americaine.html" class="article-card fade-up" data-topic="otan">
+        <a href="/articles/bresil-chine-axe.html" class="article-card fade-up" data-topic="bresil">
           <div class="article-card__stripe"></div>
-          <img class="article-card__img" src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=600&auto=format&fit=crop&q=60" alt="OTAN" />
+          <img class="article-card__img" src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&auto=format&fit=crop&q=60" alt="Brésil" />
           <div class="article-card__body">
-            <span class="topic-tag">OTAN</span>
-            <h3>L'OTAN face à l'ère post-américaine</h3>
-            <p>La promesse de l'article 5 résistera-t-elle au désengagement partiel de Washington ?</p>
-            <div class="article-card__footer"><span class="meta">12 mars 2026 · 9 min</span><span class="arrow">→</span></div>
+            <span class="topic-tag">Brésil</span>
+            <h3>Brésil–Chine : l'axe du Sud global redessine l'Atlantique</h3>
+            <p>L'accord commercial sino-brésilien de 2025 et ses implications pour l'hémisphère occidental.</p>
+            <div class="article-card__footer"><span class="meta">1 mars 2026 · 8 min</span><span class="arrow">→</span></div>
           </div>
         </a>
-        <a href="/articles/russie-economie-guerre.html" class="article-card fade-up" data-topic="russie">
+        <a href="/articles/venezuela-crise.html" class="article-card fade-up" data-topic="amerique-latine">
           <div class="article-card__stripe"></div>
-          <img class="article-card__img" src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=600&auto=format&fit=crop&q=60" alt="Russie" />
+          <img class="article-card__img" src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=600&auto=format&fit=crop&q=60" alt="Amérique latine" />
           <div class="article-card__body">
-            <span class="topic-tag">Russie</span>
-            <h3>Russie 2026 : économie de guerre et horizon politique</h3>
-            <p>Le régime de Poutine a transformé son économie en économie de guerre. Analyse de sa soutenabilité.</p>
-            <div class="article-card__footer"><span class="meta">8 mars 2026 · 13 min</span><span class="arrow">→</span></div>
+            <span class="topic-tag">Amérique latine</span>
+            <h3>Venezuela : l'autoritarisme de Maduro face aux migrations de masse</h3>
+            <p>Plus de 7 millions de Vénézuéliens ont fui le pays. La crise humanitaire se double d'une instrumentalisation régionale.</p>
+            <div class="article-card__footer"><span class="meta">22 fév. 2026 · 10 min</span><span class="arrow">→</span></div>
           </div>
         </a>
-        <a href="/articles/ue-souverainisme.html" class="article-card fade-up" data-topic="ue">
+        <a href="/articles/mexico-cartels.html" class="article-card fade-up" data-topic="amerique-latine">
           <div class="article-card__stripe"></div>
-          <img class="article-card__img" src="https://images.unsplash.com/photo-1580461289892-a2f8fe6fb589?w=600&auto=format&fit=crop&q=60" alt="Union Européenne" />
+          <img class="article-card__img" src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=600&auto=format&fit=crop&q=60" alt="Amérique latine" />
           <div class="article-card__body">
-            <span class="topic-tag">Union Européenne</span>
-            <h3>Souverainisme et intégration européenne : une coexistence impossible ?</h3>
-            <p>De Budapest à Warsaw, les gouvernements illibéraux redéfinissent les limites de l'appartenance européenne.</p>
-            <div class="article-card__footer"><span class="meta">2 mars 2026 · 10 min</span><span class="arrow">→</span></div>
+            <span class="topic-tag">Amérique latine</span>
+            <h3>Mexique : l'État face à l'État parallèle des cartels</h3>
+            <p>Les cartels mexicains ont atteint un niveau d'organisation paramilitaire qui défie l'autorité fédérale.</p>
+            <div class="article-card__footer"><span class="meta">15 fév. 2026 · 11 min</span><span class="arrow">→</span></div>
           </div>
         </a>
-        <a href="/articles/balkans-adhesion.html" class="article-card fade-up" data-topic="balkans">
+        <a href="/articles/canada-usa-relations.html" class="article-card fade-up" data-topic="canada">
           <div class="article-card__stripe"></div>
-          <img class="article-card__img" src="https://images.unsplash.com/photo-1549893072-4bc678117f45?w=600&auto=format&fit=crop&q=60" alt="Balkans" />
+          <img class="article-card__img" src="https://images.unsplash.com/photo-1541427468627-a89a96e5ca1d?w=600&auto=format&fit=crop&q=60" alt="Canada" />
           <div class="article-card__body">
-            <span class="topic-tag">Balkans</span>
-            <h3>Balkans occidentaux : l'adhésion à l'UE, un horizon qui recule</h3>
-            <p>Serbie, Kosovo, Bosnie : le processus d'élargissement européen marque le pas.</p>
-            <div class="article-card__footer"><span class="meta">25 fév. 2026 · 8 min</span><span class="arrow">→</span></div>
+            <span class="topic-tag">Canada</span>
+            <h3>Canada–États-Unis : la relation spéciale sous pression tarifaire</h3>
+            <p>Les tarifs douaniers imposés par Washington fragilisent une relation économique unique.</p>
+            <div class="article-card__footer"><span class="meta">9 fév. 2026 · 9 min</span><span class="arrow">→</span></div>
           </div>
         </a>
-        <a href="/articles/nucleaire-europeen.html" class="article-card fade-up" data-topic="otan">
+        <a href="/articles/usa-iran-confrontation.html" class="article-card fade-up" data-topic="usa">
           <div class="article-card__stripe"></div>
-          <img class="article-card__img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60" alt="OTAN" />
+          <img class="article-card__img" src="https://images.unsplash.com/photo-1559060017-445fb9722f2a?w=600&auto=format&fit=crop&q=60" alt="États-Unis" />
           <div class="article-card__body">
-            <span class="topic-tag">OTAN</span>
-            <h3>Vers une doctrine nucléaire européenne autonome ?</h3>
-            <p>Paris et Londres au centre d'une équation stratégique sans précédent depuis 1945.</p>
-            <div class="article-card__footer"><span class="meta">18 fév. 2026 · 12 min</span><span class="arrow">→</span></div>
+            <span class="topic-tag">États-Unis</span>
+            <h3>USA–Iran : la confrontation asymétrique et ses limites</h3>
+            <p>Washington durcit ses sanctions, Téhéran multiplie les proxies. L'escalade cherche son plafond diplomatique.</p>
+            <div class="article-card__footer"><span class="meta">3 fév. 2026 · 12 min</span><span class="arrow">→</span></div>
           </div>
         </a>
       </div>
@@ -218,20 +217,20 @@
       <div class="sidebar-block fade-up">
         <div class="sidebar-title">Les plus lus</div>
         <ul class="sidebar-list">
-          <li><span class="num">01</span><a href="/articles/guerre-ukraine.html">Guerre en Ukraine : bilan stratégique</a></li>
-          <li><span class="num">02</span><a href="/articles/otan-ere-post-americaine.html">L'OTAN face à l'ère post-américaine</a></li>
-          <li><span class="num">03</span><a href="/articles/russie-economie-guerre.html">Russie 2026 : économie de guerre</a></li>
-          <li><span class="num">04</span><a href="/articles/nucleaire-europeen.html">Doctrine nucléaire européenne</a></li>
-          <li><span class="num">05</span><a href="/articles/ue-souverainisme.html">Souverainisme et intégration</a></li>
+          <li><span class="num">01</span><a href="/articles/doctrine-trump.html">La doctrine Trump 2.0</a></li>
+          <li><span class="num">02</span><a href="/articles/bresil-chine-axe.html">Brésil–Chine : l'axe du Sud global</a></li>
+          <li><span class="num">03</span><a href="/articles/mexico-cartels.html">Mexique : l'État face aux cartels</a></li>
+          <li><span class="num">04</span><a href="/articles/usa-iran-confrontation.html">USA–Iran : confrontation asymétrique</a></li>
+          <li><span class="num">05</span><a href="/articles/venezuela-crise.html">Venezuela : la crise permanente</a></li>
         </ul>
       </div>
       <div class="sidebar-block fade-up">
         <div class="sidebar-title">Autres rubriques</div>
         <div class="other-regions">
           <a href="/afr.html" class="other-region-link"><span class="dot" style="background:#c8821a"></span>Afrique</a>
+          <a href="/eu.html" class="other-region-link"><span class="dot" style="background:#1e5fa8"></span>Europe</a>
           <a href="/asie.html" class="other-region-link"><span class="dot" style="background:#1a8a6e"></span>Asie</a>
           <a href="/proche-or.html" class="other-region-link"><span class="dot" style="background:#8b3a8b"></span>Proche-Orient</a>
-          <a href="/ame.html" class="other-region-link"><span class="dot" style="background:#b83232"></span>Amérique</a>
         </div>
       </div>
       <div class="cta-box fade-up">
