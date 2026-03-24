@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rivalité sino-américaine dans l'espace : le vrai, le faux et l'incertain — Analyses Géopolitiques</title>
+  <meta name="description" content="Depuis 1970, la Chine est passée de zéro à la 3e puissance spatiale mondiale. Analyse de la rivalité sino-américaine : capacités réelles, narratifs trompeurs et incertitudes stratégiques." />
+
+  <meta property="og:title" content="Rivalité sino-américaine dans l'espace : le vrai, le faux et l'incertain" />
+  <meta property="og:description" content="Depuis 1970, la Chine est passée de zéro à la 3e puissance spatiale mondiale. Démêler le vrai, le faux et l'incertain dans la course spatiale sino-américaine." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=70" />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink:      #0d0e12;
+      --paper:    #f5f2eb;
+      --offwhite: #faf8f3;
+      --mid:      #6b6860;
+      --light:    #a8a39a;
+      --rule:     #d8d3c8;
+      --accent:   #1a8a6e;  /* Asie — malachite */
+      --afrique:  #c8821a;
+      --amerique: #b83232;
+      --europe:   #1e5fa8;
+      --asie:     #1a8a6e;
+      --orient:   #8b3a8b;
+      --body-max: 720px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Serif 4', Georgia, serif; background: var(--offwhite); color: var(--ink); line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+
+    #progress-bar {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: var(--accent);
+      z-index: 9999; transition: width .1s linear;
+    }
+
+    .topbar {
+      background: var(--ink); color: #9a9591;
+      font-family: 'DM Mono', monospace; font-size: .72rem;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: .45rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .topbar a { color: #c8c3bb; transition: color .2s; }
+    .topbar a:hover { color: #fff; }
+
+    .masthead {
+      background: var(--offwhite); border-bottom: 3px solid var(--ink);
+      padding: 1.4rem 2rem 1rem;
+      display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem;
+    }
+    .masthead__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+      font-weight: 900; line-height: 1.05; letter-spacing: -.02em;
+    }
+    .masthead__logo span {
+      display: block; font-size: .55em; font-weight: 600;
+      font-style: italic; letter-spacing: .02em; color: var(--mid);
+    }
+    .masthead__sub {
+      font-family: 'DM Mono', monospace; font-size: .7rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--mid); text-align: right; line-height: 1.7;
+    }
+
+    nav {
+      background: var(--ink); display: flex; flex-wrap: wrap;
+      position: sticky; top: 0; z-index: 100;
+    }
+    nav a {
+      display: flex; align-items: center; gap: .45rem;
+      padding: .7rem 1.1rem;
+      font-family: 'DM Mono', monospace; font-size: .73rem;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: #c8c3bb; border-right: 1px solid #1e2028;
+      transition: background .2s, color .2s;
+    }
+    nav a:hover, nav a.active { background: #1a1c24; color: #fff; }
+    nav a .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    nav a[data-r="afrique"]  .dot { background: var(--afrique); }
+    nav a[data-r="amerique"] .dot { background: var(--amerique); }
+    nav a[data-r="europe"]   .dot { background: var(--europe); }
+    nav a[data-r="asie"]     .dot { background: var(--asie); }
+    nav a[data-r="orient"]   .dot { background: var(--orient); }
+    nav a.nav-cta { margin-left: auto; background: var(--amerique); color: #fff; border: none; font-weight: 500; }
+    nav a.nav-cta:hover { background: #9e2020; }
+
+    .article-hero {
+      position: relative; height: clamp(300px, 45vw, 520px);
+      overflow: hidden; background: var(--ink);
+    }
+    .article-hero__img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(20%) brightness(.7);
+      transition: transform 8s ease;
+    }
+    .article-hero:hover .article-hero__img { transform: scale(1.03); }
+    .article-hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(13,14,18,.88) 30%, rgba(13,14,18,.2) 100%);
+    }
+    .article-hero__content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 2.5rem 2rem;
+      max-width: calc(var(--body-max) + 4rem); margin: 0 auto;
+    }
+    .article-hero__tag {
+      display: inline-block;
+      font-family: 'DM Mono', monospace; font-size: .65rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      background: var(--accent); color: #fff;
+      padding: .22rem .6rem; margin-bottom: .9rem;
+    }
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+      font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: .8rem;
+    }
+    .article-hero__sub {
+      font-size: 1rem; color: rgba(255,255,255,.72);
+      font-style: italic; max-width: 620px;
+    }
+
+    .meta-bar {
+      background: #fff; border-bottom: 1px solid var(--rule); padding: .9rem 2rem;
+    }
+    .meta-bar__inner {
+      max-width: calc(var(--body-max) + 4rem); margin: 0 auto;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem;
+    }
+    .meta-item {
+      font-family: 'DM Mono', monospace; font-size: .65rem;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--light);
+      display: flex; align-items: center; gap: .35rem;
+    }
+    .meta-item strong { color: var(--mid); }
+    .meta-sep { color: var(--rule); }
+    .meta-bar__share { margin-left: auto; display: flex; gap: .5rem; }
+    .share-btn {
+      font-family: 'DM Mono', monospace; font-size: .62rem;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: .3rem .7rem; border: 1px solid var(--rule);
+      background: #fff; cursor: pointer; color: var(--mid);
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .share-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .article-layout {
+      max-width: 1180px; margin: 0 auto; padding: 3rem 2rem;
+      display: grid; grid-template-columns: 1fr 260px;
+      gap: 4rem; align-items: start;
+    }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; gap: 2rem; } }
+
+    .article-body { max-width: var(--body-max); }
+
+    .article-body > p:first-of-type::first-letter {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.2em; font-weight: 900;
+      float: left; line-height: .8;
+      margin: .05em .12em -.05em 0;
+      color: var(--accent);
+    }
+
+    .article-body p {
+      font-size: 1.05rem; line-height: 1.82;
+      margin-bottom: 1.5rem; color: #1a1b20;
+    }
+    .article-body h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem; font-weight: 700; line-height: 1.2;
+      margin: 2.8rem 0 1rem;
+      padding-top: .5rem; border-top: 2px solid var(--ink);
+    }
+    .article-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.12rem; font-weight: 600; font-style: italic;
+      margin: 2rem 0 .8rem; color: var(--mid);
+    }
+    .article-body blockquote {
+      margin: 2.5rem 0; padding: 1.5rem 1.8rem;
+      border-left: 4px solid var(--accent); background: var(--paper);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.12rem; font-style: italic; font-weight: 600;
+      line-height: 1.5; color: var(--ink);
+    }
+    .article-body blockquote cite {
+      display: block; margin-top: .6rem;
+      font-family: 'DM Mono', monospace; font-size: .65rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      font-style: normal; font-weight: 400; color: var(--light);
+    }
+
+    /* Verdict cards — VRAI / FAUX / INCERTAIN */
+    .verdict-card {
+      margin: 2rem 0;
+      border: 1px solid var(--rule);
+      background: #fff; overflow: hidden;
+    }
+    .verdict-card__header {
+      display: flex; align-items: center; gap: .8rem;
+      padding: .7rem 1.2rem;
+    }
+    .verdict-card__header .badge {
+      font-family: 'DM Mono', monospace; font-size: .7rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .25rem .7rem; font-weight: 500; flex-shrink: 0;
+    }
+    .verdict-card__header .claim {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; font-weight: 700; line-height: 1.3;
+    }
+    .verdict-card__body {
+      padding: 1rem 1.2rem 1.2rem;
+      border-top: 1px solid var(--rule);
+      font-size: .9rem; line-height: 1.7; color: var(--mid);
+    }
+    .verdict-card__body p { margin-bottom: .6rem; }
+    .verdict-card__body p:last-child { margin-bottom: 0; }
+
+    .verdict-vrai    .verdict-card__header { background: #edf7f3; }
+    .verdict-faux    .verdict-card__header { background: #fdf0f0; }
+    .verdict-incert  .verdict-card__header { background: #fdf6e8; }
+
+    .badge-vrai    { background: #1a8a6e; color: #fff; }
+    .badge-faux    { background: #b83232; color: #fff; }
+    .badge-incert  { background: #c8821a; color: #fff; }
+
+    .article-body .encadre {
+      margin: 2rem 0; padding: 1.4rem 1.6rem;
+      border: 1px solid var(--rule); background: #fff;
+    }
+    .article-body .encadre__title {
+      font-family: 'DM Mono', monospace; font-size: .68rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: .7rem;
+      display: flex; align-items: center; gap: .5rem;
+    }
+    .article-body .encadre__title::before {
+      content: ''; display: inline-block;
+      width: 14px; height: 2px; background: var(--accent);
+    }
+    .article-body .encadre p {
+      font-size: .88rem; line-height: 1.65; margin-bottom: .6rem; color: var(--mid);
+    }
+    .article-body .encadre p:last-child { margin-bottom: 0; }
+
+    .article-body figure { margin: 2rem 0; }
+    .article-body figure img { width: 100%; filter: grayscale(15%); }
+    .article-body figcaption {
+      font-family: 'DM Mono', monospace; font-size: .65rem;
+      letter-spacing: .07em; text-transform: uppercase;
+      color: var(--light); margin-top: .5rem;
+      padding-top: .4rem; border-top: 1px solid var(--rule);
+    }
+
+    .article-body ul { margin: 1rem 0 1.5rem 1.4rem; }
+    .article-body li { font-size: 1rem; line-height: 1.75; margin-bottom: .4rem; color: #1a1b20; }
+
+    .article-tags {
+      margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+      display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+    }
+    .article-tags__label {
+      font-family: 'DM Mono', monospace; font-size: .65rem;
+      letter-spacing: .1em; text-transform: uppercase; color: var(--light); margin-right: .3rem;
+    }
+    .tag-pill {
+      font-family: 'DM Mono', monospace; font-size: .63rem;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: .25rem .65rem; border: 1px solid var(--rule);
+      color: var(--mid); background: #fff;
+      transition: background .2s, color .2s, border-color .2s; cursor: pointer;
+    }
+    .tag-pill:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .related { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 2px solid var(--ink); }
+    .related__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; margin-bottom: 1.4rem;
+    }
+    .related-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem;
+    }
+    .related-card {
+      border: 1px solid var(--rule); background: #fff; overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .related-card__stripe { height: 3px; background: var(--accent); }
+    .related-card__body { padding: .9rem; }
+    .related-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: .88rem; font-weight: 700; line-height: 1.3; margin-bottom: .4rem;
+    }
+    .related-card .meta {
+      font-family: 'DM Mono', monospace; font-size: .6rem;
+      letter-spacing: .06em; text-transform: uppercase; color: var(--light);
+    }
+
+    .sidebar { position: sticky; top: 80px; }
+    .sidebar-block { margin-bottom: 2rem; }
+    .sidebar-title {
+      font-family: 'DM Mono', monospace; font-size: .68rem;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--mid); border-bottom: 2px solid var(--ink);
+      padding-bottom: .4rem; margin-bottom: 1rem;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li {
+      border-bottom: 1px solid var(--rule); padding: .55rem 0;
+      font-size: .82rem; line-height: 1.4;
+    }
+    .toc-list li a {
+      color: var(--mid); transition: color .2s;
+      display: flex; gap: .5rem; align-items: flex-start;
+    }
+    .toc-list li a:hover { color: var(--accent); }
+    .toc-num { font-family: 'DM Mono', monospace; font-size: .6rem; color: var(--accent); flex-shrink: 0; padding-top: .1rem; }
+
+    .author-block { background: #fff; border: 1px solid var(--rule); padding: 1.2rem; }
+    .author-block__name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: .2rem; }
+    .author-block__role {
+      font-family: 'DM Mono', monospace; font-size: .63rem;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .7rem;
+    }
+    .author-block p { font-size: .8rem; color: var(--mid); line-height: 1.6; }
+
+    .cta-box { background: var(--ink); color: #fff; padding: 1.4rem; text-align: center; }
+    .cta-box h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .cta-box p { font-size: .75rem; color: rgba(255,255,255,.6); margin-bottom: .9rem; line-height: 1.5; }
+    .cta-box a {
+      display: inline-block; background: var(--accent); color: #fff;
+      font-family: 'DM Mono', monospace; font-size: .65rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .55rem 1rem; transition: opacity .2s;
+    }
+    .cta-box a:hover { opacity: .8; }
+
+    footer {
+      background: #0d0e12; color: #5e5a54; padding: 2.5rem 2rem;
+      font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .07em;
+    }
+    .footer-inner {
+      max-width: 1280px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: #5e5a54; text-transform: uppercase; transition: color .2s; }
+    .footer-links a:hover { color: #c8c3bb; }
+
+    .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 640px) {
+      .masthead { flex-direction: column; align-items: flex-start; }
+      nav a { font-size: .65rem; padding: .6rem .8rem; }
+      .article-layout { padding: 2rem 1rem; }
+      .meta-bar { padding: .8rem 1rem; }
+      .meta-bar__share { display: none; }
+      .article-hero__content { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<div class="topbar">
+  <span>Analyses Géopolitiques — <strong style="color:#c8c3bb">Puissances &amp; Conflits du XXIe siècle</strong></span>
+  <span><a href="#">Abonnement</a> &nbsp;·&nbsp; <a href="#">Contact</a></span>
+</div>
+
+<header class="masthead">
+  <a href="../index.html" class="masthead__logo">
+    Analyses<br>Géopolitiques
+    <span>Revue stratégique indépendante</span>
+  </a>
+  <div class="masthead__sub">Fondée en 2024<br>Tourcoing, France<br>Édition Web · Mars 2026</div>
+</header>
+
+<nav>
+  <a href="../index.html">Accueil</a>
+  <a href="../afr.html"       data-r="afrique"><span class="dot"></span>Afrique</a>
+  <a href="../ame.html"      data-r="amerique"><span class="dot"></span>Amérique</a>
+  <a href="../eu.html"        data-r="europe"><span class="dot"></span>Europe</a>
+  <a href="../asie.html"          data-r="asie" class="active"><span class="dot"></span>Asie</a>
+  <a href="../proche-or.html" data-r="orient"><span class="dot"></span>Proche-Orient</a>
+  <a href="#" class="nav-cta">Accès Premium →</a>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img class="article-hero__img"
+    src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1400&auto=format&fit=crop&q=70"
+    alt="Rivalité spatiale sino-américaine" />
+  <div class="article-hero__overlay"></div>
+  <div class="article-hero__content">
+    <span class="article-hero__tag">Asie · Rivalité stratégique</span>
+    <h1>La course spatiale sino-américaine : démêler le vrai, le faux et l'incertain</h1>
+    <p class="article-hero__sub">En cinquante ans, la Chine est passée du néant à la troisième puissance spatiale mondiale. Analyse sans complaisance d'une rivalité où les narratifs médiatiques déforment souvent la réalité stratégique.</p>
+  </div>
+</div>
+
+<!-- META BAR -->
+<div class="meta-bar">
+  <div class="meta-bar__inner">
+    <span class="meta-item">✍ <strong>Rédaction AG</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">📅 <strong>24 mars 2026</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">⏱ Lecture : <strong>14 min</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">Rubrique : <strong style="color:var(--accent)">Asie</strong></span>
+    <div class="meta-bar__share">
+      <button class="share-btn" onclick="shareArticle('twitter')">Twitter/X</button>
+      <button class="share-btn" onclick="shareArticle('facebook')">Facebook</button>
+      <button class="share-btn" onclick="shareArticle('copy')">Copier le lien</button>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT -->
+<div class="article-layout">
+
+  <article class="article-body fade-up">
+
+    <p>
+      En 1970, la Chine mettait en orbite son premier satellite — <em>Dong Fang Hong 1</em> —
+      avec un retard de treize ans sur les États-Unis et de douze sur l'Union soviétique. Cinquante
+      ans plus tard, Pékin est la seule puissance au monde, avec Washington, à avoir posé un rover
+      mobile sur Mars. Cette ascension n'a pas de précédent dans l'histoire de la conquête spatiale.
+      Elle a également engendré un flot de discours alarmistes, d'assertions mal fondées et
+      d'incertitudes stratégiques que toute analyse sérieuse se doit de démêler.
+    </p>
+
+    <p>
+      Le budget spatial chinois — environ 20 milliards de dollars annuels selon les estimations
+      consolidées — reste inférieur au budget américain, qui oscille entre 60 et 70 milliards de
+      dollars, dont une part militaire estimée à 40-50 milliards. Pourtant, la compétition n'est pas
+      réductible à un simple rapport de forces financier. C'est une rivalité de doctrines, de
+      temporalités politiques et de récits nationaux contradictoires — et c'est précisément là que
+      la réalité commence à diverger du discours.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 id="section-1">I. La Chine, puissance spatiale de premier rang : ce qui est vrai</h2>
+
+    <p>
+      Il existe une tentation, dans les cercles stratégiques occidentaux, de minimiser la montée en
+      puissance spatiale chinoise en l'inscrivant dans un narratif de rattrapage technologique sans
+      originalité. Cette lecture est inexacte. Pékin maîtrise aujourd'hui l'intégralité du spectre
+      des activités spatiales : vol habité avec la station Tiangong, exploration planétaire avec
+      le rover Zhurong sur Mars, navigation par satellite avec le système BeiDou, observation
+      terrestre et guerre électronique avec des constellations militaires en pleine expansion.
+    </p>
+
+    <div class="verdict-card verdict-vrai">
+      <div class="verdict-card__header">
+        <span class="badge badge-vrai">✓ Vrai</span>
+        <span class="claim">La Chine maîtrise tous les domaines de l'activité spatiale</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>Pékin dispose d'une filière complète et autonome : lanceurs lourds (Longue Marche 5),
+        station orbitale habitée (Tiangong), exploration lunaire et martienne, navigation
+        (BeiDou), télédétection et communication militaire.</p>
+        <p>La Chine est la seule nation, avec les États-Unis, à avoir réussi un atterrissage
+        rover sur Mars — exploit que ni la Russie, ni l'Europe, ni le Japon n'ont accompli.</p>
+      </div>
+    </div>
+
+    <p>
+      La question de la hiérarchie entre la Chine et la Russie mérite cependant une nuance. Moscou
+      conserve des capacités militaires spatiales redoutables — armement antisatellite (ASAT),
+      brouillage électronique, expérience opérationnelle de décennies — que Pékin n'a pas encore
+      entièrement égalées dans toutes les dimensions. L'Union européenne, quant à elle, excelle
+      dans les technologies civiles à haute valeur ajoutée — Ariane, Copernicus, Galileo — sans
+      disposer de programme de vol habité propre.
+    </p>
+
+    <div class="verdict-card verdict-incert">
+      <div class="verdict-card__header">
+        <span class="badge badge-incert">? Incertain</span>
+        <span class="claim">La Chine occupe incontestablement la 2e place mondiale</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>La deuxième place est disputée entre la Chine, la Russie et dans une certaine mesure
+        l'Union européenne, selon le critère retenu : capacités militaires (Russie en tête),
+        technologie civile de pointe (UE compétitive), ou spectre complet incluant vols habités
+        (Chine seule avec les USA).</p>
+        <p>Le retard chinois face aux États-Unis reste réel sur des segments critiques :
+        moteurs cryogéniques à haute performance, miniaturisation des satellites militaires,
+        intégration du secteur privé dans la chaîne de valeur.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 id="section-2">II. Le rôle des acteurs privés : une asymétrie structurelle</h2>
+
+    <p>
+      L'émergence de SpaceX est peut-être le fait le plus structurant de la dernière décennie
+      spatiale. En rendant la mise en orbite drastiquement moins coûteuse — grâce à la
+      réutilisabilité du Falcon 9 — et en déployant la constellation Starlink (plus de 6 000
+      satellites en orbite basse à ce jour, soit environ 50 % de la totalité des satellites actifs
+      mondiaux), Elon Musk a transformé l'économie et la géopolitique de l'espace en quelques
+      années. La NASA et le Pentagone dépendent désormais structurellement de SpaceX pour leurs
+      missions les plus critiques.
+    </p>
+
+    <div class="verdict-card verdict-vrai">
+      <div class="verdict-card__header">
+        <span class="badge badge-vrai">✓ Vrai</span>
+        <span class="claim">Les acteurs privés américains constituent un avantage stratégique décisif</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>SpaceX, Blue Origin, Rocket Lab et d'autres ont créé un écosystème commercial spatial
+        sans équivalent. Le coût de lancement en orbite basse a été réduit d'un facteur dix en
+        quinze ans. La NASA externalise désormais les missions cargo et équipage vers l'ISS,
+        libérant ses propres capacités pour l'exploration profonde.</p>
+        <p>La Chine développe un secteur spatial privé — LandSpace, CAS Space, Galactic Energy —
+        mais sous contrôle étatique strict, limitant leur capacité d'innovation disruptive et
+        d'accès aux marchés internationaux.</p>
+      </div>
+    </div>
+
+    <blockquote>
+      « Starlink n'est pas une infrastructure spatiale américaine au sens classique du terme.
+      C'est une infrastructure privée qui poursuit sa propre logique commerciale, pas
+      nécessairement alignée sur les priorités de Washington. »
+      <cite>— Réflexion issue des analyses de l'Ifri sur la militarisation de l'espace, 2022</cite>
+    </blockquote>
+
+    <p>
+      Cette observation pointe une fragilité réelle de la puissance spatiale américaine : la
+      dépendance croissante de l'État envers un acteur privé dont les décisions obéissent à une
+      rationalité entrepreneuriale propre. L'épisode ukrainien de 2022-2023, où Elon Musk avait
+      un temps suspendu l'accès à Starlink pour certaines opérations militaires ukrainiennes,
+      illustre concrètement cette tension entre intérêt national et intérêt privé.
+    </p>
+
+    <div class="verdict-card verdict-incert">
+      <div class="verdict-card__header">
+        <span class="badge badge-incert">? Incertain</span>
+        <span class="claim">Starlink agit systématiquement comme un instrument de la stratégie américaine</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>Avec plus de 50 % des satellites actifs en orbite basse, Starlink occupe une position
+        dominante qui génère des frictions diplomatiques (France, UE) et des inquiétudes
+        stratégiques (Chine, Russie). Mais la constellation suit d'abord sa propre logique
+        commerciale et les décisions de son fondateur, pas systématiquement celles de
+        l'administration américaine.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <h2 id="section-3">III. La Lune et les ressources spatiales : déconstruire le narratif de « prédation »</h2>
+
+    <p>
+      C'est sur ce point que le discours stratégique américain est le plus trompeur — et le plus
+      politiquement instrumentalisé. Depuis 2019, des responsables de la NASA et du Pentagone
+      ont répété, dans diverses configurations, que la Chine cherchait à « prendre possession »
+      des ressources lunaires, voire à établir une présence militaire dominante sur la Lune.
+      Ce narratif mérite d'être examiné avec rigueur.
+    </p>
+
+    <div class="verdict-card verdict-faux">
+      <div class="verdict-card__header">
+        <span class="badge badge-faux">✗ Faux</span>
+        <span class="claim">La Chine pratique une « prédation » des ressources lunaires</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>Ce narratif, largement diffusé dans les milieux politiques américains, ne résiste
+        pas à l'examen technique. L'exploitation et le rapatriement de matières premières
+        lunaires vers la Terre est économiquement incohérent dans l'horizon stratégique
+        prévisible : les coûts de transport demeurent prohibitifs pour tout minerai dont la
+        valeur n'excède pas considérablement celle des terres rares les plus précieuses.</p>
+        <p>Ce que Pékin vise réellement, c'est l'ISRU — <em>In-Situ Resource Utilization</em> —
+        soit l'exploitation des ressources lunaires sur place pour soutenir une base
+        scientifique permanente : extraction d'eau glacée pour le carburant et la vie, régolithe
+        pour la construction. Cette approche est identique à celle de la NASA pour Artemis.</p>
+      </div>
+    </div>
+
+    <div class="encadre">
+      <div class="encadre__title">Qu'est-ce que l'ISRU ?</div>
+      <p>L'<em>In-Situ Resource Utilization</em> désigne l'ensemble des techniques permettant
+      d'exploiter les matériaux présents sur un corps céleste — Lune, Mars, astéroïdes — pour
+      soutenir une présence humaine ou robotique sans dépendre des réapprovisionnements depuis
+      la Terre.</p>
+      <p>Sur la Lune, les ressources prioritaires sont les glaces d'eau polaires (carburant et
+      survie), l'hélium-3 (potentiellement précieux pour la fusion nucléaire à très long terme),
+      et le régolithe (matériau de construction). L'ISRU est considérée comme la condition
+      sine qua non de toute présence lunaire durable, qu'elle soit américaine, sino-russe ou autre.</p>
+    </div>
+
+    <p>
+      L'objectif affiché de Pékin est l'atterrissage d'un premier taikonaut sur la Lune avant
+      2030, suivi de l'établissement d'une base scientifique permanente en coopération avec la
+      Russie — la Station de Recherche Lunaire Internationale (ILRS). Cet objectif est constant,
+      méthodique, et ne comporte pas, dans les documents officiels chinois, de dimension
+      d'exclusion territoriale.
+    </p>
+
+    <!-- SECTION 4 -->
+    <h2 id="section-4">IV. La volatilité américaine face à la constance chinoise</h2>
+
+    <p>
+      C'est peut-être la leçon la plus importante de la décennie écoulée, et celle qui préoccupe
+      le plus les stratèges qui observent la compétition spatiale avec lucidité : les États-Unis
+      sont structurellement plus forts, mais politiquement moins prévisibles.
+    </p>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?w=800&auto=format&fit=crop&q=70"
+           alt="Lancement spatial" />
+      <figcaption>La régularité des lancements chinois contraste avec les aléas budgétaires du programme Artemis. — © Unsplash</figcaption>
+    </figure>
+
+    <p>
+      Le programme Artemis illustre parfaitement cette fragilité. Annoncé sous le premier mandat
+      Trump avec un objectif de 2024, repoussé sous Biden à 2025 puis 2026, à nouveau incertain
+      sous le second mandat Trump — qui a montré des signes d'impatience envers la NASA au profit
+      d'acteurs privés — Artemis symbolise l'inconstance d'un système politique où chaque
+      alternance présidentielle peut modifier les priorités spatiales.
+    </p>
+
+    <p>
+      La Chine, à l'inverse, affiche une continuité remarquable depuis le lancement du programme
+      spatial habité en 1992. Chaque objectif annoncé — station Tiangong, rover lunaire Chang'e,
+      Mars avec Tianwen — a été atteint dans les délais impartis. Cette prévisibilité est en
+      elle-même un avantage stratégique : elle permet une planification industrielle et
+      diplomatique à long terme que le système américain peine à égaler.
+    </p>
+
+    <blockquote>
+      « Si la puissance américaine domine l'espace au présent, la constance chinoise structure
+      l'avenir. C'est le paradoxe central de cette rivalité. »
+      <cite>— Synthèse analytique</cite>
+    </blockquote>
+
+    <h3>Le piège de Thucydide appliqué à l'espace</h3>
+
+    <p>
+      Graham Allison, dans son analyse du « piège de Thucydide », montre que sur les seize cas
+      historiques où une puissance montante a défié une puissance établie, douze ont débouché sur
+      un conflit armé. La rivalité sino-américaine dans l'espace n'est pas militarisée au sens
+      traditionnel — il n'existe pas de règle du droit international interdisant les armements
+      antisatellites, et les deux puissances ont démontré cette capacité. Mais l'espace est
+      devenu un nouveau théâtre où la compétition pour la primauté symbolique et opérationnelle
+      se joue avec une intensité croissante.
+    </p>
+
+    <p>
+      La véritable question stratégique n'est pas de savoir si la Chine « gagnera » la course
+      spatiale — notion en elle-même discutable dans un domaine aussi multidimensionnel. Elle est
+      de savoir si les deux puissances seront capables d'établir des normes de comportement
+      spatial qui évitent l'escalade, à une époque où les satellites civils, militaires et
+      commerciaux forment une infrastructure globale dont la destruction partielle pourrait
+      avoir des conséquences catastrophiques pour l'ensemble de l'économie mondiale.
+    </p>
+
+    <!-- CONCLUSION -->
+    <h2 id="conclusion">Conclusion : ni panique, ni naïveté</h2>
+
+    <p>
+      La rivalité sino-américaine dans l'espace est réelle, profonde, et structurante pour les
+      équilibres géopolitiques du XXIe siècle. Mais elle ne se laisse pas réduire aux récits
+      simplistes qui la caricaturent en guerre froide spatiale ou en compétition pour le « pillage
+      lunaire ». La réalité est plus nuancée, plus technique, et à certains égards plus inquiétante :
+      elle se joue sur des décennies, avec des acteurs — dont SpaceX — qui ne sont pas pleinement
+      contrôlés par les États, dans un vide juridique international préoccupant.
+    </p>
+
+    <p>
+      Ce que révèle l'analyse comparative des capacités, des budgets et des doctrines, c'est
+      avant tout une asymétrie de temporalité politique. Washington domine au présent, mais son
+      système démocratique génère une volatilité stratégique que Pékin, avec sa planification
+      décennale, sait exploiter méthodiquement. C'est cette asymétrie — plus que tout écart
+      technologique — qui constitue le véritable enjeu de long terme.
+    </p>
+
+    <!-- TAGS -->
+    <div class="article-tags">
+      <span class="article-tags__label">Tags :</span>
+      <span class="tag-pill">Asie</span>
+      <span class="tag-pill">Chine</span>
+      <span class="tag-pill">États-Unis</span>
+      <span class="tag-pill">Espace</span>
+      <span class="tag-pill">Piège de Thucydide</span>
+      <span class="tag-pill">SpaceX</span>
+      <span class="tag-pill">Lune</span>
+    </div>
+
+    <!-- ARTICLES LIÉS -->
+    <div class="related fade-up">
+      <div class="related__title">Articles liés</div>
+      <div class="related-grid">
+        <a href="piege-thucydide.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Le piège de Thucydide en Indo-Pacifique</h4>
+            <span class="meta">5 mars 2026 · 14 min</span>
+          </div>
+        </a>
+        <a href="taiwan-2026.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Taïwan 2026 : le scénario d'une escalade maîtrisée</h4>
+            <span class="meta">11 mars 2026 · 14 min</span>
+          </div>
+        </a>
+        <a href="mer-chine-sud.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Mer de Chine méridionale : la militarisation silencieuse</h4>
+            <span class="meta">8 fév. 2026 · 9 min</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">Sommaire</div>
+      <ul class="toc-list">
+        <li><a href="#section-1"><span class="toc-num">I.</span> La Chine, puissance de premier rang</a></li>
+        <li><a href="#section-2"><span class="toc-num">II.</span> Le rôle des acteurs privés</a></li>
+        <li><a href="#section-3"><span class="toc-num">III.</span> La Lune : déconstruire le narratif</a></li>
+        <li><a href="#section-4"><span class="toc-num">IV.</span> Volatilité US vs constance chinoise</a></li>
+        <li><a href="#conclusion"><span class="toc-num">—</span> Conclusion</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">L'auteur</div>
+      <div class="author-block">
+        <div class="author-block__name">Rédaction AG</div>
+        <div class="author-block__role">Analyste — Rubrique Asie</div>
+        <p>Analyses géopolitiques indépendantes couvrant la rivalité sino-américaine, l'Indo-Pacifique et les dynamiques stratégiques de l'Asie contemporaine.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h4>Accès Premium</h4>
+      <p>Analyses complètes, archives et notes de terrain réservées aux abonnés.</p>
+      <a href="#">S'abonner →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Analyses Géopolitiques — Site indépendant en géopolitique et sciences politiques.</span>
+    <div class="footer-links">
+      <a href="../index.html">Accueil</a>
+      <a href="#">Abonnement</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    document.getElementById('progress-bar').style.width =
+      (doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100) + '%';
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function shareArticle(platform) {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    const links = {
+      twitter:  `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    };
+    if (platform === 'copy') {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Lien copié !'));
+    } else {
+      window.open(links[platform], '_blank', 'width=600,height=400');
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Empire devant le gouffre iranien : pourquoi l'Amérique ne peut pas gagner — Analyses Géopolitiques</title>
+  <meta name="description" content="Six chapitres d'analyse stratégique sur la confrontation américano-iranienne : profondeur historique de l'Iran, économie de la défaite, piège de Thucydide, et verdict de Clausewitz." />
+
+  <meta property="og:title" content="L'Empire devant le gouffre iranien : pourquoi l'Amérique ne peut pas gagner" />
+  <meta property="og:description" content="Les voix des grands stratèges ont lancé les avertissements. Les faits les confirment chapitre après chapitre." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=1200&auto=format&fit=crop&q=70" />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink:      #0d0e12;
+      --paper:    #f5f2eb;
+      --offwhite: #faf8f3;
+      --mid:      #6b6860;
+      --light:    #a8a39a;
+      --rule:     #d8d3c8;
+      --accent:   #8b3a8b;  /* Proche-Orient — byzantin */
+      --afrique:  #c8821a;
+      --amerique: #b83232;
+      --europe:   #1e5fa8;
+      --asie:     #1a8a6e;
+      --orient:   #8b3a8b;
+      --body-max: 720px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Serif 4', Georgia, serif; background: var(--offwhite); color: var(--ink); line-height: 1.75; }
+    a { color: inherit; text-decoration: none; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--accent); z-index: 9999; transition: width .1s linear; }
+
+    /* ── TOPBAR ── */
+    .topbar { background: var(--ink); color: #9a9591; font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; padding: .45rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .topbar a { color: #c8c3bb; transition: color .2s; } .topbar a:hover { color: #fff; }
+
+    /* ── MASTHEAD ── */
+    .masthead { background: var(--offwhite); border-bottom: 3px solid var(--ink); padding: 1.4rem 2rem 1rem; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; }
+    .masthead__logo { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3.5vw, 2.6rem); font-weight: 900; line-height: 1.05; letter-spacing: -.02em; }
+    .masthead__logo span { display: block; font-size: .55em; font-weight: 600; font-style: italic; letter-spacing: .02em; color: var(--mid); }
+    .masthead__sub { font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); text-align: right; line-height: 1.7; }
+
+    /* ── NAV ── */
+    nav { background: var(--ink); display: flex; flex-wrap: wrap; position: sticky; top: 0; z-index: 100; }
+    nav a { display: flex; align-items: center; gap: .45rem; padding: .7rem 1.1rem; font-family: 'DM Mono', monospace; font-size: .73rem; letter-spacing: .08em; text-transform: uppercase; color: #c8c3bb; border-right: 1px solid #1e2028; transition: background .2s, color .2s; }
+    nav a:hover, nav a.active { background: #1a1c24; color: #fff; }
+    nav a .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+    nav a[data-r="afrique"]  .dot { background: var(--afrique); }
+    nav a[data-r="amerique"] .dot { background: var(--amerique); }
+    nav a[data-r="europe"]   .dot { background: var(--europe); }
+    nav a[data-r="asie"]     .dot { background: var(--asie); }
+    nav a[data-r="orient"]   .dot { background: var(--orient); }
+    nav a.nav-cta { margin-left: auto; background: var(--amerique); color: #fff; border: none; font-weight: 500; }
+    nav a.nav-cta:hover { background: #9e2020; }
+
+    /* ── HERO ── */
+    .article-hero { position: relative; height: clamp(320px, 48vw, 560px); overflow: hidden; background: var(--ink); }
+    .article-hero__img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(25%) brightness(.6); transition: transform 8s ease; }
+    .article-hero:hover .article-hero__img { transform: scale(1.03); }
+    .article-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,14,18,.94) 30%, rgba(13,14,18,.2) 100%); }
+    .article-hero__content { position: absolute; bottom: 0; left: 0; right: 0; padding: 2.5rem 2rem; max-width: calc(var(--body-max) + 4rem); margin: 0 auto; }
+    .article-hero__tag { display: inline-block; font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .12em; text-transform: uppercase; background: var(--accent); color: #fff; padding: .22rem .6rem; margin-bottom: .9rem; }
+    .article-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3.5vw, 2.9rem); font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: .8rem; }
+    .article-hero h1 em { font-style: italic; color: #d4a6d4; }
+    .article-hero__sub { font-size: 1rem; color: rgba(255,255,255,.72); font-style: italic; max-width: 640px; }
+
+    /* ── META BAR ── */
+    .meta-bar { background: #fff; border-bottom: 1px solid var(--rule); padding: .9rem 2rem; }
+    .meta-bar__inner { max-width: calc(var(--body-max) + 4rem); margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; }
+    .meta-item { font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--light); display: flex; align-items: center; gap: .35rem; }
+    .meta-item strong { color: var(--mid); }
+    .meta-sep { color: var(--rule); }
+    .meta-bar__share { margin-left: auto; display: flex; gap: .5rem; }
+    .share-btn { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .7rem; border: 1px solid var(--rule); background: #fff; cursor: pointer; color: var(--mid); transition: background .2s, color .2s, border-color .2s; }
+    .share-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* ── LAYOUT ── */
+    .article-layout { max-width: 1180px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; gap: 2rem; } }
+
+    /* ── ARTICLE BODY ── */
+    .article-body { max-width: var(--body-max); }
+
+    .article-body > p:first-of-type::first-letter { font-family: 'Playfair Display', serif; font-size: 4.2em; font-weight: 900; float: left; line-height: .8; margin: .05em .12em -.05em 0; color: var(--accent); }
+
+    .article-body p { font-size: 1.05rem; line-height: 1.82; margin-bottom: 1.5rem; color: #1a1b20; }
+
+    .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 700; line-height: 1.2; margin: 2.8rem 0 1rem; padding-top: .5rem; border-top: 2px solid var(--ink); }
+
+    .article-body h3 { font-family: 'Playfair Display', serif; font-size: 1.12rem; font-weight: 600; font-style: italic; margin: 2rem 0 .8rem; color: var(--mid); }
+
+    /* Citation principale */
+    .article-body blockquote { margin: 2.5rem 0; padding: 1.5rem 1.8rem; border-left: 4px solid var(--accent); background: var(--paper); font-family: 'Playfair Display', serif; font-size: 1.12rem; font-style: italic; font-weight: 600; line-height: 1.5; color: var(--ink); }
+    .article-body blockquote cite { display: block; margin-top: .6rem; font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; font-style: normal; font-weight: 400; color: var(--light); }
+
+    /* Citation inline */
+    .inline-quote { margin: 1.8rem 0; padding: 1rem 1.5rem; border-left: 3px solid var(--rule); font-family: 'Playfair Display', serif; font-size: 1rem; font-style: italic; color: var(--mid); line-height: 1.65; }
+
+    /* Voix stratégiques — sidebar cards style dans le corps */
+    .voix-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .voix-card { background: #fff; border: 1px solid var(--rule); padding: 1rem; border-top: 3px solid var(--accent); }
+    .voix-card__nom { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; margin-bottom: .15rem; }
+    .voix-card__titre { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
+    .voix-card__citation { font-size: .82rem; color: var(--mid); line-height: 1.55; font-style: italic; }
+
+    /* Stats */
+    .stats-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2rem 0; }
+    .stat-cell { background: #fff; padding: 1.2rem 1rem; text-align: center; }
+    .stat-cell__num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--accent); line-height: 1; }
+    .stat-cell__label { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .09em; text-transform: uppercase; color: var(--mid); margin-top: .3rem; line-height: 1.4; }
+
+    /* Chapitre label */
+    .chapitre-label { font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: .3rem; display: flex; align-items: center; gap: .7rem; }
+    .chapitre-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+    /* Encadré */
+    .encadre { margin: 2rem 0; padding: 1.4rem 1.6rem; border: 1px solid var(--rule); background: #fff; }
+    .encadre__title { font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin-bottom: .7rem; display: flex; align-items: center; gap: .5rem; }
+    .encadre__title::before { content: ''; display: inline-block; width: 14px; height: 2px; background: var(--accent); }
+    .encadre p { font-size: .88rem; line-height: 1.65; margin-bottom: .6rem; color: var(--mid); }
+    .encadre p:last-child { margin-bottom: 0; }
+
+    /* Conclusion */
+    .conclusion-block { background: var(--ink); color: #fff; padding: 2.5rem; margin: 3rem 0; }
+    .conclusion-block__ornement { font-size: .8rem; letter-spacing: .4em; color: var(--accent); text-align: center; margin-bottom: 1.2rem; }
+    .conclusion-block h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.3; }
+    .conclusion-block p { font-size: .95rem; color: rgba(255,255,255,.72); line-height: 1.8; margin-bottom: 1rem; }
+    .conclusion-block .final { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-style: italic; color: #d4a6d4; line-height: 1.7; margin-top: 1.2rem; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.2rem; }
+
+    /* Tags */
+    .article-tags { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+    .article-tags__label { font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--light); margin-right: .3rem; }
+    .tag-pill { font-family: 'DM Mono', monospace; font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .65rem; border: 1px solid var(--rule); color: var(--mid); background: #fff; transition: background .2s, color .2s, border-color .2s; cursor: pointer; }
+    .tag-pill:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    /* Articles liés */
+    .related { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 2px solid var(--ink); }
+    .related__title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 1.4rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .related-card { border: 1px solid var(--rule); background: #fff; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    .related-card__stripe { height: 3px; background: var(--accent); }
+    .related-card__body { padding: .9rem; }
+    .related-card h4 { font-family: 'Playfair Display', serif; font-size: .88rem; font-weight: 700; line-height: 1.3; margin-bottom: .4rem; }
+    .related-card .meta { font-family: 'DM Mono', monospace; font-size: .6rem; letter-spacing: .06em; text-transform: uppercase; color: var(--light); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 80px; }
+    .sidebar-block { margin-bottom: 2rem; }
+    .sidebar-title { font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--mid); border-bottom: 2px solid var(--ink); padding-bottom: .4rem; margin-bottom: 1rem; }
+    .toc-list { list-style: none; }
+    .toc-list li { border-bottom: 1px solid var(--rule); padding: .55rem 0; font-size: .82rem; line-height: 1.4; }
+    .toc-list li a { color: var(--mid); transition: color .2s; display: flex; gap: .5rem; align-items: flex-start; }
+    .toc-list li a:hover { color: var(--accent); }
+    .toc-num { font-family: 'DM Mono', monospace; font-size: .6rem; color: var(--accent); flex-shrink: 0; padding-top: .1rem; }
+
+    /* Voix sidebar */
+    .sidebar-voix { display: flex; flex-direction: column; gap: .6rem; }
+    .sidebar-voix-item { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--accent); padding: .7rem .9rem; }
+    .sidebar-voix-item__nom { font-family: 'Playfair Display', serif; font-size: .85rem; font-weight: 700; }
+    .sidebar-voix-item__role { font-family: 'DM Mono', monospace; font-size: .58rem; letter-spacing: .07em; text-transform: uppercase; color: var(--accent); margin-bottom: .3rem; }
+    .sidebar-voix-item__quote { font-size: .75rem; color: var(--mid); font-style: italic; line-height: 1.5; }
+
+    .author-block { background: #fff; border: 1px solid var(--rule); padding: 1.2rem; }
+    .author-block__name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: .2rem; }
+    .author-block__role { font-family: 'DM Mono', monospace; font-size: .63rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .7rem; }
+    .author-block p { font-size: .8rem; color: var(--mid); line-height: 1.6; }
+
+    .cta-box { background: var(--ink); color: #fff; padding: 1.4rem; text-align: center; }
+    .cta-box h4 { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .cta-box p { font-size: .75rem; color: rgba(255,255,255,.6); margin-bottom: .9rem; line-height: 1.5; }
+    .cta-box a { display: inline-block; background: var(--accent); color: #fff; font-family: 'DM Mono', monospace; font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; padding: .55rem 1rem; transition: opacity .2s; }
+    .cta-box a:hover { opacity: .8; }
+
+    /* ── FOOTER ── */
+    footer { background: #0d0e12; color: #5e5a54; padding: 2.5rem 2rem; font-family: 'DM Mono', monospace; font-size: .68rem; letter-spacing: .07em; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: #5e5a54; text-transform: uppercase; transition: color .2s; } .footer-links a:hover { color: #c8c3bb; }
+
+    .fade-up { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 640px) {
+      .masthead { flex-direction: column; align-items: flex-start; }
+      nav a { font-size: .65rem; padding: .6rem .8rem; }
+      .article-layout { padding: 2rem 1rem; }
+      .meta-bar { padding: .8rem 1rem; }
+      .meta-bar__share { display: none; }
+      .article-hero__content { padding: 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<div class="topbar">
+  <span>Analyses Géopolitiques — <strong style="color:#c8c3bb">Puissances &amp; Conflits du XXIe siècle</strong></span>
+  <span><a href="#">Abonnement</a> &nbsp;·&nbsp; <a href="#">Contact</a></span>
+</div>
+
+<header class="masthead">
+  <a href="../index.html" class="masthead__logo">Analyses<br>Géopolitiques<span>Revue stratégique indépendante</span></a>
+  <div class="masthead__sub">Fondée en 2024<br>Tourcoing, France<br>Édition Web · Mars 2026</div>
+</header>
+
+<nav>
+  <a href="../index.html">Accueil</a>
+  <a href="../afr.html"       data-r="afrique"><span class="dot"></span>Afrique</a>
+  <a href="../ame.html"      data-r="amerique"><span class="dot"></span>Amérique</a>
+  <a href="../eu.html"        data-r="europe"><span class="dot"></span>Europe</a>
+  <a href="../asie.html"          data-r="asie"><span class="dot"></span>Asie</a>
+  <a href="../proche-or.html" data-r="orient" class="active"><span class="dot"></span>Proche-Orient</a>
+  <a href="#" class="nav-cta">Accès Premium →</a>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img class="article-hero__img"
+    src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=1400&auto=format&fit=crop&q=70"
+    alt="Iran confrontation stratégique" />
+  <div class="article-hero__overlay"></div>
+  <div class="article-hero__content">
+    <span class="article-hero__tag">Proche-Orient · Iran</span>
+    <h1>L'Empire devant le gouffre iranien :<br><em>pourquoi l'Amérique ne peut pas gagner</em></h1>
+    <p class="article-hero__sub">Les voix des grands stratèges ont lancé les avertissements. Les faits les confirment chapitre après chapitre.</p>
+  </div>
+</div>
+
+<!-- META BAR -->
+<div class="meta-bar">
+  <div class="meta-bar__inner">
+    <span class="meta-item">✍ <strong>Rédaction AG</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">📅 <strong>24 mars 2026</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">⏱ Lecture : <strong>18 min</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">Rubrique : <strong style="color:var(--accent)">Proche-Orient</strong></span>
+    <div class="meta-bar__share">
+      <button class="share-btn" onclick="shareArticle('twitter')">Twitter/X</button>
+      <button class="share-btn" onclick="shareArticle('facebook')">Facebook</button>
+      <button class="share-btn" onclick="shareArticle('copy')">Copier le lien</button>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT -->
+<div class="article-layout">
+
+  <article class="article-body fade-up">
+
+    <p>
+      Il existe des guerres que les grandes puissances ne peuvent pas gagner — non parce qu'elles
+      manquent de moyens militaires, mais parce que l'objet même du conflit dépasse la portée
+      de la force brute. L'Iran est de celles-là. Depuis 1979, chaque stratège sérieux qui a
+      analysé la confrontation américano-iranienne sans lunettes idéologiques en est arrivé à
+      la même conclusion inconfortable : une guerre contre l'Iran ne ressemblerait à rien de
+      ce que Washington a connu depuis la Seconde Guerre mondiale. Ce ne serait pas l'Irak,
+      ni l'Afghanistan, ni la Libye. Ce serait autre chose — plus profond, plus long, plus coûteux,
+      et probablement impossible à conclure par une victoire définie.
+    </p>
+
+    <p>
+      Cet article n'est pas un plaidoyer pour Téhéran. C'est une lecture froide des rapports de
+      force, des leçons de l'histoire et des avertissements de ceux qui connaissent le mieux
+      la machine de guerre américaine de l'intérieur — et qui ont eu le courage de dire ce que
+      les cercles officiels refusent d'entendre.
+    </p>
+
+    <!-- CHIFFRES CLÉS -->
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-cell__num">3 000+</div>
+        <div class="stat-cell__label">missiles balistiques dans l'arsenal iranien opérationnel</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell__num">90 M</div>
+        <div class="stat-cell__label">habitants — profondeur humaine d'un État civilisationnel</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell__num">7</div>
+        <div class="stat-cell__label">États dans le croissant de résistance iranien actif</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell__num">40</div>
+        <div class="stat-cell__label">années de préparation stratégique depuis la Révolution</div>
+      </div>
+    </div>
+
+    <!-- CHAPITRE 1 -->
+    <div class="chapitre-label">Chapitre I · La profondeur stratégique</div>
+    <h2 id="ch1">Ce que Washington refuse de calculer</h2>
+
+    <p>
+      La profondeur stratégique de l'Iran est sans équivalent dans la région. Ce n'est pas
+      un pays — c'est une civilisation de 7 000 ans qui a survécu à Alexandre, aux Mongols,
+      aux Ottomans et à Saddam Hussein. Son territoire, la diversité de son relief, et la
+      densité de sa population en font un théâtre d'opérations cauchemardesque pour toute
+      force expéditionnaire qui tenterait une occupation.
+    </p>
+
+    <p>
+      Le détroit d'Ormuz, par lequel transitent <strong>20 % du pétrole mondial</strong>, se
+      trouve à portée de l'artillerie côtière iranienne. Sa fermeture, même partielle, déclencherait
+      un choc économique planétaire que Washington — déjà alourdi par ses crises internes —
+      ne pourrait absorber sans un coût politique dévastateur. Et c'est précisément là que réside
+      l'asymétrie fondamentale : l'Iran n'a pas besoin de vaincre militairement. Il lui suffit
+      de rendre la victoire américaine intolérablement coûteuse.
+    </p>
+
+    <div class="encadre">
+      <div class="encadre__title">Le croissant de résistance iranien</div>
+      <p>L'Iran a construit depuis 1982 un réseau de proxies et d'alliés stratégiques qui s'étend
+      du Liban (Hezbollah) à l'Irak (factions pro-iraniennes), en passant par la Syrie, le Yémen
+      (Houthis), la Palestine (Hamas, Jihad islamique), et l'Afghanistan (Fatimiyoun). Ces forces
+      constituent une capacité de déni d'accès distribuée que nul bombardement aérien ne peut
+      neutraliser d'un seul coup.</p>
+      <p>Cette architecture ne s'est pas construite par hasard : elle est le fruit de quarante années
+      d'investissement stratégique délibéré dans la guerre asymétrique, en réponse directe à
+      l'impossibilité de rivaliser conventionnellement avec les États-Unis.</p>
+    </div>
+
+    <!-- CHAPITRE 2 -->
+    <div class="chapitre-label">Chapitre II · L'économie de la défaite</div>
+    <h2 id="ch2">Quand les chiffres rendent la victoire impossible</h2>
+
+    <p>
+      La logique économique de la guerre asymétrique est implacable. Chaque missile iranien
+      intercepté par une batterie Patriot américaine coûte à la trésorerie américaine entre
+      <strong>3 et 5 millions de dollars</strong>. Chaque drone Shahid lancé par l'Iran ne
+      dépasse pas les 20 000 dollars. La comptabilité de l'usure que Clausewitz aurait
+      reconnue immédiatement : <em>la guerre est la continuation de la politique par d'autres
+      moyens</em>, et quand les moyens économiques s'effondrent, la politique s'effondre avec eux.
+    </p>
+
+    <blockquote>
+      « Les États-Unis ont dépensé huit mille milliards de dollars dans leurs guerres depuis le
+      11 septembre. Ils n'en ont gagné aucune. Et l'Iran observait. Puis il a investi dans des
+      missiles à 10 000 dollars chacun, face à des systèmes de défense à dix millions. »
+      <cite>— Jeffrey Sachs, économiste, Université Columbia, directeur du Centre pour le développement durable, conseiller aux Nations Unies</cite>
+    </blockquote>
+
+    <p>
+      Ce rapport de coûts n'est pas un accident. Il résulte d'un calcul stratégique iranien
+      consciemment articulé autour de la notion d'<em>usure asymétrique</em> : forcer l'adversaire
+      à dépenser des ressources disproportionnées pour des gains marginaux. L'histoire récente
+      valide cette approche. En 2024, lors des échanges de missiles entre l'Iran et Israël,
+      la défense israélienne soutenue par les Américains a mobilisé des ressources considérables
+      pour intercepter des vagues de drones et de missiles dont le coût total n'atteignait pas
+      le dixième des défenses déployées.
+    </p>
+
+    <blockquote>
+      « La guerre n'est pas une question de puissance de feu abstraite. C'est un test de volonté
+      nationale, de cohésion sociale et de résilience économique. Sur ces trois axes, les
+      États-Unis sont aujourd'hui exposés. »
+      <cite>— Colonel Lawrence Wilkerson, chef de cabinet du secrétaire d'État Colin Powell, Institut militaire de Virginie</cite>
+    </blockquote>
+
+    <p>
+      Wilkerson connaît le mécanisme de décision de guerre de l'intérieur. Il a vu comment
+      les renseignements ont été manipulés avant l'invasion de l'Irak en 2003. Il porte ce poids.
+      Et sa conclusion après vingt ans est sans appel : <strong>la structure américaine de
+      prise de décision est structurellement incapable d'évaluer honnêtement les coûts d'un
+      conflit asymétrique prolongé.</strong>
+    </p>
+
+    <!-- CHAPITRE 3 -->
+    <div class="chapitre-label">Chapitre III · Le piège de Thucydide</div>
+    <h2 id="ch3">Ce que les nations disent aux empires qui ignorent leurs limites</h2>
+
+    <p>
+      Graham Allison, directeur du Centre Belfer à Harvard, a théorisé le phénomène dans une
+      formule devenue référence : le <strong>piège de Thucydide</strong>. Lorsqu'une puissance
+      montante menace une puissance dominante, la guerre devient le résultat le plus probable —
+      et simultanément le plus catastrophique. Le paradoxe iranien est le suivant : une Amérique
+      impériale en déclin cherche à écraser une puissance régionale pour prouver une hégémonie
+      que ses propres décisions économiques ont déjà compromise.
+    </p>
+
+    <blockquote>
+      « Thucydide nous a enseigné que les puissances qui se croient invincibles commettent les
+      erreurs les plus graves. L'arrogance est la première cause des défaites des empires. »
+      <cite>— Graham Allison, politologue, École Kennedy de Harvard, auteur de <em>Destined for War</em></cite>
+    </blockquote>
+
+    <p>
+      Sun Tzu, dont <em>L'Art de la guerre</em> reste l'ouvrage le plus étudié dans les académies
+      militaires du monde entier — y compris West Point — avait formulé il y a vingt-cinq siècles
+      ce que les généraux américains semblent avoir oublié :
+    </p>
+
+    <div class="inline-quote">
+      « Celui qui connaît l'ennemi et se connaît lui-même ne perdra pas une seule bataille en
+      cent. Celui qui ne connaît ni l'ennemi ni lui-même perdra toutes les batailles qu'il
+      engagera. »
+    </div>
+
+    <p>
+      L'histoire récente du Proche-Orient est une démonstration continue de cette sagesse.
+      De Saddam à Kadhafi, de Mossadegh à Ben Laden, Washington sous-estime systématiquement
+      la <strong>résilience des civilisations</strong> qu'elle pense affronter. L'Iran, en
+      revanche, a étudié chacune de ces erreurs avec la précision d'un étudiant qui sait que
+      l'examen est décisif.
+    </p>
+
+    <!-- Les voix -->
+    <h3>Les voix qui avaient raison</h3>
+    <div class="voix-grid">
+      <div class="voix-card">
+        <div class="voix-card__nom">John Mearsheimer</div>
+        <div class="voix-card__titre">Réalisme offensif · Université de Chicago</div>
+        <div class="voix-card__citation">« Attaquer l'Iran serait la décision la plus imprudente de l'histoire américaine. »</div>
+      </div>
+      <div class="voix-card">
+        <div class="voix-card__nom">Andrew Bacevich</div>
+        <div class="voix-card__titre">Historien militaire · Université de Boston</div>
+        <div class="voix-card__citation">« L'Iran serait la répétition du scénario sur une scène plus vaste. »</div>
+      </div>
+      <div class="voix-card">
+        <div class="voix-card__nom">Scott Ritter</div>
+        <div class="voix-card__titre">Chef inspecteur des armements de l'ONU</div>
+        <div class="voix-card__citation">« Une stratégie d'usure qui a déjà prouvé son efficacité contre eux. »</div>
+      </div>
+      <div class="voix-card">
+        <div class="voix-card__nom">Ray McGovern</div>
+        <div class="voix-card__titre">27 ans à la CIA · Directeur du renseignement soviétique à la Maison Blanche</div>
+        <div class="voix-card__citation">« L'identité iranienne survivra à n'importe quel bombardement et en sortira plus solide. »</div>
+      </div>
+    </div>
+
+    <!-- CHAPITRE 4 -->
+    <div class="chapitre-label">Chapitre IV · Le verdict de Clausewitz</div>
+    <h2 id="ch4">Une guerre sans finalité politique : l'échec annoncé</h2>
+
+    <p>
+      Carl von Clausewitz, théoricien prussien dont les écrits demeurent la pierre angulaire
+      de la pensée militaire occidentale, a posé un principe que Washington viole avec une
+      constance méthodique : <strong>toute guerre qui manque d'un objectif politique clair
+      et réalisable est une guerre perdue avant d'avoir commencé.</strong>
+    </p>
+
+    <div class="inline-quote">
+      « La guerre est un acte de violence destiné à contraindre l'adversaire à se soumettre
+      à notre volonté. Mais si l'adversaire préfère mourir plutôt que de se soumettre, aucune
+      violence au monde ne produira le résultat escompté. »
+    </div>
+
+    <p>
+      Quel est l'objectif américain en Iran ? Le changement de régime — mais avec quels moyens,
+      quelles forces, et au profit de quel gouvernement alternatif ? L'histoire a déjà répondu :
+      aucun régime imposé de l'extérieur sur un terrain islamique n'a survécu à la génération
+      suivante. Du Shah Mohammad Reza Pahlavi renversé par la Révolution de 1979, à la débâcle
+      afghane de 2021, le pattern se répète avec une régularité qui défie toute prétention à
+      l'intelligence stratégique.
+    </p>
+
+    <blockquote>
+      « Tu peux tuer un homme, mais tu ne peux pas tuer une idée. L'identité iranienne — perse,
+      chiite et nationale — survivra à n'importe quel bombardement. Et en sortira plus endurcie
+      qu'elle ne l'était. »
+      <cite>— Ray McGovern, analyste à la CIA pendant 27 ans, directeur de la division du renseignement soviétique à la Maison Blanche, cofondateur de VIPS</cite>
+    </blockquote>
+
+    <p>
+      Le bilan historique du bombardement stratégique confirme cette évidence. La Seconde Guerre
+      mondiale a démontré que les bombardements intensifs de l'Allemagne et du Japon ont
+      d'abord renforcé la détermination des populations à résister. La victoire décisive n'a
+      été obtenue qu'après une occupation totale, et des années de démilitarisation organisée.
+      Or Washington n'envisage pas d'occuper l'Iran, et ne le peut pas. Ce qui signifie que
+      sa guerre aérienne n'aura pas de lendemain.
+    </p>
+
+    <!-- CHAPITRE 5 -->
+    <div class="chapitre-label">Chapitre V · Le monde observe</div>
+    <h2 id="ch5">La défaite géopolitique a commencé avant la fin des combats</h2>
+
+    <p>
+      La guerre contre l'Iran ne se jouerait pas seulement sur le terrain. Elle se jouerait
+      dans les salles de réunion de Pékin, Moscou, New Delhi et Brasilia. Et le verdict de
+      ces capitales est déjà rendu.
+    </p>
+
+    <blockquote>
+      « Chaque bombe américaine qui tombe sur l'Iran est une déclaration gratuite offerte en
+      cadeau à Xi Jinping. Elle dit au monde : l'Amérique est dangereuse et imprévisible,
+      et elle viendra vous chercher vous aussi si vous ne vous alignez pas. C'est le meilleur
+      argument de recrutement que Pékin pouvait rêver. »
+      <cite>— Gordon Chang, analyste géopolitique, auteur de <em>The Coming Collapse of China</em></cite>
+    </blockquote>
+
+    <p>
+      Les faits confirment cette lecture. La Chine a augmenté ses importations de pétrole
+      iranien. La Russie a renforcé sa coopération militaire avec Téhéran. L'Inde se balance,
+      cherchant ses intérêts. <strong>Et le dollar perd jour après jour son statut de valeur
+      refuge</strong>, au profit d'accords bilatéraux en monnaies nationales. La guerre contre
+      l'Iran ne serait pas seulement une guerre militaire : ce serait une guerre contre l'ordre
+      mondial. Et sur ce terrain-là, l'Amérique recule.
+    </p>
+
+    <div class="inline-quote">
+      « La domination américaine reposait sur deux piliers : la supériorité militaire et la
+      confiance dans le système libéral qu'elle prétendait défendre. Elle sacrifie désormais
+      le second en tentant de prouver le premier. »
+      <cite>— Zbigniew Brzezinski, <em>Le Grand Échiquier</em></cite>
+    </div>
+
+    <p>
+      George Kennan, architecte de la stratégie de containment pendant la Guerre froide,
+      avait formulé dès 1997 un avertissement qui s'applique aujourd'hui avec une précision
+      qui donne le vertige :
+    </p>
+
+    <blockquote>
+      « L'empire qui croit que la force militaire peut résoudre des problèmes politiques et
+      civilisationnels dans leur essence est un empire qui se condamne lui-même à une série
+      de défaites coûteuses. »
+      <cite>— George F. Kennan, diplomate et historien américain, architecte de la politique de containment, ambassadeur en Union soviétique</cite>
+    </blockquote>
+
+    <!-- CONCLUSION -->
+    <div class="conclusion-block">
+      <div class="conclusion-block__ornement">✦ ✦ ✦</div>
+      <h3>L'histoire ne se répète pas. Mais elle bégaie.</h3>
+      <p>De Kaboul à Bagdad, le schéma est identique et immuable : une entrée fracassante, des
+      déclarations de victoire prématurées, et un retrait humiliant qui s'étire sur des années.
+      L'Iran est plus vaste, plus organisé, plus préparé, et plus enraciné dans son sol et
+      dans son histoire que n'importe quel adversaire américain précédent.</p>
+      <p>Les penseurs qui ont lancé les avertissements n'étaient pas des idéalistes rêvant de
+      paix. C'étaient des stratèges qui avaient lu Thucydide, Sun Tzu et Clausewitz, et en avaient
+      tiré ce que Washington a refusé d'apprendre.</p>
+      <div class="final">
+        La question n'est plus : l'Amérique peut-elle gagner cette guerre ?<br>
+        La question est désormais : combien de temps lui faudra-t-il avant d'admettre qu'elle l'a perdue ?
+      </div>
+    </div>
+
+    <!-- TAGS -->
+    <div class="article-tags">
+      <span class="article-tags__label">Tags :</span>
+      <span class="tag-pill">Proche-Orient</span>
+      <span class="tag-pill">Iran</span>
+      <span class="tag-pill">États-Unis</span>
+      <span class="tag-pill">Clausewitz</span>
+      <span class="tag-pill">Thucydide</span>
+      <span class="tag-pill">Guerre asymétrique</span>
+      <span class="tag-pill">Hormuz</span>
+    </div>
+
+    <!-- ARTICLES LIÉS -->
+    <div class="related fade-up">
+      <div class="related__title">Articles liés</div>
+      <div class="related-grid">
+        <a href="iran-arabie-saoudite.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Iran–Arabie Saoudite : la détente de façade</h4>
+            <span class="meta">15 mars 2026 · 11 min</span>
+          </div>
+        </a>
+        <a href="iran-nucleaire-2026.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Programme nucléaire iranien : le seuil de non-retour</h4>
+            <span class="meta">5 mars 2026 · 13 min</span>
+          </div>
+        </a>
+        <a href="houthis-mer-rouge.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Houthis et mer Rouge : la guerre des routes maritimes</h4>
+            <span class="meta">20 fév. 2026 · 10 min</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">Sommaire</div>
+      <ul class="toc-list">
+        <li><a href="#ch1"><span class="toc-num">I.</span> La profondeur stratégique</a></li>
+        <li><a href="#ch2"><span class="toc-num">II.</span> L'économie de la défaite</a></li>
+        <li><a href="#ch3"><span class="toc-num">III.</span> Le piège de Thucydide</a></li>
+        <li><a href="#ch4"><span class="toc-num">IV.</span> Le verdict de Clausewitz</a></li>
+        <li><a href="#ch5"><span class="toc-num">V.</span> Le monde observe</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">Les voix qui avaient raison</div>
+      <div class="sidebar-voix">
+        <div class="sidebar-voix-item">
+          <div class="sidebar-voix-item__nom">John Mearsheimer</div>
+          <div class="sidebar-voix-item__role">Réalisme offensif · Chicago</div>
+          <div class="sidebar-voix-item__quote">« La décision la plus imprudente de l'histoire américaine. »</div>
+        </div>
+        <div class="sidebar-voix-item">
+          <div class="sidebar-voix-item__nom">Jeffrey Sachs</div>
+          <div class="sidebar-voix-item__role">Économiste · Columbia</div>
+          <div class="sidebar-voix-item__quote">« 8 000 milliards dépensés. Aucune guerre gagnée. »</div>
+        </div>
+        <div class="sidebar-voix-item">
+          <div class="sidebar-voix-item__nom">Col. L. Wilkerson</div>
+          <div class="sidebar-voix-item__role">Chef de cabinet de Colin Powell</div>
+          <div class="sidebar-voix-item__quote">« Sur la volonté nationale, l'Amérique est à découvert. »</div>
+        </div>
+        <div class="sidebar-voix-item">
+          <div class="sidebar-voix-item__nom">Gordon Chang</div>
+          <div class="sidebar-voix-item__role">Analyste géopolitique</div>
+          <div class="sidebar-voix-item__quote">« Chaque bombe est un cadeau offert à Pékin. »</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">L'auteur</div>
+      <div class="author-block">
+        <div class="author-block__name">Rédaction AG</div>
+        <div class="author-block__role">Analyste — Rubrique Proche-Orient</div>
+        <p>Analyses stratégiques sur les confrontations américano-iraniennes, la géopolitique du Golfe et les dynamiques de puissance au Moyen-Orient.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h4>Accès Premium</h4>
+      <p>Analyses complètes, archives et notes de terrain réservées aux abonnés.</p>
+      <a href="#">S'abonner →</a>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Analyses Géopolitiques — Site indépendant en géopolitique et sciences politiques.</span>
+    <div class="footer-links">
+      <a href="../index.html">Accueil</a>
+      <a href="#">Abonnement</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    document.getElementById('progress-bar').style.width =
+      (doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100) + '%';
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  function shareArticle(platform) {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    const links = {
+      twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    };
+    if (platform === 'copy') {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Lien copié !'));
+    } else {
+      window.open(links[platform], '_blank', 'width=600,height=400');
+    }
+  }
+</script>
+</body>
+</html>
