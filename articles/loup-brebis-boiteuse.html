@@ -162,6 +162,44 @@
     .fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}.fade-up.visible{opacity:1;transform:none}
 
     @media(max-width:640px){.masthead{flex-direction:column;align-items:flex-start}nav a{font-size:.65rem;padding:.6rem .8rem}.article-layout{padding:2rem 1rem}.meta-bar__share{display:none}.article-hero__content{padding:1.5rem 1rem}}
+
+    /* Auteur inline dans l'article */
+    .author-inline {
+      margin: 3rem 0 2rem;
+      padding: 1.4rem 1.6rem;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--accent);
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+    }
+    .author-inline__avatar {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; font-weight: 900;
+      color: #fff; line-height: 1;
+    }
+    .author-inline__info {}
+    .author-inline__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem; font-weight: 700;
+      margin-bottom: .15rem; color: var(--ink);
+    }
+    .author-inline__role {
+      font-family: 'DM Mono', monospace;
+      font-size: .62rem; letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--accent); margin-bottom: .5rem;
+    }
+    .author-inline__bio {
+      font-size: .85rem; color: var(--mid);
+      line-height: 1.6; margin: 0 !important;
+    }
   </style>
 </head>
 <body>
@@ -536,6 +574,17 @@
       <div class="proverbe__arabic">على قدر فراشك مدّ رجلك — ولكن الأهم: اعمل على أن يتسع فراشك</div>
       <div class="proverbe__fr">« Étends tes jambes à la mesure de ton lit — mais l'essentiel est : travaille à élargir ton lit. »</div>
       <div class="proverbe__source">Sagesse arabe · Fil directeur de cette analyse</div>
+    </div>
+
+
+    <!-- AUTEUR -->
+    <div class="author-inline">
+      <div class="author-inline__avatar">N</div>
+      <div class="author-inline__info">
+        <div class="author-inline__name">Nasser AL SABRI</div>
+        <div class="author-inline__role">Directeur · International Threat Analysis Bureau (ITAB)</div>
+        <p class="author-inline__bio">Analyste en affaires politiques, anthropologie politique et pensée sociale. Dirige l'ITAB, bureau indépendant d'analyse des menaces internationales. Travaille à la croisée de la sociologie, de la philosophie et des relations internationales.</p>
+      </div>
     </div>
 
     <!-- TAGS -->
