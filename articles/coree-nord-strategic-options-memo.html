@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>مذكرة الخيارات الاستراتيجية — كوريا الشمالية | محاكاة صينية</title>
+<meta name="description" content="مذكرة خيارات استراتيجية: باسم الصين في أزمة كوريا الشمالية — محاكاة NSC. كيف تدعم الصين بيونغ يانغ دون استفزاز واشنطن؟"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@400;700;900&family=Noto+Naskh+Arabic:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --a:#8b1a1a;--ink:#1a1a2a;--bg:#f5f3ef;--paper:#fff;
+  --mid:#5a5870;--rule:#d4cfc8;--or:#9a7a1a;
+  --header-bg:#0a0a14;--accent:#c8a020;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Naskh Arabic',sans-serif;background:var(--bg);color:var(--ink);direction:rtl;line-height:1.85;font-size:1rem}
+a{color:inherit;text-decoration:none}
+
+/* ── PAGE HEADER — gouvernemental ── */
+.memo-header{background:var(--header-bg);color:#fff;padding:0}
+.mh-stripe{background:var(--a);height:5px}
+.mh-body{padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.mh-logo{font-family:'Noto Serif Arabic',serif;font-size:1.5rem;font-weight:900;color:var(--accent)}
+.mh-logo span{display:block;font-size:.7em;font-weight:400;color:#6a6585;margin-top:.2rem}
+.mh-classify{text-align:left}
+.mh-classify .stamp{display:inline-block;border:2px solid var(--a);color:var(--a);font-weight:700;font-size:.75rem;padding:.3rem .8rem;letter-spacing:.08em}
+.mh-classify .series{font-size:.65rem;color:#5a5570;margin-top:.4rem}
+
+/* ── META TABLE ── */
+.memo-meta{background:#f0ece3;border-bottom:2px solid var(--a);padding:1.2rem 3rem}
+.meta-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.5rem 2rem;font-size:.82rem}
+.meta-row{display:flex;gap:.5rem}
+.meta-label{color:var(--a);font-weight:700;white-space:nowrap}
+.meta-val{color:var(--ink)}
+
+/* ── DOCUMENT BODY ── */
+.memo-body{max-width:940px;margin:2rem auto;padding:0 2rem 4rem}
+
+/* SUBJECT LINE */
+.subject-line{background:var(--a);color:#fff;padding:1rem 1.5rem;margin-bottom:2rem}
+.subject-line .sub-label{font-size:.7rem;letter-spacing:.1em;opacity:.7;margin-bottom:.3rem}
+.subject-line .sub-text{font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:700;line-height:1.3}
+
+/* EXECUTIVE SUMMARY */
+.exec-summary{background:#fef9f0;border:1px solid #d4c090;border-right:4px solid var(--or);padding:1.3rem 1.5rem;margin-bottom:2rem}
+.exec-summary .es-label{font-size:.7rem;font-weight:700;color:var(--or);letter-spacing:.1em;margin-bottom:.6rem}
+.exec-summary p{font-size:.92rem;color:#3a3020;line-height:1.8}
+
+/* SECTIONS */
+.memo-section{margin-bottom:2.5rem}
+.section-header{display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
+.section-num{background:var(--a);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
+.section-title{font-family:'Noto Serif Arabic',serif;font-size:1.1rem;font-weight:700;color:var(--ink)}
+.memo-body p{margin-bottom:1rem;font-size:.95rem;line-height:1.85}
+.memo-body p:last-child{margin-bottom:0}
+
+/* THREATS / OPPORTUNITIES — bullet-like */
+.point-list{list-style:none;padding:0;margin:.5rem 0 1rem}
+.point-list li{display:flex;gap:.8rem;align-items:flex-start;margin-bottom:.7rem;padding:.7rem 1rem;background:#f8f7f4;border-right:3px solid var(--rule)}
+.point-list li .pi{flex-shrink:0;font-size:.9rem;margin-top:.1rem}
+.point-list li .pt{font-size:.9rem;line-height:1.75}
+.point-list.threats li{border-right-color:#c0302a}
+.point-list.threats li .pi{color:#c0302a}
+.point-list.opport li{border-right-color:#2a7a3a}
+.point-list.opport li .pi{color:#2a7a3a}
+.point-list.tactics li{border-right-color:#1e5fa8}
+.point-list.tactics li .pi{color:#1e5fa8}
+
+/* STRATEGY RECOMMENDED */
+.strategy-box{background:#0a0a14;color:#fff;padding:1.5rem;margin:1.5rem 0}
+.strategy-box .sb-label{font-size:.68rem;color:#6a6585;letter-spacing:.1em;margin-bottom:.8rem}
+.strategy-box h3{font-family:'Noto Serif Arabic',serif;font-size:1.05rem;color:var(--accent);margin-bottom:.8rem}
+.strategy-box p{font-size:.88rem;color:#c8c4d4;line-height:1.8;margin-bottom:.6rem}
+.strategy-box p:last-child{margin-bottom:0}
+
+/* SIGNATURE BLOCK */
+.memo-sig{border-top:2px solid var(--a);padding-top:1.5rem;margin-top:3rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-size:.8rem;color:var(--mid)}
+.sig-block .sig-name{font-family:'Noto Serif Arabic',serif;font-size:1rem;font-weight:700;color:var(--ink);margin-top:.4rem}
+.sig-block .sig-role{font-size:.75rem;color:var(--mid)}
+
+/* NAVIGATION */
+.memo-nav{max-width:940px;margin:0 auto 2rem;padding:0 2rem;display:flex;gap:1rem;flex-wrap:wrap}
+.nav-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border:1px solid var(--rule);font-size:.78rem;font-family:'Noto Naskh Arabic',sans-serif;color:var(--mid);transition:all .2s;background:var(--paper)}
+.nav-btn:hover{border-color:var(--a);color:var(--a)}
+
+/* TOPBAR */
+.topbar{background:#07070f;color:#5a5570;font-family:'Noto Naskh Arabic',sans-serif;font-size:.72rem;padding:.4rem 2rem;display:flex;justify-content:space-between}
+.topbar a{color:#9a95b0}
+
+@media(max-width:640px){
+  .mh-body{flex-direction:column;padding:1.5rem}
+  .memo-meta{padding:1rem 1.5rem}
+  .memo-body{padding:0 1rem 3rem}
+  .memo-nav{padding:0 1rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>تحليلات جيوسياسية — سلسلة محاكاة بحر الصين الجنوبي · ITAB · تورسينج، فرنسا</span>
+  <span><a href="/">الرئيسية</a> · <a href="/asie.html">آسيا</a></span>
+</div>
+
+<div class="memo-header">
+  <div class="mh-stripe"></div>
+  <div class="mh-body">
+    <div class="mh-logo">
+      تحليلات جيوسياسية · ITAB
+      <span>محاكاة استراتيجية — بحر الصين وكوريا الشمالية</span>
+    </div>
+    <div class="mh-classify">
+      <div class="stamp">🔒 وثيقة تحليلية — محاكاة</div>
+      <div class="series">سلسلة المحاكاة · الوثيقة 5 من 5</div>
+    </div>
+  </div>
+</div>
+
+<div class="memo-meta">
+  <div class="meta-grid">
+    <div class="meta-row"><span class="meta-label">إلى:</span><span class="meta-val">مجلس الاستراتيجية الوطنية (نموذج محاكاة)</span></div>
+    <div class="meta-row"><span class="meta-label">من:</span><span class="meta-val">فريق التحليل الاستراتيجي · ITAB</span></div>
+    <div class="meta-row"><span class="meta-label">الموضوع:</span><span class="meta-val">الخيارات الاستراتيجية الصينية — أزمة كوريا الشمالية</span></div>
+    <div class="meta-row"><span class="meta-label">التاريخ:</span><span class="meta-val">مارس 2026</span></div>
+    <div class="meta-row"><span class="meta-label">الفاعل:</span><span class="meta-val">جمهورية الصين الشعبية (الموقع المُحاكى)</span></div>
+    <div class="meta-row"><span class="meta-label">التصنيف:</span><span class="meta-val">وثيقة تحليلية أكاديمية — محاكاة</span></div>
+  </div>
+</div>
+
+<div class="memo-nav">
+  <a href="/articles/chine-problemes-reponses.html" class="nav-btn">← الوثيقة السابقة: مشكلات الصين وردودها</a>
+  <a href="/articles/chine-puissance-portrait-strategique.html" class="nav-btn">↩ بداية السلسلة: بورتريه الصين</a>
+  <a href="/asie.html" class="nav-btn">📂 ملف آسيا</a>
+</div>
+
+<div class="memo-body">
+
+  <div class="subject-line">
+    <div class="sub-label">موضوع المذكرة</div>
+    <div class="sub-text">كيف تدعم الصين كوريا الشمالية في سياق أزمة نووية حادة دون الدخول في مواجهة مع الولايات المتحدة أو الانزلاق إلى حرب؟</div>
+  </div>
+
+  <div class="exec-summary">
+    <div class="es-label">ملخص تنفيذي</div>
+    <p>أطلقت الجمهورية الشعبية الديمقراطية لكوريا بنجاح صاروخاً بثلاث مراحل وضع في مداره قمراً صناعياً، ما يُثبت — وفق التقييمات الاستخباراتية الأمريكية — امتلاكها تكنولوجيا إعادة الدخول الجوي القادرة على حمل رؤوس حربية نووية إلى عمق الأراضي الأمريكية. جلس مجلس الأمن القومي الأمريكي (NSC) لتقييم الخيارات. هذه المذكرة تُحدّد الموقف الاستراتيجي الصيني والخيارات المُتاحة للتعامل مع الأزمة، وفق موقع الصين كفاعل رئيسي في المحاكاة.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="memo-section">
+    <div class="section-header">
+      <div class="section-num">١</div>
+      <div class="section-title">الرهان الاستراتيجي الجوهري</div>
+    </div>
+    <p>تقف الصين أمام معادلة صعبة تتطلب إدارة دقيقة ومتوازنة: الحفاظ على الاستقرار الاستراتيجي في شبه الجزيرة الكورية دون السماح للأزمة بالتصعيد إلى مواجهة مسلحة، والحيلولة دون أي ضربة أمريكية على الأراضي الكورية الشمالية التي ستُربك التوازن الإقليمي بأكمله وستُقيم سابقة خطيرة قرب الحدود الصينية. في الوقت نفسه، يُريد بكين أن تظل المُفاوِضة الحتمية لأي تسوية — وليس جزءاً من مشكلة تُحلّها واشنطن بمفردها أو بمعزل عن المصالح الصينية.</p>
+    <p>السيناريو الأخطر على المصالح الصينية ليس الحرب — إنه الاتفاق الأمريكي-الكوري الشمالي المباشر الذي يتجاوز بكين ويُقلّص نفوذها على الجار الحدودي. أي تسوية لا تمر عبر الصين هي هزيمة استراتيجية حتى لو لم تُطلق رصاصة واحدة.</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <div class="memo-section">
+    <div class="section-header">
+      <div class="section-num">٢</div>
+      <div class="section-title">التهديدات التي تواجه الصين في هذه الأزمة</div>
+    </div>
+    <ul class="point-list threats">
+      <li><span class="pi">⚠</span><span class="pt"><strong>خطر التصعيد العسكري الأمريكي:</strong> إذا قرّر البيت الأبيض توجيه ضربة وقائية للمنشآت النووية الكورية الشمالية، ستنزلق المنطقة في فوضى تُهدد الحدود الصينية مباشرةً — سواء من خلال موجات نزوح كارثية أو من خلال سقوط النظام في بيونغ يانغ.</span></li>
+      <li><span class="pi">⚠</span><span class="pt"><strong>الضغط الاقتصادي الأمريكي على الشركات الصينية:</strong> قد تُوسّع واشنطن نطاق العقوبات الثانوية لتشمل شركات صينية تتعامل مع القطاعات الاقتصادية الكورية الشمالية، مما قد يُكلّف الاقتصاد الصيني خسائر ملموسة.</span></li>
+      <li><span class="pi">⚠</span><span class="pt"><strong>اتفاق أمريكي-كوري شمالي يُقصي الصين:</strong> على غرار قمة سنغافورة 2018، قد تسلك واشنطن مسار التفاوض المباشر مع بيونغ يانغ، محوِّلةً كوريا الشمالية من ورقة ضغط صينية إلى شريك أمريكي محتمل.</span></li>
+      <li><span class="pi">⚠</span><span class="pt"><strong>تسارع التحالف الأمريكي-الياباني-الكوري الجنوبي:</strong> الأزمة تُوفّر الذريعة المثالية لتعزيز القدرات الصاروخية الاعتراضية في اليابان وكوريا الجنوبية وتوسيع المناورات المشتركة — مما يُقرّب الحضور العسكري الأمريكي من الحدود الصينية.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="memo-section">
+    <div class="section-header">
+      <div class="section-num">٣</div>
+      <div class="section-title">الفرص المتاحة للصين في هذه الأزمة</div>
+    </div>
+    <ul class="point-list opport">
+      <li><span class="pi">✦</span><span class="pt"><strong>تعزيز صورة «المُستقرّ الإقليمي»:</strong> الصين القادرة على إقناع بيونغ يانغ بضبط النفس — أو على الأقل تقديم نفسها على هذا الأساس — تكسب مكانة دولية لا تستطيع أي قوة أخرى منافستها في هذا الملف.</span></li>
+      <li><span class="pi">✦</span><span class="pt"><strong>استثمار الأزمة لتحسين العلاقات مع كوريا الجنوبية:</strong> سيول التي تشعر بالقلق من بيونغ يانغ قد تكون أكثر استعداداً لقبول الدور الصيني الوسيط إذا قدّمت بكين ضمانات مقنعة تُقلّص التهديد الشمالي.</span></li>
+      <li><span class="pi">✦</span><span class="pt"><strong>اختبار تماسك التحالف الأمريكي:</strong> الأزمة الحادة تكشف التناقضات الداخلية في التحالف — اليابان تُفضّل الحذر، كوريا الجنوبية تخشى الحرب على أراضيها، وأمريكا تواجه ضغوطاً داخلية. الصين تستطيع تعميق هذه الشقوق دبلوماسياً.</span></li>
+      <li><span class="pi">✦</span><span class="pt"><strong>الدبلوماسية الثلاثية مع روسيا:</strong> توسيع التنسيق الصيني-الروسي في مجلس الأمن يُعطّل أي قرار ملزم ضد كوريا الشمالية ويُرسل رسالة بأن المحور البديل يتحرك بإرادة موحّدة.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 4 -->
+  <div class="memo-section">
+    <div class="section-header">
+      <div class="section-num">٤</div>
+      <div class="section-title">الموارد الصينية المتاحة للتعامل مع الأزمة</div>
+    </div>
+    <p>تمتلك الصين رصيداً استراتيجياً متعدد الأبعاد يُميّزها عن أي فاعل آخر في هذه الأزمة:</p>
+    <p><strong>الرافعة الاقتصادية الكورية الشمالية:</strong> نحو 90% من صادرات بيونغ يانغ تتجه للصين. عشرات الآلاف من العمال الكوريين الشماليين يعملون على الأراضي الصينية ويُرسلون ما يُقارب 1.5 مليار دولار سنوياً. هذا الاعتماد يمنح بكين نفوذاً فعلياً — إذا اختارت استخدامه صراحةً.</p>
+    <p><strong>العضوية الدائمة في مجلس الأمن:</strong> حق النقض (الفيتو) يمنع أي قرار أممي ملزم ضد كوريا الشمالية، ويُعطي الصين ورقة تعطيلية لا تمتلكها أي قوة أخرى.</p>
+    <p><strong>المكانة الاقتصادية العالمية:</strong> أمريكا لا تستطيع فرض حصار اقتصادي شامل على الصين دون أن تُضرّ سلاسل التوريد العالمية وأسعار الاستهلاك الأمريكية — وهذا يُعطي بكين هامشاً في التفاوض.</p>
+    <p><strong>الشراكة الاستراتيجية مع روسيا:</strong> التنسيق الصيني-الروسي يُوفّر جبهة دبلوماسية موحّدة تجعل أي عمل أمريكي أحادي أكثر كلفة سياسياً دولياً.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <div class="strategy-box">
+    <div class="sb-label">الاستراتيجية الموصى بها</div>
+    <h3>«الدعم الصامت مع الواجهة الدبلوماسية»</h3>
+    <p>الإعلان العلني عن دعم الدبلوماسية والحوار والتهدئة، مع تقديم الصين نفسها على الصعيد الدولي كـ«مسؤول إقليمي» يسعى لخفض التوتر — وهذا يُقلّص الضغط الأمريكي ويُرسّخ المكانة الدولية.</p>
+    <p>في المقابل، مواصلة دعم الاستقرار الاقتصادي للنظام الكوري الشمالي بصورة هادئة ومُدارة، دون تصعيد علني يُعطي واشنطن ذريعة لعقوبات إضافية. الهدف: إبقاء النظام قائماً ومستقراً دون تصعيد نووي جديد.</p>
+    <p>تجنّب أي التزام عسكري مباشر، إلا في سيناريو هجوم أمريكي على الأراضي الصينية أو على الحدود المشتركة مباشرةً — وهو سيناريو منخفض الاحتمال لكن يجب تحديده كخط أحمر.</p>
+  </div>
+
+  <!-- SECTION 6 -->
+  <div class="memo-section">
+    <div class="section-header">
+      <div class="section-num">٥</div>
+      <div class="section-title">الخيارات التكتيكية الفورية</div>
+    </div>
+    <ul class="point-list tactics">
+      <li><span class="pi">→</span><span class="pt"><strong>إطلاق مبادرة دبلوماسية ثلاثية فورية (الصين-روسيا-كوريا الشمالية):</strong> إصدار بيان مشترك يدعو لوقف التصعيد والعودة للمفاوضات وفق «إطار الخطوتَين» (تجميد نووي مقابل تخفيف عقوبات). هذا يُقدّم الصين كمبادِرة دبلوماسية لا كحامية لبرنامج نووي.</span></li>
+      <li><span class="pi">→</span><span class="pt"><strong>تعزيز المراقبة العسكرية الهادئة على الحدود:</strong> رفع جاهزية القوات في المنطقة العسكرية الشمالية دون إعلان تعبئة علنية — إرسال رسالة ردعية لواشنطن من أن أي عملية عسكرية ستُلامس مناطق الاهتمام الصيني.</span></li>
+      <li><span class="pi">→</span><span class="pt"><strong>فتح قناة هادئة مع واشنطن:</strong> إتاحة اتصالات سرية مع الجانب الأمريكي تُوضّح فيها الصين «الخطوط الحمراء» والمصالح غير القابلة للمساس — مع التشديد على رفض أي عمل عسكري أحادي.</span></li>
+      <li><span class="pi">→</span><span class="pt"><strong>تفعيل الاتصالات الاقتصادية مع كوريا الجنوبية:</strong> تقديم حوافز اقتصادية لسيول تجعل التنسيق مع الصين أكثر جاذبية من التصعيد مع واشنطن — مشاريع بنية تحتية، تبادل طاقة، تخفيف التوترات التجارية.</span></li>
+      <li><span class="pi">→</span><span class="pt"><strong>إدارة الجانب الإعلامي:</strong> توجيه الخطاب الرسمي الصيني نحو «المخاوف الإنسانية والاستقرار الإقليمي»، مع تجنب أي تصريح يُفسَّر كدعم صريح للتهديدات الكورية الشمالية.</span></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 7: Objectifs opérationnels -->
+  <div class="memo-section">
+    <div class="section-header">
+      <div class="section-num">٦</div>
+      <div class="section-title">الأهداف التشغيلية قصيرة المدى ومتوسطة المدى</div>
+    </div>
+    <p><strong>قصير المدى (4-8 أسابيع):</strong> منع أي عمل عسكري أمريكي. تجميد التصعيد الكوري الشمالي. تقديم مبادرة تفاوضية تُضع الصين في موقع الوسيط لا الشريك المتهم.</p>
+    <p><strong>متوسط المدى (6-18 شهراً):</strong> إرساء إطار تفاوضي متعدد الأطراف تكون الصين ركيزته. استخدام الفترة لتعميق الاعتماد الاقتصادي لكوريا الجنوبية على الصين وتقليص زخم تحالفها الأمريكي. الإبقاء على النظام الكوري الشمالي مستقراً ومُحكَم السيطرة دون أن يكون مصدر أزمة دائمة تستنزف الموقف الصيني.</p>
+    <p><strong>بعيد المدى:</strong> تكريس مبدأ أن أي تسوية دائمة في شبه الجزيرة الكورية لا يمكن أن تتم دون ضمانات صينية — وبالتالي تأمين أن «حق التوقيع» الصيني على أي معاهدة إقليمية مستقبلية أمر لا يمكن تجاهله.</p>
+  </div>
+
+  <!-- SIGNATURE BLOCK -->
+  <div class="memo-sig">
+    <div class="sig-block">
+      <div class="sig-role">وثيقة تحليلية أكاديمية — لأغراض المحاكاة الاستراتيجية فقط</div>
+      <div class="sig-name">المعهد الدولي لتحليل التهديدات — ITAB</div>
+      <div class="sig-role">تورسينج، فرنسا · مارس 2026</div>
+    </div>
+    <div class="sig-block" style="text-align:left">
+      <div class="sig-role">الوثيقة 5 من 5 في سلسلة محاكاة بحر الصين</div>
+      <div class="sig-name">ناصر الصبري</div>
+      <div class="sig-role">مدير ITAB · محلل جيوسياسي</div>
+    </div>
+  </div>
+
+  <!-- NAV BOTTOM -->
+  <div style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:1rem">
+    <a href="/articles/chine-puissance-portrait-strategique.html" style="font-size:.82rem;color:var(--a);font-family:'Noto Naskh Arabic',sans-serif">← الوثيقة 1: بورتريه الصين</a>
+    <a href="/articles/chine-strategie-3-ans.html" style="font-size:.82rem;color:var(--a);font-family:'Noto Naskh Arabic',sans-serif">← الوثيقة 2: استراتيجية 3 سنوات</a>
+    <a href="/articles/chine-equilibre-forces-mer-chine.html" style="font-size:.82rem;color:var(--a);font-family:'Noto Naskh Arabic',sans-serif">← الوثيقة 3: التوازن العسكري</a>
+    <a href="/articles/chine-problemes-reponses.html" style="font-size:.82rem;color:var(--a);font-family:'Noto Naskh Arabic',sans-serif">← الوثيقة 4: المشكلات والردود</a>
+  </div>
+
+</div><!-- /memo-body -->
+
+</body>
+</html>
