@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>الحرب في الساحل: لماذا يزداد الوضع سوءاً في 2026؟ — تحليلات جيوسياسية</title>
+  <meta name="description" content="JNIM وداعش والوسط الأفريقي وAfrica Corps — العوامل التي تُغذّي الحلقة المفرغة للعنف في أكثر مناطق العالم هشاشةً."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@300;400;600;700;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --ink:#1a1a2a; --paper:#ffffff; --offwhite:#f8f7f4; --cream:#f3f0e8;
+      --mid:#5a5870; --light:#9a96b0; --rule:#e2ddd8;
+      --accent:#c8821a;
+      --afrique:#c8821a;--amerique:#b83232;--europe:#1e5fa8;--asie:#1a8a6e;--orient:#8b3a8b;
+      --or:#d4a843; --body-max:760px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Noto Serif Arabic',Georgia,serif;background:var(--offwhite);color:var(--ink);line-height:1.9;direction:rtl}
+    a{color:inherit;text-decoration:none}
+    #progress-bar{position:fixed;top:0;right:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear}
+
+    /* TOPBAR */
+    .topbar{background:#1a1a2a;color:#8a87a0;font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;padding:.45rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #2a2a3a}
+    .topbar a{color:#b8b4d0;transition:color .2s}.topbar a:hover{color:var(--or)}
+
+    /* MASTHEAD */
+    .masthead{background:var(--paper);border-bottom:3px solid var(--ink);padding:1.4rem 2rem 1rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+    .masthead__logo{font-family:'Noto Serif Arabic',serif;font-size:clamp(1.4rem,3vw,2.4rem);font-weight:900;line-height:1.1;color:var(--accent)}
+    .masthead__logo span{display:block;font-size:.55em;font-weight:400;color:var(--mid);margin-top:.3rem}
+    .masthead__sub{font-family:'Noto Naskh Arabic',sans-serif;font-size:.72rem;color:var(--mid);text-align:left;line-height:1.8}
+
+    /* NAV */
+    nav{background:#1a1a2a;display:flex;flex-wrap:wrap;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--accent)}
+    nav a{display:flex;align-items:center;gap:.5rem;padding:.7rem 1rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.8rem;color:#9a96b0;border-left:1px solid #2a2a3a;transition:background .2s,color .2s}
+    nav a:hover,nav a.active{background:#252535;color:var(--or)}
+    nav a .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+    nav a[data-r="afrique"] .dot{background:var(--afrique)}
+    nav a[data-r="amerique"] .dot{background:var(--amerique)}
+    nav a[data-r="europe"] .dot{background:var(--europe)}
+    nav a[data-r="asie"] .dot{background:var(--asie)}
+    nav a[data-r="orient"] .dot{background:var(--orient)}
+    nav a.nav-cta{margin-right:auto;background:var(--amerique);color:#fff;border:none;font-weight:600}
+
+    /* HERO */
+    .article-hero{position:relative;height:clamp(300px,45vw,520px);overflow:hidden;background:#1a1a2a}
+    .article-hero__img{width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
+    .article-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,42,.97) 35%,rgba(26,26,42,.15) 100%)}
+    .article-hero__content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;max-width:calc(var(--body-max)+4rem);margin:0 auto}
+    .article-hero__tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.9rem}
+    .tag-badge{display:inline-block;font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;padding:.22rem .6rem;color:#fff;border-radius:2px}
+    .article-hero h1{font-family:'Noto Serif Arabic',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;line-height:1.15;color:#fff;margin-bottom:.8rem}
+    .article-hero h1 em{font-style:normal;color:var(--or)}
+    .article-hero__sub{font-size:1rem;color:rgba(255,255,255,.75);max-width:680px;line-height:1.85}
+
+    /* META BAR */
+    .meta-bar{background:var(--paper);border-bottom:1px solid var(--rule);padding:.9rem 2rem;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+    .meta-bar__inner{max-width:calc(var(--body-max)+4rem);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+    .meta-item{font-family:'Noto Naskh Arabic',sans-serif;font-size:.72rem;color:var(--light)}
+    .meta-item strong{color:var(--mid)}
+    .meta-sep{color:var(--rule)}
+
+    /* LAYOUT */
+    .article-layout{max-width:1200px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start}
+    @media(max-width:920px){.article-layout{grid-template-columns:1fr;gap:2rem}}
+
+    /* ARTICLE BODY */
+    .article-body{max-width:var(--body-max)}
+    .article-body>p:first-of-type::first-letter{font-family:'Noto Serif Arabic',serif;font-size:4rem;font-weight:900;float:right;line-height:.85;margin:.05em 0 -.05em .15em;color:var(--accent)}
+    .article-body p{font-size:1.06rem;line-height:1.95;margin-bottom:1.6rem;color:#2a2a3a}
+    .article-body strong{font-weight:700;color:var(--ink)}
+    .article-body ul{margin:1rem 0 1.5rem 0;padding-right:1.6rem}
+    .article-body li{font-size:1rem;line-height:1.85;margin-bottom:.6rem;color:#2a2a3a}
+
+    .ch-label{font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;letter-spacing:.05em;color:var(--accent);margin-bottom:.3rem;display:flex;align-items:center;gap:.8rem;flex-direction:row-reverse}
+    .ch-label::before{content:'';flex:1;height:1px;background:var(--rule)}
+
+    .article-body h2{font-family:'Noto Serif Arabic',serif;font-size:1.6rem;font-weight:700;line-height:1.25;margin:3rem 0 1rem;padding-top:.6rem;border-top:2px solid var(--ink);color:var(--ink)}
+    .article-body h3{font-family:'Noto Serif Arabic',serif;font-size:1.1rem;font-weight:600;margin:2rem 0 .8rem;color:var(--accent)}
+
+    .article-body blockquote{margin:2.5rem 0;padding:1.6rem 2rem;border-right:4px solid var(--accent);background:var(--cream);font-family:'Noto Serif Arabic',serif;font-size:1.1rem;font-weight:600;line-height:1.7;color:var(--ink)}
+    .article-body blockquote cite{display:block;margin-top:.7rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;font-weight:400;color:var(--mid)}
+
+    /* STATS */
+    .stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2rem 0}
+    .stat-cell{background:var(--paper);padding:1.2rem;text-align:center}
+    .stat-cell__num{font-family:'Noto Serif Arabic',serif;font-size:1.8rem;font-weight:900;color:var(--accent);line-height:1}
+    .stat-cell__label{font-family:'Noto Naskh Arabic',sans-serif;font-size:.63rem;color:var(--mid);margin-top:.3rem;line-height:1.5}
+
+    /* COMPARISON TABLE */
+    .comparison-header{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin:2rem 0;padding:1.5rem;background:var(--paper);border:1px solid var(--rule);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .country-box{text-align:center;padding:1rem}
+    .country-flag{font-size:2.5rem;margin-bottom:.5rem}
+    .country-name{font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:900;margin-bottom:.3rem}
+    .country-score{font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem}
+    .vs-badge{font-family:'Noto Serif Arabic',serif;font-size:2rem;font-weight:900;color:var(--accent);text-align:center}
+    .comparison-table{margin:2rem 0;overflow-x:auto}
+    .comparison-table table{width:100%;border-collapse:collapse;font-size:.9rem}
+    .comparison-table th{background:var(--ink);color:#fff;font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;padding:.7rem 1rem;text-align:right}
+    .comparison-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);text-align:right}
+    .comparison-table tr:nth-child(even) td{background:var(--cream)}
+    .comparison-table td:first-child{font-weight:600;color:var(--mid);font-size:.85rem}
+
+    /* VERDICT */
+    .verdict-box{margin:2.5rem 0;border:2px solid var(--accent);background:var(--paper);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+    .verdict-title{background:var(--accent);color:#fff;font-family:'Noto Naskh Arabic',sans-serif;font-size:.78rem;padding:.7rem 1.2rem;font-weight:700}
+    .verdict-content{padding:1.5rem 1.7rem}
+    .verdict-content p{font-size:.95rem;line-height:1.78;margin-bottom:.7rem;color:#2a2a3a}.verdict-content p:last-child{margin-bottom:0}
+    .verdict-content strong{color:var(--ink)}
+
+    /* SCENARIO GRID */
+    .scenario-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:2rem 0}
+    .scenario-card{border:1px solid var(--rule);background:var(--paper);overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+    .scenario-card__head{padding:.6rem 1rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;font-weight:700;color:#fff}
+    .scenario-card__body{padding:1rem;font-size:.88rem;line-height:1.7;color:var(--mid)}
+    .scenario-card__title{font-family:'Noto Serif Arabic',serif;font-size:.98rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+
+    /* AUTHOR */
+    .author-inline{margin:3rem 0 2rem;padding:1.5rem 1.7rem;background:var(--cream);border:1px solid var(--rule);border-right:4px solid var(--accent);display:flex;gap:1.2rem;align-items:flex-start}
+    .author-inline__avatar{width:52px;height:52px;border-radius:50%;background:var(--accent);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:900;color:#fff}
+    .author-inline__name{font-family:'Noto Serif Arabic',serif;font-size:1rem;font-weight:700;margin-bottom:.15rem;color:var(--ink)}
+    .author-inline__role{font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;color:var(--accent);margin-bottom:.5rem}
+    .author-inline__bio{font-size:.88rem;color:var(--mid);line-height:1.7;margin:0!important}
+
+    /* TAGS */
+    .article-tags{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+    .article-tags__label{font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;color:var(--light);margin-left:.3rem}
+    .tag-pill{font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;padding:.25rem .7rem;border:1px solid var(--rule);color:var(--mid);background:var(--paper);transition:all .2s;cursor:pointer}
+    .tag-pill:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    /* RELATED */
+    .related{margin-top:3.5rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
+    .related__title{font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:700;margin-bottom:1.4rem;color:var(--ink)}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{border:1px solid var(--rule);background:var(--paper);overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;display:block}
+    .related-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);border-color:var(--accent)}
+    .related-card__stripe{height:4px}
+    .related-card__body{padding:1rem 1.1rem}
+    .related-card h4{font-family:'Noto Serif Arabic',serif;font-size:.95rem;font-weight:700;line-height:1.4;margin-bottom:.5rem;color:var(--ink)}
+    .related-arrow{font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;color:var(--accent)}
+
+    /* SIDEBAR */
+    .sidebar{position:sticky;top:80px}
+    .sidebar-block{margin-bottom:2.2rem;background:var(--paper);border:1px solid var(--rule);padding:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+    .sidebar-title{font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;color:var(--ink);border-bottom:2px solid var(--accent);padding-bottom:.4rem;margin-bottom:1rem;font-weight:700}
+    .toc-list{list-style:none}
+    .toc-list li{border-bottom:1px solid var(--rule);padding:.55rem 0;font-size:.88rem;line-height:1.4}
+    .toc-list li a{color:var(--mid);transition:color .2s;display:flex;gap:.5rem;align-items:flex-start;flex-direction:row-reverse}
+    .toc-list li a:hover{color:var(--accent)}
+    .toc-num{font-family:'Noto Naskh Arabic',sans-serif;font-size:.65rem;color:var(--accent);flex-shrink:0}
+    .cta-box{background:linear-gradient(135deg,#1a1a2a,#2a1a3a);color:#fff;padding:1.5rem;text-align:center;border-radius:2px}
+    .cta-box h4{font-family:'Noto Serif Arabic',serif;font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:var(--or)}
+    .cta-box p{font-size:.82rem;color:rgba(255,255,255,.65);margin-bottom:1rem;line-height:1.7}
+    .cta-box a{display:inline-block;background:var(--orient);color:#fff;font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;padding:.6rem 1.4rem;transition:background .2s}
+    .cta-box a:hover{background:#6a2a6a}
+
+    /* FOOTER */
+    footer{background:#1a1a2a;color:#5a5870;padding:2.5rem 2rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;border-top:3px solid var(--accent)}
+    .footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}.footer-links a{color:#5a5870;transition:color .2s}.footer-links a:hover{color:var(--or)}
+
+    .fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}.fade-up.visible{opacity:1;transform:none}
+    @media(max-width:640px){.masthead{flex-direction:column;align-items:flex-start}nav a{font-size:.72rem;padding:.55rem .75rem}.article-layout{padding:1.5rem 1rem}.article-hero__content{padding:1.5rem 1rem}}
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+<div class="topbar">
+  <span>تحليلات جيوسياسية — <strong style="color:var(--or)">القوى والصراعات في القرن الحادي والعشرين</strong></span>
+  <span><a href="https://fr.geopolo.com/afr" style="color:var(--or)">🇫🇷 Français</a> · <a href="/abonnement.html">الاشتراك</a></span>
+</div>
+<header class="masthead">
+  <a href="/" class="masthead__logo">تحليلات جيوسياسية<span>مجلة استراتيجية مستقلة</span></a>
+  <div class="masthead__sub">تأسست عام 2024 · تورسينج، فرنسا · مارس 2026</div>
+</header>
+<nav>
+  <a href="/">الرئيسية</a>
+  <a href="/afr.html" data-r="afrique" class="active"><span class="dot"></span>أفريقيا</a>
+  <a href="/ame.html" data-r="amerique"><span class="dot"></span>أمريكا</a>
+  <a href="/eu.html" data-r="europe"><span class="dot"></span>أوروبا</a>
+  <a href="/asie.html" data-r="asie"><span class="dot"></span>آسيا</a>
+  <a href="/proche-or.html" data-r="orient"><span class="dot"></span>الشرق الأوسط</a>
+  <a href="/abonnement.html" class="nav-cta">الاشتراك المميز ←</a>
+</nav>
+<div class="article-hero">
+  <img class="article-hero__img" src="https://images.unsplash.com/photo-1509822929464-92b63a6fe115?w=1400&auto=format&fit=crop&q=70" alt="الحرب في الساحل: لماذا يزداد الوضع سوءاً في 2026؟"/>
+  <div class="article-hero__overlay"></div>
+  <div class="article-hero__content">
+    <div class="article-hero__tags"><span class="tag-badge" style="background:#c8821a">أفريقيا · الساحل</span></div>
+    <h1>الحرب في الساحل:<br><em>لماذا يزداد الوضع سوءاً في 2026؟</em></h1>
+    <p class="article-hero__sub">JNIM وداعش والوسط الأفريقي وAfrica Corps — العوامل التي تُغذّي الحلقة المفرغة للعنف في أكثر مناطق العالم هشاشةً.</p>
+  </div>
+</div>
+<div class="meta-bar">
+  <div class="meta-bar__inner">
+    <span class="meta-item">✍ <strong>ناصر الصبري</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">🏛 <strong>ITAB</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">📅 <strong>مارس 2026</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">⏱ قراءة: <strong>12 دقيقة</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">القسم: <strong style="color:var(--accent)">أفريقيا</strong></span>
+  </div>
+</div>
+<div class="article-layout">
+  <article class="article-body fade-up">
+
+    <p>في عام 2026، أصبح الساحل بؤرة الجهادية العالمية. تسيطر الجماعات المرتبطة بالقاعدة (JNIM) وداعش (EIGS) على مساحات أوسع مما كانت عليه عام 2020، رغم سنوات من العمليات العسكرية الفرنسية والأمريكية والأوروبية والوطنية. رقم الضحايا المدنيين يسجّل أرقاماً قياسية. وآمال الاستقرار التي علّقها البعض على المجالس العسكرية وفاغنر ثبتت أوهاماً.</p>
+
+    <div class="stats-row">
+      <div class="stat-cell"><div class="stat-cell__num">40%</div><div class="stat-cell__label">من الأراضي المالية خارج سيطرة الدولة</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">8,000+</div><div class="stat-cell__label">مدني قُتل عام 2024 (رقم قياسي)</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">2,5 مليون</div><div class="stat-cell__label">نازح داخلي في منطقة الساحل</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">3</div><div class="stat-cell__label">انقلابات في سنتين (مالي، بوركينا، النيجر)</div></div>
+    </div>
+
+    <div class="ch-label">البُعد الأول · خمسة أسباب للتدهور</div>
+    <h2 id="acteurs">لماذا لا يُحسم الوضع عسكرياً؟</h2>
+    <p><strong>1. فشل النموذج الأمني.</strong> لم تنجح القوات الفرنسية ولا فاغنر ولا الجيوش الوطنية في تحييد الجماعات الجهادية بصورة دائمة. العمليات العسكرية تُزيل قيادات لكن الحركات تتجدد — تُغذّيها مظالم اجتماعية لا تُعالجها الأسلحة.</p>
+    <p><strong>2. التنافس بين الجماعات الجهادية.</strong> التنافس بين JNIM (القاعدة) وEIGS (داعش) على السيطرة الجغرافية يُضاعف العنف — كل طرف يُسابق الآخر في الوحشية.</p>
+    <p><strong>3. انهيار الدولة.</strong> انقلابات مالي وبوركينا فاسو والنيجر دمّرت هياكل دولتية هشة أصلاً. المجالس العسكرية الحاكمة تُفضّل الصراع السياسي على الصراع ضد التمرد.</p>
+
+    <blockquote>
+      «وعد فاغنر بالأمن وجلب الوحشية. عانى المدنيون من الطرفين: من الجهاديين ومن فاغنر. هذا عمّق المظالم بدل معالجتها.»
+      <cite>— أندرو ليبوفيتش، المجلس الأوروبي للعلاقات الخارجية، 2024</cite>
+    </blockquote>
+
+    <div class="article-tags"><span class="article-tags__label">الكلمات المفتاحية:</span><span class="tag-pill">الساحل</span><span class="tag-pill">JNIM</span><span class="tag-pill">فاغنر</span><span class="tag-pill">مالي</span><span class="tag-pill">بوركينا فاسو</span></div>
+    <div class="author-inline">
+      <div class="author-inline__avatar">ن</div>
+      <div>
+        <div class="author-inline__name">ناصر الصبري</div>
+        <div class="author-inline__role">مدير · المعهد الدولي لتحليل التهديدات (ITAB)</div>
+        <p class="author-inline__bio">محلل في الجيوسياسة والأنثروبولوجيا السياسية والعلاقات الدولية. يدير ITAB، المعهد المستقل لتحليل التهديدات الدولية.</p>
+      </div>
+    </div>
+    <div class="related fade-up">
+      <div class="related__title">مقالات ذات صلة</div>
+      <div class="related-grid">
+        <a href="crise-sahel.html" class="related-card">
+          <div class="related-card__stripe" style="background:#c8821a"></div>
+          <div class="related-card__body">
+            <h4>أزمة الساحل: الأسباب البنيوية</h4>
+            <span class="related-arrow">← اقرأ المقال</span>
+          </div>
+        </a>
+        <a href="wagner-afrique-centrale.html" class="related-card">
+          <div class="related-card__stripe" style="background:#c8821a"></div>
+          <div class="related-card__body">
+            <h4>فاغنر في أفريقيا الوسطى</h4>
+            <span class="related-arrow">← اقرأ المقال</span>
+          </div>
+        </a>
+        <a href="aes-alliance-sahel.html" class="related-card">
+          <div class="related-card__stripe" style="background:#c8821a"></div>
+          <div class="related-card__body">
+            <h4>تحالف دول الساحل</h4>
+            <span class="related-arrow">← اقرأ المقال</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </article>
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">المحتويات</div>
+      <ul class="toc-list">
+        <li><a href="#bilan"><span class="toc-num">1.</span> الحصيلة 2023-2026</a></li>
+        <li><a href="#acteurs"><span class="toc-num">2.</span> الأطراف الفاعلة</a></li>
+        <li><a href="#wagner"><span class="toc-num">3.</span> فشل نموذج فاغنر</a></li>
+        <li><a href="#demographie"><span class="toc-num">4.</span> القنبلة الديموغرافية</a></li>
+        <li><a href="#solutions"><span class="toc-num">5.</span> هل من مخرج؟</a></li>
+      </ul>
+    </div>
+    <div class="cta-box">
+      <h4>الاشتراك المميز</h4>
+      <p>تحليلات كاملة وأرشيف ومذكرات ميدانية حصرية للمشتركين.</p>
+      <a href="/abonnement.html">اشترك الآن ←</a>
+    </div>
+  </aside>
+</div>
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 تحليلات جيوسياسية</span>
+    <div class="footer-links">
+      <a href="/">الرئيسية</a>
+      <a href="/afr.html">أفريقيا</a>
+      <a href="#">تواصل معنا</a>
+    </div>
+  </div>
+</footer>
+<script>
+  window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('progress-bar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%'});
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.06});
+  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
