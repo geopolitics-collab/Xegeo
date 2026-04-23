@@ -1,338 +1,432 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>حرب إيران-إسرائيل: يوميات نزاع جارٍ — تحليلات جيوسياسية</title>
-  <meta name="description" content="في 28 فبراير 2026، شنّت الولايات المتحدة وإسرائيل ضربات مشتركة على إيران فأردت خامنئي. اليوم 26: تحليل شامل لحرب تُعيد رسم الشرق الأوسط."/>
+  <title>La guerre Iran-Israël : chronique d'un conflit en cours — Analyses Géopolitiques</title>
+  <meta name="description" content="Le 28 février 2026, les États-Unis et Israël ont lancé des frappes massives sur l'Iran, tuant Khamenei. Analyse complète du conflit en cours, jour par jour."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Arabic:wght@300;400;600;700;900&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
-    :root{
-      --ink:#1a1a2a; --paper:#ffffff; --offwhite:#f8f7f4; --cream:#f3f0e8;
-      --mid:#5a5870; --light:#9a96b0; --rule:#e2ddd8;
-      --accent:#8b3a8b;
-      --afrique:#c8821a;--amerique:#b83232;--europe:#1e5fa8;--asie:#1a8a6e;--orient:#8b3a8b;
-      --or:#d4a843; --body-max:760px;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Noto Serif Arabic',Georgia,serif;background:var(--offwhite);color:var(--ink);line-height:1.9;direction:rtl}
-    a{color:inherit;text-decoration:none}
-    #progress-bar{position:fixed;top:0;right:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear}
-
-    /* TOPBAR */
-    .topbar{background:#1a1a2a;color:#8a87a0;font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;padding:.45rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #2a2a3a}
-    .topbar a{color:#b8b4d0;transition:color .2s}.topbar a:hover{color:var(--or)}
-
-    /* MASTHEAD */
-    .masthead{background:var(--paper);border-bottom:3px solid var(--ink);padding:1.4rem 2rem 1rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
-    .masthead__logo{font-family:'Noto Serif Arabic',serif;font-size:clamp(1.4rem,3vw,2.4rem);font-weight:900;line-height:1.1;color:var(--accent)}
-    .masthead__logo span{display:block;font-size:.55em;font-weight:400;color:var(--mid);margin-top:.3rem}
-    .masthead__sub{font-family:'Noto Naskh Arabic',sans-serif;font-size:.72rem;color:var(--mid);text-align:left;line-height:1.8}
-
-    /* NAV */
-    nav{background:#1a1a2a;display:flex;flex-wrap:wrap;position:sticky;top:0;z-index:100;border-bottom:3px solid var(--accent)}
-    nav a{display:flex;align-items:center;gap:.5rem;padding:.7rem 1rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.8rem;color:#9a96b0;border-left:1px solid #2a2a3a;transition:background .2s,color .2s}
-    nav a:hover,nav a.active{background:#252535;color:var(--or)}
+    :root{--ink:#0d0e12;--paper:#f5f2eb;--offwhite:#faf8f3;--mid:#6b6860;--light:#a8a39a;--rule:#d8d3c8;--accent:#8b3a8b;--afrique:#c8821a;--amerique:#b83232;--europe:#1e5fa8;--asie:#1a8a6e;--orient:#8b3a8b;--body-max:760px}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+    body{font-family:'Source Serif 4',Georgia,serif;background:var(--offwhite);color:var(--ink);line-height:1.82}a{color:inherit;text-decoration:none}
+    #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear}
+    .topbar{background:var(--ink);color:#9a9591;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .topbar a{color:#c8c3bb;transition:color .2s}.topbar a:hover{color:#fff}
+    .masthead{background:var(--offwhite);border-bottom:3px solid var(--ink);padding:1.4rem 2rem 1rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+    .masthead__logo{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2.6rem);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+    .masthead__logo span{display:block;font-size:.55em;font-weight:600;font-style:italic;color:var(--mid)}
+    .masthead__sub{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-align:right;line-height:1.7}
+    nav{background:var(--ink);display:flex;flex-wrap:wrap;position:sticky;top:0;z-index:100}
+    nav a{display:flex;align-items:center;gap:.45rem;padding:.7rem 1.1rem;font-family:'DM Mono',monospace;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;color:#c8c3bb;border-right:1px solid #1e2028;transition:background .2s,color .2s}
+    nav a:hover,nav a.active{background:#1a1c24;color:#fff}
     nav a .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-    nav a[data-r="afrique"] .dot{background:var(--afrique)}
-    nav a[data-r="amerique"] .dot{background:var(--amerique)}
+    nav a[data-r="orient"] .dot{background:var(--orient)}
     nav a[data-r="europe"] .dot{background:var(--europe)}
     nav a[data-r="asie"] .dot{background:var(--asie)}
-    nav a[data-r="orient"] .dot{background:var(--orient)}
-    nav a.nav-cta{margin-right:auto;background:var(--amerique);color:#fff;border:none;font-weight:600}
-
-    /* HERO */
-    .article-hero{position:relative;height:clamp(300px,45vw,520px);overflow:hidden;background:#1a1a2a}
-    .article-hero__img{width:100%;height:100%;object-fit:cover;filter:brightness(.55)}
-    .article-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,26,42,.97) 35%,rgba(26,26,42,.15) 100%)}
-    .article-hero__content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;max-width:calc(var(--body-max)+4rem);margin:0 auto}
+    nav a[data-r="afrique"] .dot{background:var(--afrique)}
+    nav a[data-r="amerique"] .dot{background:var(--amerique)}
+    nav a.nav-cta{margin-left:auto;background:var(--amerique);color:#fff;border:none;font-weight:500}
+    /* BREAKING BANNER */
+    .breaking-banner{background:#8b1a1a;color:#fff;padding:.6rem 2rem;display:flex;align-items:center;gap:1rem;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em}
+    .breaking-tag{background:#fff;color:#8b1a1a;font-weight:700;padding:.15rem .45rem;font-size:.65rem;flex-shrink:0;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+    .article-hero{position:relative;height:clamp(320px,48vw,580px);overflow:hidden;background:var(--ink)}
+    .article-hero__img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(.45)}
+    .article-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,14,18,.97) 35%,rgba(13,14,18,.1) 100%)}
+    .article-hero__content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;max-width:calc(var(--body-max) + 4rem);margin:0 auto}
     .article-hero__tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.9rem}
-    .tag-badge{display:inline-block;font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;padding:.22rem .6rem;color:#fff;border-radius:2px}
-    .article-hero h1{font-family:'Noto Serif Arabic',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;line-height:1.15;color:#fff;margin-bottom:.8rem}
-    .article-hero h1 em{font-style:normal;color:var(--or)}
-    .article-hero__sub{font-size:1rem;color:rgba(255,255,255,.75);max-width:680px;line-height:1.85}
-
-    /* META BAR */
-    .meta-bar{background:var(--paper);border-bottom:1px solid var(--rule);padding:.9rem 2rem;box-shadow:0 1px 4px rgba(0,0,0,.05)}
-    .meta-bar__inner{max-width:calc(var(--body-max)+4rem);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
-    .meta-item{font-family:'Noto Naskh Arabic',sans-serif;font-size:.72rem;color:var(--light)}
-    .meta-item strong{color:var(--mid)}
-    .meta-sep{color:var(--rule)}
-
-    /* LAYOUT */
-    .article-layout{max-width:1200px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 280px;gap:4rem;align-items:start}
+    .tag-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;color:#fff}
+    .article-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.9rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:.8rem}
+    .article-hero h1 em{font-style:italic;color:#e8b090}
+    .article-hero__sub{font-size:1rem;color:rgba(255,255,255,.68);font-style:italic;max-width:660px;line-height:1.65}
+    .meta-bar{background:#fff;border-bottom:1px solid var(--rule);padding:.9rem 2rem}
+    .meta-bar__inner{max-width:calc(var(--body-max) + 4rem);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+    .meta-item{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--light)}
+    .meta-item strong{color:var(--mid)}.meta-sep{color:var(--rule)}
+    .article-layout{max-width:1200px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 270px;gap:4.5rem;align-items:start}
     @media(max-width:920px){.article-layout{grid-template-columns:1fr;gap:2rem}}
-
-    /* ARTICLE BODY */
     .article-body{max-width:var(--body-max)}
-    .article-body>p:first-of-type::first-letter{font-family:'Noto Serif Arabic',serif;font-size:4rem;font-weight:900;float:right;line-height:.85;margin:.05em 0 -.05em .15em;color:var(--accent)}
-    .article-body p{font-size:1.06rem;line-height:1.95;margin-bottom:1.6rem;color:#2a2a3a}
-    .article-body strong{font-weight:700;color:var(--ink)}
-    .article-body ul{margin:1rem 0 1.5rem 0;padding-right:1.6rem}
-    .article-body li{font-size:1rem;line-height:1.85;margin-bottom:.6rem;color:#2a2a3a}
-
-    .ch-label{font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;letter-spacing:.05em;color:var(--accent);margin-bottom:.3rem;display:flex;align-items:center;gap:.8rem;flex-direction:row-reverse}
-    .ch-label::before{content:'';flex:1;height:1px;background:var(--rule)}
-
-    .article-body h2{font-family:'Noto Serif Arabic',serif;font-size:1.6rem;font-weight:700;line-height:1.25;margin:3rem 0 1rem;padding-top:.6rem;border-top:2px solid var(--ink);color:var(--ink)}
-    .article-body h3{font-family:'Noto Serif Arabic',serif;font-size:1.1rem;font-weight:600;margin:2rem 0 .8rem;color:var(--accent)}
-
-    .article-body blockquote{margin:2.5rem 0;padding:1.6rem 2rem;border-right:4px solid var(--accent);background:var(--cream);font-family:'Noto Serif Arabic',serif;font-size:1.1rem;font-weight:600;line-height:1.7;color:var(--ink)}
-    .article-body blockquote cite{display:block;margin-top:.7rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;font-weight:400;color:var(--mid)}
-
+    .article-body>p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4.2em;font-weight:900;float:left;line-height:.82;margin:.05em .12em -.05em 0;color:var(--accent)}
+    .article-body p{font-size:1.05rem;line-height:1.84;margin-bottom:1.5rem;color:#1a1b20}
+    .article-body strong{font-weight:600;color:var(--ink)}
+    .ch-label{font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem;display:flex;align-items:center;gap:.7rem}
+    .ch-label::after{content:'';flex:1;height:1px;background:var(--rule)}
+    .article-body h2{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;line-height:1.2;margin:3rem 0 1rem;padding-top:.6rem;border-top:2px solid var(--ink)}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin:1.8rem 0 .7rem;color:var(--mid)}
+    .article-body blockquote{margin:2.5rem 0;padding:1.6rem 2rem;border-left:4px solid var(--accent);background:var(--paper);font-family:'Playfair Display',serif;font-size:1.08rem;font-style:italic;font-weight:600;line-height:1.55;color:var(--ink)}
+    .article-body blockquote cite{display:block;margin-top:.7rem;font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;font-style:normal;font-weight:400;color:var(--light)}
+    /* TIMELINE */
+    .timeline{margin:2.5rem 0;border-left:3px solid var(--accent);padding-left:1.8rem;position:relative}
+    .timeline-item{margin-bottom:2rem;position:relative}
+    .timeline-item::before{content:'';position:absolute;left:-2.4rem;top:.35rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--offwhite)}
+    .timeline-date{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+    .timeline-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:.4rem;color:var(--ink)}
+    .timeline-body{font-size:.92rem;color:var(--mid);line-height:1.72}
     /* STATS */
     .stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2rem 0}
-    .stat-cell{background:var(--paper);padding:1.2rem;text-align:center}
-    .stat-cell__num{font-family:'Noto Serif Arabic',serif;font-size:1.8rem;font-weight:900;color:var(--accent);line-height:1}
-    .stat-cell__label{font-family:'Noto Naskh Arabic',sans-serif;font-size:.63rem;color:var(--mid);margin-top:.3rem;line-height:1.5}
-
-    /* COMPARISON TABLE */
-    .comparison-header{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center;margin:2rem 0;padding:1.5rem;background:var(--paper);border:1px solid var(--rule);box-shadow:0 2px 8px rgba(0,0,0,.06)}
-    .country-box{text-align:center;padding:1rem}
-    .country-flag{font-size:2.5rem;margin-bottom:.5rem}
-    .country-name{font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:900;margin-bottom:.3rem}
-    .country-score{font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem}
-    .vs-badge{font-family:'Noto Serif Arabic',serif;font-size:2rem;font-weight:900;color:var(--accent);text-align:center}
-    .comparison-table{margin:2rem 0;overflow-x:auto}
-    .comparison-table table{width:100%;border-collapse:collapse;font-size:.9rem}
-    .comparison-table th{background:var(--ink);color:#fff;font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;padding:.7rem 1rem;text-align:right}
-    .comparison-table td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);text-align:right}
-    .comparison-table tr:nth-child(even) td{background:var(--cream)}
-    .comparison-table td:first-child{font-weight:600;color:var(--mid);font-size:.85rem}
-
-    /* VERDICT */
-    .verdict-box{margin:2.5rem 0;border:2px solid var(--accent);background:var(--paper);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.08)}
-    .verdict-title{background:var(--accent);color:#fff;font-family:'Noto Naskh Arabic',sans-serif;font-size:.78rem;padding:.7rem 1.2rem;font-weight:700}
-    .verdict-content{padding:1.5rem 1.7rem}
-    .verdict-content p{font-size:.95rem;line-height:1.78;margin-bottom:.7rem;color:#2a2a3a}.verdict-content p:last-child{margin-bottom:0}
-    .verdict-content strong{color:var(--ink)}
-
-    /* SCENARIO GRID */
+    .stat-cell{background:#fff;padding:1.1rem;text-align:center}
+    .stat-cell__num{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;color:var(--accent);line-height:1}
+    .stat-cell__label{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mid);margin-top:.3rem;line-height:1.4}
+    /* MAP TABLE */
+    .map-table{margin:2rem 0;overflow-x:auto}
+    .map-table table{width:100%;border-collapse:collapse;font-size:.88rem}
+    .map-table th{background:var(--ink);color:#fff;font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;padding:.7rem 1rem;text-align:left}
+    .map-table td{padding:.6rem 1rem;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.55}
+    .map-table tr:nth-child(even) td{background:var(--paper)}
+    /* SCENARIO */
     .scenario-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:2rem 0}
-    .scenario-card{border:1px solid var(--rule);background:var(--paper);overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.05)}
-    .scenario-card__head{padding:.6rem 1rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;font-weight:700;color:#fff}
-    .scenario-card__body{padding:1rem;font-size:.88rem;line-height:1.7;color:var(--mid)}
-    .scenario-card__title{font-family:'Noto Serif Arabic',serif;font-size:.98rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
-
+    .scenario-card{border:1px solid var(--rule);background:#fff;overflow:hidden}
+    .scenario-card__head{padding:.6rem 1rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:#fff}
+    .scenario-card__body{padding:1rem;font-size:.84rem;line-height:1.65;color:var(--mid)}
+    .scenario-card__title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
     /* AUTHOR */
-    .author-inline{margin:3rem 0 2rem;padding:1.5rem 1.7rem;background:var(--cream);border:1px solid var(--rule);border-right:4px solid var(--accent);display:flex;gap:1.2rem;align-items:flex-start}
-    .author-inline__avatar{width:52px;height:52px;border-radius:50%;background:var(--accent);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:900;color:#fff}
-    .author-inline__name{font-family:'Noto Serif Arabic',serif;font-size:1rem;font-weight:700;margin-bottom:.15rem;color:var(--ink)}
-    .author-inline__role{font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;color:var(--accent);margin-bottom:.5rem}
-    .author-inline__bio{font-size:.88rem;color:var(--mid);line-height:1.7;margin:0!important}
-
-    /* TAGS */
+    .author-inline{margin:3rem 0 2rem;padding:1.4rem 1.6rem;background:#fff;border:1px solid var(--rule);border-top:3px solid var(--accent);display:flex;gap:1.2rem;align-items:flex-start}
+    .author-inline__avatar{width:52px;height:52px;border-radius:50%;background:var(--accent);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:#fff}
+    .author-inline__name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:.15rem}
+    .author-inline__role{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+    .author-inline__bio{font-size:.85rem;color:var(--mid);line-height:1.6;margin:0!important}
     .article-tags{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
-    .article-tags__label{font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;color:var(--light);margin-left:.3rem}
-    .tag-pill{font-family:'Noto Naskh Arabic',sans-serif;font-size:.68rem;padding:.25rem .7rem;border:1px solid var(--rule);color:var(--mid);background:var(--paper);transition:all .2s;cursor:pointer}
-    .tag-pill:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-
+    .article-tags__label{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-right:.3rem}
+    .tag-pill{font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .65rem;border:1px solid var(--rule);color:var(--mid);background:#fff}
     /* RELATED */
     .related{margin-top:3.5rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
-    .related__title{font-family:'Noto Serif Arabic',serif;font-size:1.2rem;font-weight:700;margin-bottom:1.4rem;color:var(--ink)}
-    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
-    .related-card{border:1px solid var(--rule);background:var(--paper);overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;display:block}
-    .related-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.1);border-color:var(--accent)}
-    .related-card__stripe{height:4px}
-    .related-card__body{padding:1rem 1.1rem}
-    .related-card h4{font-family:'Noto Serif Arabic',serif;font-size:.95rem;font-weight:700;line-height:1.4;margin-bottom:.5rem;color:var(--ink)}
-    .related-arrow{font-family:'Noto Naskh Arabic',sans-serif;font-size:.7rem;color:var(--accent)}
-
+    .related__title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:1.4rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:1rem}
+    .related-card{border:1px solid var(--rule);background:#fff;overflow:hidden;transition:transform .2s}
+    .related-card:hover{transform:translateY(-3px)}
+    .related-card__stripe{height:3px}.related-card__body{padding:.9rem}
+    .related-card h4{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;line-height:1.3}
     /* SIDEBAR */
     .sidebar{position:sticky;top:80px}
-    .sidebar-block{margin-bottom:2.2rem;background:var(--paper);border:1px solid var(--rule);padding:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
-    .sidebar-title{font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;color:var(--ink);border-bottom:2px solid var(--accent);padding-bottom:.4rem;margin-bottom:1rem;font-weight:700}
+    .sidebar-block{margin-bottom:2.2rem}
+    .sidebar-title{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--ink);padding-bottom:.4rem;margin-bottom:1rem}
     .toc-list{list-style:none}
-    .toc-list li{border-bottom:1px solid var(--rule);padding:.55rem 0;font-size:.88rem;line-height:1.4}
-    .toc-list li a{color:var(--mid);transition:color .2s;display:flex;gap:.5rem;align-items:flex-start;flex-direction:row-reverse}
+    .toc-list li{border-bottom:1px solid var(--rule);padding:.55rem 0;font-size:.82rem;line-height:1.4}
+    .toc-list li a{color:var(--mid);transition:color .2s;display:flex;gap:.5rem;align-items:flex-start}
     .toc-list li a:hover{color:var(--accent)}
-    .toc-num{font-family:'Noto Naskh Arabic',sans-serif;font-size:.65rem;color:var(--accent);flex-shrink:0}
-    .cta-box{background:linear-gradient(135deg,#1a1a2a,#2a1a3a);color:#fff;padding:1.5rem;text-align:center;border-radius:2px}
-    .cta-box h4{font-family:'Noto Serif Arabic',serif;font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:var(--or)}
-    .cta-box p{font-size:.82rem;color:rgba(255,255,255,.65);margin-bottom:1rem;line-height:1.7}
-    .cta-box a{display:inline-block;background:var(--orient);color:#fff;font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;padding:.6rem 1.4rem;transition:background .2s}
-    .cta-box a:hover{background:#6a2a6a}
-
-    /* FOOTER */
-    footer{background:#1a1a2a;color:#5a5870;padding:2.5rem 2rem;font-family:'Noto Naskh Arabic',sans-serif;font-size:.75rem;border-top:3px solid var(--accent)}
+    .toc-num{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);flex-shrink:0}
+    .live-box{background:#8b1a1a;color:#fff;padding:1.2rem;margin-bottom:1.5rem}
+    .live-box__title{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem}
+    .live-dot{width:8px;height:8px;border-radius:50%;background:#ff4444;animation:pulse 1.5s infinite}
+    .live-box__item{font-size:.8rem;line-height:1.6;padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85)}
+    .live-box__item:last-child{border-bottom:none}
+    .cta-box{background:var(--ink);color:#fff;padding:1.4rem;text-align:center}
+    .cta-box h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:.4rem}
+    .cta-box p{font-size:.75rem;color:rgba(255,255,255,.6);margin-bottom:.9rem;line-height:1.5}
+    .cta-box a{display:inline-block;background:var(--accent);color:#fff;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1rem}
+    footer{background:#0d0e12;color:#5e5a54;padding:2.5rem 2rem;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.07em}
     .footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}.footer-links a{color:#5a5870;transition:color .2s}.footer-links a:hover{color:var(--or)}
-
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}.footer-links a{color:#5e5a54;text-transform:uppercase;transition:color .2s}.footer-links a:hover{color:#c8c3bb}
     .fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}.fade-up.visible{opacity:1;transform:none}
-    @media(max-width:640px){.masthead{flex-direction:column;align-items:flex-start}nav a{font-size:.72rem;padding:.55rem .75rem}.article-layout{padding:1.5rem 1rem}.article-hero__content{padding:1.5rem 1rem}}
+    @media(max-width:640px){.masthead{flex-direction:column;align-items:flex-start}nav a{font-size:.65rem;padding:.6rem .8rem}.article-layout{padding:2rem 1rem}.article-hero__content{padding:1.5rem 1rem}}
   </style>
 </head>
 <body>
 <div id="progress-bar"></div>
+
 <div class="topbar">
-  <span>تحليلات جيوسياسية — <strong style="color:var(--or)">القوى والصراعات في القرن الحادي والعشرين</strong></span>
-  <span><a href="https://https://fr.geopolo.com" style="color:var(--or)">🇫🇷 Français</a> · <a href="/abonnement.html">الاشتراك</a></span>
+  <span>Analyses Géopolitiques — <strong style="color:#c8c3bb">Puissances &amp; Conflits du XXIe siècle</strong></span>
+  <span><a href="https://geopolitics-ar.nasseralsabri.workers.dev" style="background:#d4a843;color:#0a0a12;padding:.18rem .55rem;font-weight:700;font-size:.72rem;">🌐 عربي</a> &nbsp;·&nbsp; <a href="/abonnement.html">Abonnement</a> &nbsp;·&nbsp; <a href="#">Contact</a></span>
 </div>
+
 <header class="masthead">
-  <a href="/" class="masthead__logo">تحليلات جيوسياسية<span>مجلة استراتيجية مستقلة</span></a>
-  <div class="masthead__sub">تأسست عام 2024 · تورسينج، فرنسا · مارس 2026</div>
+  <a href="/index.html" class="masthead__logo">Analyses<br>Géopolitiques<span>Revue stratégique indépendante</span></a>
+  <div class="masthead__sub">Fondée en 2024 · Tourcoing, France · Mis à jour 26 mars 2026</div>
 </header>
+
 <nav>
-  <a href="/">الرئيسية</a>
-  <a href="/afr.html" data-r="afrique"><span class="dot"></span>أفريقيا</a>
-  <a href="/ame.html" data-r="amerique"><span class="dot"></span>أمريكا</a>
-  <a href="/eu.html" data-r="europe"><span class="dot"></span>أوروبا</a>
-  <a href="/asie.html" data-r="asie"><span class="dot"></span>آسيا</a>
-  <a href="/proche-or.html" data-r="orient" class="active"><span class="dot"></span>الشرق الأوسط</a>
-  <a href="/abonnement.html" class="nav-cta">الاشتراك المميز ←</a>
+  <a href="/index.html">Accueil</a>
+  <a href="/afr.html" data-r="afrique"><span class="dot"></span>Afrique</a>
+  <a href="/ame.html" data-r="amerique"><span class="dot"></span>Amérique</a>
+  <a href="/eu.html" data-r="europe"><span class="dot"></span>Europe</a>
+  <a href="/asie.html" data-r="asie"><span class="dot"></span>Asie</a>
+  <a href="/proche-or.html" data-r="orient" class="active"><span class="dot"></span>Proche-Orient</a>
+  <a href="/abonnement.html" class="nav-cta">Accès Premium →</a>
 </nav>
+
+<div class="breaking-banner">
+  <span class="breaking-tag">🔴 EN COURS</span>
+  <span>Jour 26 — Guerre USA-Israël contre Iran · Les frappes continuent · Détroit d'Hormuz perturbé · Pétrole >100$/baril</span>
+</div>
+
 <div class="article-hero">
-  <img class="article-hero__img" src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=1400&auto=format&fit=crop&q=70" alt="حرب إيران-إسرائيل: يوميات نزاع جارٍ"/>
+  <img class="article-hero__img" src="https://images.unsplash.com/photo-1604152135912-04a022e23696?w=1400&auto=format&fit=crop&q=70" alt="Guerre Iran Israël 2026"/>
   <div class="article-hero__overlay"></div>
   <div class="article-hero__content">
-    <div class="article-hero__tags"><span class="tag-badge" style="background:#8b1a1a">🔴 نزاع جارٍ</span><span class="tag-badge" style="background:#8b3a8b">الشرق الأوسط</span></div>
-    <h1>حرب إيران-إسرائيل:<br><em>يوميات نزاع جارٍ</em></h1>
-    <p class="article-hero__sub">في 28 فبراير 2026، شنّت الولايات المتحدة وإسرائيل ضربات مشتركة على إيران فأردت خامنئي. اليوم 26: تحليل شامل لحرب تُعيد رسم الشرق الأوسط.</p>
+    <div class="article-hero__tags">
+      <span class="tag-badge" style="background:#8b1a1a">🔴 Conflit en cours</span>
+      <span class="tag-badge" style="background:#8b3a8b">Proche-Orient</span>
+      <span class="tag-badge" style="background:#b83232">USA · Israël · Iran</span>
+    </div>
+    <h1>La guerre Iran-Israël :<br><em>chronique d'un conflit en cours</em></h1>
+    <p class="article-hero__sub">Le 28 février 2026, les États-Unis et Israël ont lancé des frappes massives sur l'Iran, tuant le Guide Suprême Khamenei. Jour 26 : analyse complète d'une guerre qui redéfinit le Moyen-Orient.</p>
   </div>
 </div>
+
 <div class="meta-bar">
   <div class="meta-bar__inner">
-    <span class="meta-item">✍ <strong>ناصر الصبري</strong></span>
+    <span class="meta-item">✍ <strong>Nasser AL SABRI</strong></span>
     <span class="meta-sep">·</span>
     <span class="meta-item">🏛 <strong>ITAB</strong></span>
     <span class="meta-sep">·</span>
-    <span class="meta-item">📅 <strong>محدّث 26 مارس 2026</strong></span>
+    <span class="meta-item">📅 Mis à jour : <strong>26 mars 2026</strong></span>
     <span class="meta-sep">·</span>
-    <span class="meta-item">⏱ قراءة: <strong>18 دقيقة</strong></span>
+    <span class="meta-item">⏱ Lecture : <strong>18 min</strong></span>
     <span class="meta-sep">·</span>
-    <span class="meta-item">القسم: <strong style="color:var(--accent)">الشرق الأوسط</strong></span>
+    <span class="meta-item" style="color:#8b1a1a;font-weight:700">🔴 Article mis à jour en temps réel</span>
   </div>
 </div>
+
 <div class="article-layout">
   <article class="article-body fade-up">
 
-    <p>كان هذا المقال يطرح سؤالاً: «هل حرب إيران-إسرائيل حتمية؟» — أصبح السؤال الآن جزءاً من التاريخ. <strong>في 28 فبراير 2026، فجر الثلاثاء، شنّت الولايات المتحدة وإسرائيل «عملية الغضب الملحمي» (Operation Epic Fury)، ضربات مباغتة وشاملة على إيران.</strong> في غضون ساعات، أُعلن مقتل المرشد الأعلى علي خامنئي في مكتبه بطهران. دخل الشرق الأوسط أخطر مرحلة منذ عقود. اليوم 26 من الحرب — التحليل الكامل.</p>
+    <p>La question que posait cet article il y a encore quelques semaines — «Une guerre Iran-Israël est-elle inévitable ?» — appartient désormais à l'histoire. <strong>Le 28 février 2026, à l'aube, les États-Unis et Israël ont lancé une opération militaire massive sur l'Iran, baptisée «Operation Epic Fury».</strong> En quelques heures, le Guide Suprême Ali Khamenei était assassiné dans son bureau à Téhéran. Le Moyen-Orient entrait dans sa phase la plus dangereuse depuis des décennies. Vingt-six jours plus tard, le conflit continue.</p>
 
+    <p>Cet article — initialement une analyse prospective — est entièrement réécrit pour rendre compte de la réalité du conflit en cours : sa chronologie, ses acteurs, ses bilans humains, ses enjeux géopolitiques et les scénarios de sortie. Car si la question de l'inévitabilité est désormais dépassée, celle de l'issue reste entièrement ouverte.</p>
+
+    <!-- CHIFFRES CLÉS -->
     <div class="stats-row">
-      <div class="stat-cell"><div class="stat-cell__num">26</div><div class="stat-cell__label">يوماً من الحرب (حتى 26 مارس)</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">1,500+</div><div class="stat-cell__label">قتيل إيراني (وزارة الصحة)</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">18</div><div class="stat-cell__label">قتيل إسرائيلي</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">82</div><div class="stat-cell__label">قتيل عراقي (فصائل)</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">13</div><div class="stat-cell__label">جندي أمريكي قُتل</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">1,072</div><div class="stat-cell__label">قتيل لبناني (حرب موازية)</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">9 دول</div><div class="stat-cell__label">تعرّضت لضربات إيرانية</div></div>
-      <div class="stat-cell"><div class="stat-cell__num">>100$</div><div class="stat-cell__label">سعر برميل النفط</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">26</div><div class="stat-cell__label">jours de conflit (au 26 mars)</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">1 500+</div><div class="stat-cell__label">morts iraniens (Min. santé)</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">18</div><div class="stat-cell__label">morts israéliens (attaques iraniennes)</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">82</div><div class="stat-cell__label">morts irakiens (frappes US sur PMF)</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">13</div><div class="stat-cell__label">soldats américains tués</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">1 072</div><div class="stat-cell__label">morts libanais (guerre parallèle)</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">9</div><div class="stat-cell__label">pays visés par les contre-frappes iraniennes</div></div>
+      <div class="stat-cell"><div class="stat-cell__num">>100$</div><div class="stat-cell__label">prix du baril de pétrole</div></div>
     </div>
 
-    <div class="ch-label">الجزء الأول · الطريق إلى الحرب</div>
-    <h2 id="route">من الحرب الخفية إلى الحرب المفتوحة: 2024-2026</h2>
+    <!-- CHRONOLOGIE -->
+    <div class="ch-label">Partie I · La route vers la guerre</div>
+    <h2 id="contexte">De la guerre de l'ombre à la guerre ouverte : 2024–2026</h2>
 
-    <p>في أبريل 2024، ولأول مرة في تاريخهما، تبادلت إيران وإسرائيل الضربات مباشرةً على أراضي كل منهما. في يونيو 2025، شنّت إسرائيل والولايات المتحدة «حرب الاثني عشر يوماً» ضد المنشآت النووية الإيرانية. توقف بوساطة عُمانية في 24 يونيو. في يناير 2026، قُتل آلاف المحتجين في إيران على يد قوات الأمن — أكبر احتجاجات منذ الثورة الإسلامية. في فبراير 2026، مفاوضات نووية غير مباشرة بين واشنطن وطهران عبر عُمان أنجزت «تقدماً ملحوظاً» وفق الوسيط العُماني. ثم في 28 فبراير — في فجر اليوم التالي لانتهاء المفاوضات دون اتفاق — انطلقت الضربات.</p>
+    <p>Pour comprendre le conflit actuel, il faut remonter à 2024. Cette année-là, pour la première fois dans l'histoire de leurs relations, Iran et Israël se sont attaqués <em>directement</em> sur leurs territoires respectifs — rompant avec sept décennies de guerre exclusivement par procuration.</p>
 
-    <div class="ch-label">الجزء الثاني · الرد الإيراني</div>
-    <h2 id="riposte">300 صاروخ، 9 دول، مضيق هرمز سلاحاً</h2>
-    <p>جاء الرد الإيراني على ثلاثة محاور متزامنة. على إسرائيل: 300 صاروخ في العشرة أيام الأولى، نصفها مجهّز بذخائر عنقودية محظورة دولياً. على القواعد الأمريكية: ضرب 27 قاعدة أمريكية في 9 دول (البحرين، الكويت، قطر، السعودية، الأردن، العراق، عُمان، تركيا، الإمارات). على البنية التحتية الطاقوية: ضرب حقل غاز جنوب بارس الإيراني من قِبَل إسرائيل أثار رداً إيرانياً بضرب منشأة ميناء الأحمدي النفطية في الكويت. <strong>أخطر سلاح: مضيق هرمز — حيث علّقت إيران حركة الملاحة جزئياً، محرّكةً سعر برميل النفط إلى ما فوق 100 دولار.</strong></p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Avril 2024</div>
+        <div class="timeline-title">Premier échange direct Iran-Israël</div>
+        <div class="timeline-body">Israël frappe le consulat iranien à Damas, tuant des officiers des Gardiens de la Révolution. L'Iran riposte en lançant plus de 300 drones et missiles sur Israël — une première dans l'histoire. Interception à 99% par Israël, les États-Unis, la Jordanie et le Royaume-Uni.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Juin 2025</div>
+        <div class="timeline-title">La «Guerre des 12 jours» — Opération israélo-américaine</div>
+        <div class="timeline-body">Israël et les États-Unis lancent des frappes massives sur les installations nucléaires iraniennes (Natanz, Fordow, Isfahan) et les infrastructures militaires. Les défenses S-300 iraniennes sont presque entièrement détruites. Cessez-le-feu le 24 juin, négocié par Oman. Trump appelle le conflit la «guerre des 12 jours» en référence à la guerre des Six Jours de 1967.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Janvier 2026</div>
+        <div class="timeline-title">Protestations massives en Iran — réprimées dans le sang</div>
+        <div class="timeline-body">Les plus grandes manifestations depuis la Révolution islamique de 1979 secouent l'Iran. Des milliers de personnes sont tuées par les forces de sécurité. Trump menace une action militaire. Le régime est affaibli de l'intérieur.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Février 2026</div>
+        <div class="timeline-title">Négociations nucléaires indirectes — et leur rupture soudaine</div>
+        <div class="timeline-body">Des négociations nucléaires indirectes USA-Iran reprennent via Oman. Le médiateur omanais signale des «progrès significatifs». L'Iran serait prêt à des concessions majeures. Trump se dit «pas enthousiaste». Le 27 février — la veille des frappes — les pourparlers s'achèvent sans accord.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date" style="color:#8b1a1a;font-weight:700">28 Février 2026 — JOUR J</div>
+        <div class="timeline-title" style="color:#8b1a1a">Opération «Epic Fury» — Le début de la guerre</div>
+        <div class="timeline-body"><strong>Les États-Unis et Israël lancent des frappes surprise simultanées sur l'Iran.</strong> Plus de 1 200 bombes en 24 heures. Le Guide Suprême Ali Khamenei est assassiné dans son bureau au complexe de Beit Rahbari à Téhéran — sa fille, son gendre et son petit-fils sont également tués. Le ministre de la Défense et le chef d'état-major du CGRI sont tués. Trump confirme la mort de Khamenei sur Truth Social : «Khamenei, l'un des êtres les plus maléfiques de l'Histoire, est mort.»</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">1er mars 2026</div>
+        <div class="timeline-title">L'Iran contre-attaque — La région s'embrase</div>
+        <div class="timeline-body">L'Iran confirme la mort de Khamenei. Son fils est désigné successeur. 40 jours de deuil national décrétés. Le CGRI lance des centaines de missiles et drones sur Israël et 27 bases américaines dans 9 pays : Bahreïn, Koweït, Qatar, Arabie Saoudite, Jordanie, Irak, Oman, Turquie, Émirats arabes unis. Un drone frappe la base britannique d'Akrotiri à Chypre.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Mars 2026 (semaines 2–4)</div>
+        <div class="timeline-title">Escalade et front multilatéral</div>
+        <div class="timeline-body">Israël frappe le champ gazier de South Pars en Iran. L'Iran intensifie les attaques sur les infrastructures énergétiques du Golfe : la raffinerie Mina Al-Ahmadi au Koweït est frappée, des incendies se déclarent dans plusieurs unités. Le Liban : guerre parallèle Israël-Hezbollah avec 1 072 morts libanais. L'Irak : frappes américaines sur les PMF (Hachd al-Chaabi), 82 morts irakiens. Le détroit d'Hormuz est perturbé, le pétrole dépasse 100$/baril.</div>
+      </div>
+    </div>
+
+    <!-- OBJECTIFS -->
+    <div class="ch-label">Partie II · Objectifs déclarés et réels</div>
+    <h2 id="objectifs">Nucléaire, missiles, changement de régime : les buts de guerre</h2>
+
+    <p>Les objectifs officiellement déclarés par Washington et Tel-Aviv sont au nombre de trois. En pratique, ils recouvrent des ambitions divergentes qui compliquent la définition de ce que serait une «victoire».</p>
+
+    <div class="map-table">
+      <table>
+        <thead><tr><th>Objectif déclaré</th><th>Par qui</th><th>Réalité opérationnelle</th><th>Atteint ?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Détruire le programme nucléaire</strong></td><td>USA + Israël</td><td>Natanz et Fordow frappés. Mais l'AIEA n'a pas de preuve de destruction totale.</td><td>⚠️ Partiel</td></tr>
+          <tr><td><strong>Démanteler les missiles balistiques</strong></td><td>USA + Israël</td><td>75% des lanceurs détruits selon analyse JINSA. L'Iran continue de lancer des missiles, dit ne pas manquer de stock.</td><td>⚠️ Partiel</td></tr>
+          <tr><td><strong>Changement de régime</strong></td><td>Israël (USA ambigu)</td><td>Khamenei tué. Mais les CGRI, le parlement et la présidence restent en place. Le fils de Khamenei désigné successeur.</td><td>❌ Non atteint</td></tr>
+        </tbody>
+      </table>
+    </div>
 
     <blockquote>
-      «إزالة الشرعية الداخلية لنظام ما لا تعني زواله. الحرس الثوري والبرلمان ورئاسة الجمهورية لا تزال قائمة. اغتيال خامنئي أزال المفاوض الأعلى، لم يُزل النظام.»
-      <cite>— فالي نصر، SAIS جامعة جونز هوبكنز، مارس 2026</cite>
+      «Retirer la menace existentielle posée par le régime terroriste iranien.»
+      <cite>— Benjamin Netanyahu, déclaration du 28 février 2026 justifiant les frappes</cite>
     </blockquote>
 
-    <div class="ch-label">الجزء الثالث · سيناريوهات 60 يوماً</div>
-    <h2 id="scenarios">ثلاثة مسارات للحرب</h2>
+    <p>Netanyahu a adressé directement le peuple iranien en farsi, l'appelant à «sortir dans les rues, par millions, pour terminer le travail, pour renverser le régime de la peur». Cette rhétorique — qui mise sur une insurrection populaire intérieure pour achever le changement de régime que les bombes ne peuvent pas seules accomplir — révèle la limite fondamentale de la stratégie : une victoire militaire sans victoire politique ne produit pas la stabilité recherchée.</p>
+
+    <!-- RÉPONSE IRANIENNE -->
+    <div class="ch-label">Partie III · La riposte iranienne</div>
+    <h2 id="riposte">300 missiles, 9 pays, le détroit d'Hormuz comme arme</h2>
+
+    <p>La réponse iranienne s'est déployée sur trois axes simultanés, démontrant une capacité de résistance qui a surpris certains analystes après l'affaiblissement subi lors de la «guerre des 12 jours» de juin 2025.</p>
+
+    <h3>Axe 1 — Frappes directes sur Israël</h3>
+    <p>Au dixième jour du conflit, l'Iran avait tiré 300 missiles sur Israël, dont près de la moitié équipés de sous-munitions à fragmentation — des armes interdites par la Convention sur les munitions à fragmentation que l'Iran n'a pas signée. Le nombre de frappes a nettement diminué après le premier jour, attribué par l'analyse JINSA à la destruction de 75% des lanceurs iraniens par les frappes américano-israéliennes. Dix-huit Israéliens ont été tués, dont neuf civils dans une frappe sur un quartier résidentiel de Beit Shemesh le 1er mars.</p>
+
+    <h3>Axe 2 — Frappes sur les bases américaines régionales</h3>
+    <p>L'Iran a attaqué 27 bases militaires américaines dans 9 pays : Bahreïn (siège de la 5e Flotte US), Koweït, Qatar, Arabie Saoudite, Jordanie, Irak, Oman, Turquie et Émirats arabes unis. Treize soldats américains ont été tués, six autres lors du crash d'un avion-ravitailleur en Irak. Le CGRI a revendiqué des frappes sur l'île militaire britannique de Diego Garcia dans l'océan Indien — claim que l'Iran a ultérieurement démenti, parlant d'une «opération sous fausse bannière».</p>
+
+    <h3>Axe 3 — Détroit d'Hormuz et infrastructures énergétiques</h3>
+    <p><strong>C'est l'arme la plus redoutable de l'Iran.</strong> En perturbant la navigation dans le détroit d'Hormuz — par lequel transitent 20% du pétrole mondial et 20% du GNL mondial — Téhéran a déclenché une crise énergétique mondiale. Environ 2 000 navires et 20 000 marins sont bloqués dans le détroit. Le baril de Brent dépasse 100 dollars. Le Programme alimentaire mondial de l'ONU a averti que l'escalade militaire menace la sécurité alimentaire mondiale, 50% des exportations mondiales d'urée et de soufre transitant par le détroit.</p>
+
+    <blockquote>
+      «Les Houthis ont montré qu'un acteur non étatique pouvait perturber les routes maritimes mondiales. L'Iran, en tant qu'État, peut faire 10 fois pire.»
+      <cite>— Analyse CSIS, Washington D.C., mars 2026</cite>
+    </blockquote>
+
+    <!-- DIPLOMATIE -->
+    <div class="ch-label">Partie IV · La diplomatie impossible</div>
+    <h2 id="diplomatie">Négociations sous bombes : contradiction irrésoluble</h2>
+
+    <p>Vingt-six jours après le début du conflit, la situation diplomatique est paradoxale et volatile. Trump a affirmé le 24 mars que des «discussions» étaient en cours avec l'Iran pour un accord de paix global, déclarant que «l'Iran est sérieux». Téhéran a aussitôt démenti catégoriquement, le CGRI qualifiant ces déclarations de «fake news» et les leaders parlementaires de «gros mensonge». Les officiels iraniens ont accusé Washington de fabriquer ces affirmations pour manipuler les marchés pétroliers mondiaux et gagner du temps pendant le déploiement de renforts militaires.</p>
+
+    <div class="map-table">
+      <table>
+        <thead><tr><th>Acteur</th><th>Position</th><th>Intérêt</th></tr></thead>
+        <tbody>
+          <tr><td>🇺🇸 États-Unis (Trump)</td><td>Frappes continues + ouverture «talks»</td><td>Éliminer nucléaire + préserver économie US (pétrole)</td></tr>
+          <tr><td>🇮🇱 Israël (Netanyahu)</td><td>Poursuite jusqu'à changement de régime</td><td>Élimination définitive de la menace iranienne</td></tr>
+          <tr><td>🇮🇷 Iran</td><td>Résistance + ripostes + pas de négociation sous la contrainte</td><td>Rétablir la dissuasion, éviter l'effondrement du régime</td></tr>
+          <tr><td>🇷🇺 Russie</td><td>Condamne («meurtre cynique»)</td><td>Affaiblissement des USA, maintien du partenariat iranien</td></tr>
+          <tr><td>🇨🇳 Chine</td><td>Condamne «fermement»</td><td>Stabilité des marchés pétroliers, contre-pouvoir US</td></tr>
+          <tr><td>🇬🇧 Royaume-Uni</td><td>Rôle défensif uniquement</td><td>Protéger les bases et alliés sans s'engager offensivement</td></tr>
+          <tr><td>🇫🇷🇩🇪 Europe</td><td>Appel à la désescalade</td><td>Stabilité énergétique, droit international</td></tr>
+          <tr><td>Golfe (EAU, KSA, Qatar)</td><td>Victimes de frappes iraniennes, appellent au dialogue</td><td>Sécurité des infrastructures, sortie de crise rapide</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>L'absence de «sortie de crise» est le problème fondamental. Lors de la guerre des 12 jours de juin 2025, les frappes s'étaient concentrées sur des cibles nucléaires et militaires précises, laissant une marge pour la négociation. Cette fois, l'assassinat de Khamenei — une «décapitation» sans précédent dans la guerre moderne contre un chef d'État — a supprimé toutes les rampes de sortie diplomatiques. Il n'y a pas de cible définie dont la destruction signalerait la victoire. Il n'y a pas d'interlocuteur iranien qui puisse signer un cessez-le-feu sans apparaître comme capitulant devant l'assassinat de son guide suprême.</p>
+
+    <!-- SCÉNARIOS -->
+    <div class="ch-label">Partie V · Scénarios à horizon 60 jours</div>
+    <h2 id="scenarios">Trois trajectoires pour la suite du conflit</h2>
 
     <div class="scenario-grid">
       <div class="scenario-card">
-        <div class="scenario-card__head" style="background:#27ae60">السيناريو أ — وقف النار (30%)</div>
+        <div class="scenario-card__head" style="background:#27ae60">Scénario A — Accord négocié (30%)</div>
         <div class="scenario-card__body">
-          <div class="scenario-card__title">وساطة عُمانية-صينية</div>
-          <p>تُفضي وساطة بكين وعُمان إلى اتفاق هش. إيران توقف ضرباتها على الخليج. واشنطن تُوقف القصف. الاحتمال يرتفع إذا تجاوز النفط 120$/برميل باستمرار.</p>
+          <div class="scenario-card__title">Cessez-le-feu par épuisement</div>
+          <p>La médiation omanaise, soutenue par la Chine et la Russie, aboutit à un accord fragile. L'Iran suspend ses frappes sur le Golfe. Washington arrête les bombardements en échange d'engagements informels sur le nucléaire. Netanyahu accepte sous pression américaine. <strong>Probable si le prix du pétrole dépasse durablement 120$/baril.</strong></p>
         </div>
       </div>
       <div class="scenario-card">
-        <div class="scenario-card__head" style="background:#e67e22">السيناريو ب — استنزاف متوسط (50%)</div>
+        <div class="scenario-card__head" style="background:#e67e22">Scénario B — Guerre d'attrition (50%)</div>
         <div class="scenario-card__body">
-          <div class="scenario-card__title">الوضع الراهن يتمأسس</div>
-          <p>يستقر النزاع عند مستوى تبادل ضربات متقطعة دون اتفاق أو تصعيد حاسم. الأرجح إذا لم يتجاوز أي طرف عتبة جديدة.</p>
+          <div class="scenario-card__title">Statu quo conflictuel prolongé</div>
+          <p>Le conflit s'installe à un niveau d'intensité moyen : frappes ponctuelles des deux côtés, détroit d'Hormuz partiellement perturbé, sanctions maximales. Ni victoire ni cessez-le-feu. L'Iran se reconstruit lentement, Israël paie un coût économique croissant. <strong>Scénario le plus probable si aucun acteur ne franchit un nouveau seuil.</strong></p>
         </div>
       </div>
       <div class="scenario-card">
-        <div class="scenario-card__head" style="background:#c0392b">السيناريو ج — تصعيد إقليمي (20%)</div>
+        <div class="scenario-card__head" style="background:#c0392b">Scénario C — Escalade régionale (20%)</div>
         <div class="scenario-card__body">
-          <div class="scenario-card__title">اشتعال متعدد الجبهات</div>
-          <p>إيران تُغلق مضيق هرمز كلياً. الولايات المتحدة تقصف محطات الكهرباء الإيرانية. لبنان ينزلق نحو حرب شاملة. العراق يطرد القوات الأمريكية.</p>
+          <div class="scenario-card__title">Embrasement multifront</div>
+          <p>L'Iran ferme totalement le détroit d'Hormuz. Les États-Unis lancent des frappes sur les centrales électriques iraniennes. Le Liban s'embrase totalement. L'Irak expulse les forces américaines. Le Koweït ou Bahreïn demandent le retrait des bases US. <strong>Déclencheur possible : frappe iranienne causant des pertes massives dans un pays du Golfe.</strong></p>
         </div>
       </div>
     </div>
 
+    <!-- ANALYSE STRATÉGIQUE -->
+    <div class="ch-label">Partie VI · Analyse stratégique</div>
+    <h2 id="analyse">Ce que ce conflit change — et ce qu'il ne changera pas</h2>
+
+    <p>Indépendamment de son issue, la guerre du 28 février 2026 a déjà produit des effets stratégiques durables que ni une victoire militaire ni un cessez-le-feu ne pourront effacer.</p>
+
+    <p><strong>Premier effet : la mort du tabou des chefs d'État.</strong> En assassinant Khamenei, Israël a franchi une ligne que même les États-Unis n'avaient pas franchie contre Saddam Hussein avant l'invasion de 2003. Ce précédent — tuer le chef d'un État souverain dans une frappe aérienne — modifie les règles implicites de la guerre interétatique et expose potentiellement les dirigeants israéliens et américains à des représailles d'une nature similaire.</p>
+
+    <p><strong>Deuxième effet : la recomposition du paysage régional.</strong> L'Iran a frappé les pays du Golfe — qui avaient cherché à normaliser leurs relations avec lui — compromettant des années de diplomatie. Le Liban est à nouveau ravagé. L'Irak est tiraillé entre ses obligations envers Washington et sa population pro-iranienne. Le «croissant chiite» est gravement affaibli mais pas détruit.</p>
+
+    <p><strong>Troisième effet : l'énergie comme arme systémique.</strong> Le détroit d'Hormuz a démontré sa vulnérabilité. Même une perturbation partielle suffit à faire franchir au baril de pétrole le seuil des 100 dollars, menaçant une économie mondiale déjà fragilisée. La transition énergétique prend soudain un caractère d'urgence géopolitique que les discours climatiques seuls ne produisaient pas.</p>
+
+    <blockquote>
+      «Cette guerre montre que la dissuasion peut échouer même entre acteurs nucléaires — tant que la symétrie n'est pas complète. Israël a pu frapper parce qu'il savait que l'Iran n'avait pas encore la bombe. C'est la leçon que tous les États de la région vont retenir.»
+      <cite>— Vali Nasr, SAIS Johns Hopkins, mars 2026</cite>
+    </blockquote>
+
     <div class="article-tags">
-      <span class="article-tags__label">الكلمات المفتاحية:</span>
-      <span class="tag-pill">إيران</span><span class="tag-pill">إسرائيل</span>
-      <span class="tag-pill">الولايات المتحدة</span><span class="tag-pill">خامنئي</span>
-      <span class="tag-pill">هرمز</span><span class="tag-pill">حرب 2026</span>
+      <span class="article-tags__label">Tags :</span>
+      <span class="tag-pill">Iran</span><span class="tag-pill">Israël</span>
+      <span class="tag-pill">États-Unis</span><span class="tag-pill">Khamenei</span>
+      <span class="tag-pill">Hormuz</span><span class="tag-pill">Pétrole</span>
+      <span class="tag-pill">Guerre 2026</span>
     </div>
+
     <div class="author-inline">
-      <div class="author-inline__avatar">ن</div>
+      <div class="author-inline__avatar">N</div>
       <div>
-        <div class="author-inline__name">ناصر الصبري</div>
-        <div class="author-inline__role">مدير · المعهد الدولي لتحليل التهديدات (ITAB)</div>
-        <p class="author-inline__bio">محلل في الجيوسياسة والأنثروبولوجيا السياسية والعلاقات الدولية. يدير ITAB، المعهد المستقل لتحليل التهديدات الدولية.</p>
+        <div class="author-inline__name">Nasser AL SABRI</div>
+        <div class="author-inline__role">Directeur · International Threat Analysis Bureau (ITAB)</div>
+        <p class="author-inline__bio">Analyste en géopolitique, anthropologie politique et relations internationales. Dirige l'ITAB, bureau indépendant d'analyse des menaces internationales basé à Tourcoing, France.</p>
       </div>
     </div>
+
     <div class="related fade-up">
-      <div class="related__title">مقالات ذات صلة</div>
+      <div class="related__title">Articles liés</div>
       <div class="related-grid">
-        <a href="iran-vs-israel-comparaison-militaire.html" class="related-card">
-          <div class="related-card__stripe" style="background:#8b3a8b"></div>
-          <div class="related-card__body">
-            <h4>إيران ضد إسرائيل: مقارنة عسكرية</h4>
-            <span class="related-arrow">← اقرأ المقال</span>
-          </div>
-        </a>
-        <a href="empire-gouffre-iranien.html" class="related-card">
-          <div class="related-card__stripe" style="background:#8b3a8b"></div>
-          <div class="related-card__body">
-            <h4>الإمبراطورية أمام الهاوية الإيرانية</h4>
-            <span class="related-arrow">← اقرأ المقال</span>
-          </div>
-        </a>
-        <a href="crise-mer-rouge-commerce-mondial.html" class="related-card">
-          <div class="related-card__stripe" style="background:#8b3a8b"></div>
-          <div class="related-card__body">
-            <h4>أزمة البحر الأحمر</h4>
-            <span class="related-arrow">← اقرأ المقال</span>
-          </div>
-        </a>
+        <a href="iran-vs-israel-comparaison-militaire.html" class="related-card"><div class="related-card__stripe" style="background:#8b3a8b"></div><div class="related-card__body"><h4>Iran vs Israël : comparaison militaire</h4></div></a>
+        <a href="empire-gouffre-iranien.html" class="related-card"><div class="related-card__stripe" style="background:#8b3a8b"></div><div class="related-card__body"><h4>L'Empire devant le gouffre iranien</h4></div></a>
+        <a href="crise-mer-rouge-commerce-mondial.html" class="related-card"><div class="related-card__stripe" style="background:#8b3a8b"></div><div class="related-card__body"><h4>Crise mer Rouge : commerce mondial</h4></div></a>
+        <a href="russie-vs-otan-qui-est-le-plus-fort.html" class="related-card"><div class="related-card__stripe" style="background:#1e5fa8"></div><div class="related-card__body"><h4>Russie vs OTAN : qui est le plus fort ?</h4></div></a>
       </div>
     </div>
+
   </article>
+
   <aside class="sidebar">
+    <div class="live-box">
+      <div class="live-box__title"><span class="live-dot"></span> Mises à jour récentes</div>
+      <div class="live-box__item">⚡ Jour 26 — Frappes continuent sur les deux camps</div>
+      <div class="live-box__item">🛢️ Pétrole Brent dépasse 100$/baril</div>
+      <div class="live-box__item">🇱🇧 1 072 morts au Liban depuis le 2 mars</div>
+      <div class="live-box__item">🕌 Iran : parlement envisage de quitter le TNP</div>
+      <div class="live-box__item">🇺🇸 Trump envisage un «retrait progressif»</div>
+      <div class="live-box__item">🇮🇷 Iran frappe raffinerie Mina Al-Ahmadi (Koweït)</div>
+    </div>
+
     <div class="sidebar-block">
-      <div class="sidebar-title">المحتويات</div>
+      <div class="sidebar-title">Sommaire</div>
       <ul class="toc-list">
-        <li><a href="#route"><span class="toc-num">1.</span> الطريق إلى الحرب</a></li>
-        <li><a href="#objectifs"><span class="toc-num">2.</span> أهداف الحرب</a></li>
-        <li><a href="#riposte"><span class="toc-num">3.</span> الرد الإيراني</a></li>
-        <li><a href="#diplomatie"><span class="toc-num">4.</span> الدبلوماسية المستحيلة</a></li>
-        <li><a href="#scenarios"><span class="toc-num">5.</span> سيناريوهات 60 يوماً</a></li>
-        <li><a href="#analyse"><span class="toc-num">6.</span> تحليل استراتيجي</a></li>
+        <li><a href="#contexte"><span class="toc-num">1.</span> La route vers la guerre</a></li>
+        <li><a href="#objectifs"><span class="toc-num">2.</span> Objectifs de guerre</a></li>
+        <li><a href="#riposte"><span class="toc-num">3.</span> Riposte iranienne</a></li>
+        <li><a href="#diplomatie"><span class="toc-num">4.</span> Diplomatie impossible</a></li>
+        <li><a href="#scenarios"><span class="toc-num">5.</span> Scénarios à 60 jours</a></li>
+        <li><a href="#analyse"><span class="toc-num">6.</span> Analyse stratégique</a></li>
       </ul>
     </div>
+
     <div class="cta-box">
-      <h4>الاشتراك المميز</h4>
-      <p>تحليلات كاملة وأرشيف ومذكرات ميدانية حصرية للمشتركين.</p>
-      <a href="/abonnement.html">اشترك الآن ←</a>
+      <h4>Accès Premium</h4>
+      <p>Analyses quotidiennes du conflit réservées aux abonnés.</p>
+      <a href="/abonnement.html">S'abonner →</a>
     </div>
   </aside>
 </div>
+
 <footer>
   <div class="footer-inner">
-    <span>© 2026 تحليلات جيوسياسية</span>
+    <span>© 2026 Analyses Géopolitiques — Article mis à jour le 26 mars 2026</span>
     <div class="footer-links">
-      <a href="/">الرئيسية</a>
-      <a href="/proche-or.html">الشرق الأوسط</a>
-      <a href="#">تواصل معنا</a>
+      <a href="/index.html">Accueil</a>
+      <a href="/proche-or.html">Proche-Orient</a>
+      <a href="#">Contact</a>
     </div>
   </div>
 </footer>
+
 <script>
   window.addEventListener('scroll',()=>{const d=document.documentElement;document.getElementById('progress-bar').style.width=(d.scrollTop/(d.scrollHeight-d.clientHeight)*100)+'%'});
   const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.06});
