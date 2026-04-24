@@ -3,9 +3,136 @@
 <head>
   <meta charset="utf-8">
   <title>Abonnement – Analyses GéoPolitique</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f1a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAV */
+header {
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* PLANS */
+.pricing {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.plan {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.btn {
+  background: #4f8cff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+}
+
+/* 🌟 ÉTOILES */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.stars::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveStars 120s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* 🌧️ PLUIE */
+.rain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.rain::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(255,255,255,0.3));
+  animation: rain 0.5s linear infinite;
+}
+
+@keyframes rain {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+</style>css">
 </head>
 <body>
+  <div class="stars"></div>
+<div class="rain"></div>
   <header>
     <nav>
       <h1>Analyses GéoPolitique</h1>
