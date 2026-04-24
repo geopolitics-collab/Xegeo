@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La hallucination américaine sur l'ISRU chinois — Analyses Géopolitiques</title>
+  <meta name="description" content="Washington répète que la Chine veut « prédater » les ressources lunaires. Une analyse technique et géopolitique rigoureuse démontre que ce narratif est économiquement incohérent — et politiquement révélateur." />
+  <meta property="og:title" content="La hallucination américaine sur l'ISRU chinois" />
+  <meta property="og:description" content="Washington répète que la Chine veut prédater les ressources lunaires. L'examen technique démontre que ce narratif est faux — et politiquement instrumentalisé." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=70" />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink:#0d0e12; --paper:#f5f2eb; --offwhite:#faf8f3;
+      --mid:#6b6860; --light:#a8a39a; --rule:#d8d3c8;
+      --accent:#1a8a6e;
+      --afrique:#c8821a; --amerique:#b83232;
+      --europe:#1e5fa8; --asie:#1a8a6e; --orient:#8b3a8b;
+      --body-max:720px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Source Serif 4',Georgia,serif;background:var(--offwhite);color:var(--ink);line-height:1.75}
+    a{color:inherit;text-decoration:none}
+
+    #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear}
+
+    .topbar{background:var(--ink);color:#9a9591;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .topbar a{color:#c8c3bb;transition:color .2s}.topbar a:hover{color:#fff}
+
+    .masthead{background:var(--offwhite);border-bottom:3px solid var(--ink);padding:1.4rem 2rem 1rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+    .masthead__logo{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2.6rem);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+    .masthead__logo span{display:block;font-size:.55em;font-weight:600;font-style:italic;letter-spacing:.02em;color:var(--mid)}
+    .masthead__sub{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-align:right;line-height:1.7}
+
+    nav{background:var(--ink);display:flex;flex-wrap:wrap;position:sticky;top:0;z-index:100}
+    nav a{display:flex;align-items:center;gap:.45rem;padding:.7rem 1.1rem;font-family:'DM Mono',monospace;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;color:#c8c3bb;border-right:1px solid #1e2028;transition:background .2s,color .2s}
+    nav a:hover,nav a.active{background:#1a1c24;color:#fff}
+    nav a .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+    nav a[data-r="afrique"] .dot{background:var(--afrique)}
+    nav a[data-r="amerique"] .dot{background:var(--amerique)}
+    nav a[data-r="europe"] .dot{background:var(--europe)}
+    nav a[data-r="asie"] .dot{background:var(--asie)}
+    nav a[data-r="orient"] .dot{background:var(--orient)}
+    nav a.nav-cta{margin-left:auto;background:var(--amerique);color:#fff;border:none;font-weight:500}
+    nav a.nav-cta:hover{background:#9e2020}
+
+    .article-hero{position:relative;height:clamp(300px,45vw,520px);overflow:hidden;background:var(--ink)}
+    .article-hero__img{width:100%;height:100%;object-fit:cover;filter:grayscale(20%) brightness(.65);transition:transform 8s ease}
+    .article-hero:hover .article-hero__img{transform:scale(1.03)}
+    .article-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,14,18,.92) 30%,rgba(13,14,18,.2) 100%)}
+    .article-hero__content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;max-width:calc(var(--body-max) + 4rem);margin:0 auto}
+    .article-hero__tag{display:inline-block;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.22rem .6rem;margin-bottom:.9rem}
+    .article-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:.8rem}
+    .article-hero__sub{font-size:1rem;color:rgba(255,255,255,.72);font-style:italic;max-width:640px}
+
+    .meta-bar{background:#fff;border-bottom:1px solid var(--rule);padding:.9rem 2rem}
+    .meta-bar__inner{max-width:calc(var(--body-max) + 4rem);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+    .meta-item{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--light);display:flex;align-items:center;gap:.35rem}
+    .meta-item strong{color:var(--mid)}
+    .meta-sep{color:var(--rule)}
+    .meta-bar__share{margin-left:auto;display:flex;gap:.5rem}
+    .share-btn{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid var(--rule);background:#fff;cursor:pointer;color:var(--mid);transition:background .2s,color .2s,border-color .2s}
+    .share-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    .article-layout{max-width:1180px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 260px;gap:4rem;align-items:start}
+    @media(max-width:900px){.article-layout{grid-template-columns:1fr;gap:2rem}}
+
+    .article-body{max-width:var(--body-max)}
+
+    .article-body>p:first-of-type::first-letter{font-family:'Playfair Display',serif;font-size:4.2em;font-weight:900;float:left;line-height:.8;margin:.05em .12em -.05em 0;color:var(--accent)}
+
+    .article-body p{font-size:1.05rem;line-height:1.82;margin-bottom:1.5rem;color:#1a1b20}
+    .article-body h2{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;line-height:1.2;margin:2.8rem 0 1rem;padding-top:.5rem;border-top:2px solid var(--ink)}
+    .article-body h3{font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:600;font-style:italic;margin:2rem 0 .8rem;color:var(--mid)}
+    .article-body blockquote{margin:2.5rem 0;padding:1.5rem 1.8rem;border-left:4px solid var(--accent);background:var(--paper);font-family:'Playfair Display',serif;font-size:1.12rem;font-style:italic;font-weight:600;line-height:1.5;color:var(--ink)}
+    .article-body blockquote cite{display:block;margin-top:.6rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;font-style:normal;font-weight:400;color:var(--light)}
+
+    /* VERDICT CARDS */
+    .verdict-card{margin:2rem 0;border:1px solid var(--rule);background:#fff;overflow:hidden}
+    .verdict-card__header{display:flex;align-items:center;gap:.8rem;padding:.7rem 1.2rem}
+    .badge{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem;font-weight:500;flex-shrink:0}
+    .verdict-card__header .claim{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;line-height:1.3}
+    .verdict-card__body{padding:1rem 1.2rem 1.2rem;border-top:1px solid var(--rule);font-size:.9rem;line-height:1.7;color:var(--mid)}
+    .verdict-card__body p{margin-bottom:.6rem}.verdict-card__body p:last-child{margin-bottom:0}
+    .verdict-vrai .verdict-card__header{background:#edf7f3}
+    .verdict-faux .verdict-card__header{background:#fdf0f0}
+    .verdict-incert .verdict-card__header{background:#fdf6e8}
+    .badge-vrai{background:#1a8a6e;color:#fff}
+    .badge-faux{background:#b83232;color:#fff}
+    .badge-incert{background:#c8821a;color:#fff}
+
+    /* SCENARIO CARDS */
+    .scenario-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;margin:2rem 0}
+    .scenario-card{border:1px solid var(--rule);background:#fff;overflow:hidden}
+    .scenario-card__header{padding:.6rem 1rem;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:#fff}
+    .sc-a .scenario-card__header{background:#1a8a6e}
+    .sc-b .scenario-card__header{background:#c8821a}
+    .sc-c .scenario-card__header{background:#b83232}
+    .scenario-card__body{padding:.9rem 1rem;font-size:.82rem;line-height:1.65;color:var(--mid)}
+    .scenario-card__title{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--ink);margin-bottom:.4rem}
+
+    /* ENCADRÉ */
+    .article-body .encadre{margin:2rem 0;padding:1.4rem 1.6rem;border:1px solid var(--rule);background:#fff}
+    .article-body .encadre__title{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
+    .article-body .encadre__title::before{content:'';display:inline-block;width:14px;height:2px;background:var(--accent)}
+    .article-body .encadre p{font-size:.88rem;line-height:1.65;margin-bottom:.6rem;color:var(--mid)}
+    .article-body .encadre p:last-child{margin-bottom:0}
+
+    /* CHIFFRES CLÉS */
+    .stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2rem 0}
+    .stat-cell{background:#fff;padding:1.2rem 1rem;text-align:center}
+    .stat-cell__num{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--accent);line-height:1}
+    .stat-cell__label{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;color:var(--mid);margin-top:.3rem;line-height:1.4}
+
+    .article-body figure{margin:2rem 0}
+    .article-body figure img{width:100%;filter:grayscale(15%)}
+    .article-body figcaption{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;color:var(--light);margin-top:.5rem;padding-top:.4rem;border-top:1px solid var(--rule)}
+
+    .article-body ul{margin:1rem 0 1.5rem 1.4rem}
+    .article-body li{font-size:1rem;line-height:1.75;margin-bottom:.4rem;color:#1a1b20}
+
+    .article-tags{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+    .article-tags__label{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--light);margin-right:.3rem}
+    .tag-pill{font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .65rem;border:1px solid var(--rule);color:var(--mid);background:#fff;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+    .tag-pill:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+    .related{margin-top:3.5rem;padding-top:1.5rem;border-top:2px solid var(--ink)}
+    .related__title{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:1.4rem}
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+    .related-card{border:1px solid var(--rule);background:#fff;overflow:hidden;transition:transform .2s,box-shadow .2s}
+    .related-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .related-card__stripe{height:3px;background:var(--accent)}
+    .related-card__body{padding:.9rem}
+    .related-card h4{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;line-height:1.3;margin-bottom:.4rem}
+    .related-card .meta{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--light)}
+
+    .sidebar{position:sticky;top:80px}
+    .sidebar-block{margin-bottom:2rem}
+    .sidebar-title{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--ink);padding-bottom:.4rem;margin-bottom:1rem}
+    .toc-list{list-style:none}
+    .toc-list li{border-bottom:1px solid var(--rule);padding:.55rem 0;font-size:.82rem;line-height:1.4}
+    .toc-list li a{color:var(--mid);transition:color .2s;display:flex;gap:.5rem;align-items:flex-start}
+    .toc-list li a:hover{color:var(--accent)}
+    .toc-num{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);flex-shrink:0;padding-top:.1rem}
+
+    .author-block{background:#fff;border:1px solid var(--rule);padding:1.2rem}
+    .author-block__name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:.2rem}
+    .author-block__role{font-family:'DM Mono',monospace;font-size:.63rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
+    .author-block p{font-size:.8rem;color:var(--mid);line-height:1.6}
+
+    .cta-box{background:var(--ink);color:#fff;padding:1.4rem;text-align:center}
+    .cta-box h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:.4rem}
+    .cta-box p{font-size:.75rem;color:rgba(255,255,255,.6);margin-bottom:.9rem;line-height:1.5}
+    .cta-box a{display:inline-block;background:var(--accent);color:#fff;font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.55rem 1rem;transition:opacity .2s}
+    .cta-box a:hover{opacity:.8}
+
+    footer{background:#0d0e12;color:#5e5a54;padding:2.5rem 2rem;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.07em}
+    .footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+    .footer-links a{color:#5e5a54;text-transform:uppercase;transition:color .2s}.footer-links a:hover{color:#c8c3bb}
+
+    .fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}
+    .fade-up.visible{opacity:1;transform:none}
+
+    @media(max-width:640px){.masthead{flex-direction:column;align-items:flex-start}nav a{font-size:.65rem;padding:.6rem .8rem}.article-layout{padding:2rem 1rem}.meta-bar{padding:.8rem 1rem}.meta-bar__share{display:none}.article-hero__content{padding:1.5rem 1rem}}
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<div class="topbar">
+  <span>Analyses Géopolitiques — <strong style="color:#c8c3bb">Puissances &amp; Conflits du XXIe siècle</strong></span>
+  <span><a href="#">Abonnement</a> &nbsp;·&nbsp; <a href="#">Contact</a></span>
+</div>
+
+<header class="masthead">
+  <a href="../index.html" class="masthead__logo">Analyses<br>Géopolitiques<span>Revue stratégique indépendante</span></a>
+  <div class="masthead__sub">Fondée en 2024<br>Tourcoing, France<br>Édition Web · Mars 2026</div>
+</header>
+
+<nav>
+  <a href="../index.html">Accueil</a>
+  <a href="../afrique/index.html"       data-r="afrique"><span class="dot"></span>Afrique</a>
+  <a href="../amerique/index.html"      data-r="amerique"><span class="dot"></span>Amérique</a>
+  <a href="../europe/index.html"        data-r="europe"><span class="dot"></span>Europe</a>
+  <a href="../asie/index.html"          data-r="asie" class="active"><span class="dot"></span>Asie</a>
+  <a href="../proche-orient/index.html" data-r="orient"><span class="dot"></span>Proche-Orient</a>
+  <a href="#" class="nav-cta">Accès Premium →</a>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img class="article-hero__img"
+    src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1400&auto=format&fit=crop&q=70"
+    alt="Lune et exploration spatiale" />
+  <div class="article-hero__overlay"></div>
+  <div class="article-hero__content">
+    <span class="article-hero__tag">Asie · Stratégie spatiale</span>
+    <h1>La hallucination américaine sur l'ISRU chinois</h1>
+    <p class="article-hero__sub">Washington répète que Pékin veut « prédater » les ressources lunaires. Une analyse technique et géopolitique rigoureuse démontre que ce narratif est économiquement incohérent — et politiquement révélateur.</p>
+  </div>
+</div>
+
+<!-- META BAR -->
+<div class="meta-bar">
+  <div class="meta-bar__inner">
+    <span class="meta-item">✍ <strong>Rédaction AG</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">📅 <strong>24 mars 2026</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">⏱ Lecture : <strong>16 min</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">Rubrique : <strong style="color:var(--accent)">Asie</strong></span>
+    <div class="meta-bar__share">
+      <button class="share-btn" onclick="shareArticle('twitter')">Twitter/X</button>
+      <button class="share-btn" onclick="shareArticle('facebook')">Facebook</button>
+      <button class="share-btn" onclick="shareArticle('copy')">Copier le lien</button>
+    </div>
+  </div>
+</div>
+
+<!-- LAYOUT -->
+<div class="article-layout">
+
+  <article class="article-body fade-up">
+
+    <p>
+      Le 4 janvier 2023, Bill Nelson, administrateur de la NASA, lançait dans le journal britannique
+      <em>The Guardian</em> un avertissement qui allait faire le tour des rédactions mondiales :
+      « Nous devons prendre garde à ce que la Chine n'arrive pas sur la Lune sous couvert de recherche
+      scientifique et ne déclare : "C'est ici notre territoire, restez dehors." » Quelques mois plus
+      tard, devant le Congrès américain, il comparait explicitement les ambitions lunaires chinoises
+      à l'occupation chinoise de récifs en mer de Chine méridionale. L'image était percutante.
+      Elle était aussi, sur le plan technique et économique, profondément trompeuse.
+    </p>
+
+    <p>
+      Ce narratif de la « prédation lunaire » — l'idée que la Chine chercherait à s'approprier les
+      ressources du pôle Sud de la Lune pour les exploiter à son profit exclusif — s'est diffusé
+      à la vitesse des algorithmes dans les cercles politiques, médiatiques et stratégiques
+      américains. Il repose sur une confusion fondamentale entre deux réalités radicalement
+      différentes : l'<em>In-Situ Resource Utilization</em> (ISRU), qui est la vocation réelle
+      du programme lunaire chinois, et un projet fantasmé d'extraction minière destinée à
+      l'exportation terrestre, qui n'existe dans aucun document officiel de Pékin.
+      Démêler ces deux réalités est l'objet de cet article.
+    </p>
+
+    <!-- SECTION 1 -->
+    <h2 id="section-1">I. Qu'est-ce que l'ISRU ? La science avant la politique</h2>
+
+    <p>
+      L'<em>In-Situ Resource Utilization</em> désigne l'ensemble des techniques permettant
+      d'exploiter les matériaux présents sur un corps céleste — Lune, Mars, astéroïdes — pour
+      soutenir une présence humaine ou robotique <em>sur place</em>, sans dépendre des
+      réapprovisionnements depuis la Terre. Le concept est aussi vieux que la conquête spatiale
+      elle-même : il est central dans les plans de la NASA pour Mars depuis les années 1990,
+      et figure en bonne place dans les architectures Artemis pour la Lune.
+    </p>
+
+    <div class="encadre">
+      <div class="encadre__title">Les trois ressources prioritaires de l'ISRU lunaire</div>
+      <p><strong>1. La glace d'eau polaire</strong> — Confirmée par l'instrument SOFIA de la NASA dans les zones d'ombre permanente du pôle Sud (Shackleton crater). Elle est la ressource la plus stratégique : divisée par électrolyse, elle produit de l'hydrogène (propergol) et de l'oxygène (survie et propulsion). Sa présence réduit radicalement la masse à lancer depuis la Terre.</p>
+      <p><strong>2. Le régolithe lunaire</strong> — La couche superficielle de poussière et débris qui couvre l'intégralité de la surface lunaire. Il est utilisable comme matériau de construction par frittage (chauffage) ou impression 3D, permettant d'ériger des abris sans transport de matériaux depuis la Terre. L'ESA développe des technologies D-Shape 3D pour ce cas d'usage.</p>
+      <p><strong>3. L'hélium-3 (³He)</strong> — Isotope rare sur Terre, présent dans le régolithe lunaire à des concentrations de 10 à 20 parties par milliard (ppb), déposé par le vent solaire sur des milliards d'années. Théoriquement précieux pour la fusion nucléaire de type D-³He. Sa concentration est significativement plus élevée dans les régions équatoriales (Mare Tranquillitatis, bassin Aitken) que dans les zones polaires.</p>
+    </div>
+
+    <p>
+      La physique de l'ISRU impose une contrainte fondamentale que ses critiques américains
+      semblent ignorer : l'exploitation <em>sur place</em> est radicalement différente de
+      l'exportation vers la Terre. Produire du carburant lunaire pour alimenter une base,
+      construire des abris à partir du sol local, extraire de l'eau pour la survie des
+      astronautes — tout cela est de l'ISRU. Charger des minerais sur un vaisseau et les
+      ramener sur Terre pour les vendre, c'est une tout autre affaire, soumise à des contraintes
+      économiques qui rendent l'opération absurde dans l'horizon temporel actuel.
+    </p>
+
+    <!-- CHIFFRES CLÉS -->
+    <div class="stats-row">
+      <div class="stat-cell">
+        <div class="stat-cell__num">10–20</div>
+        <div class="stat-cell__label">ppb de ³He dans le régolithe lunaire</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell__num">~1 M</div>
+        <div class="stat-cell__label">tonnes de ³He estimées dans les 3 premiers mètres</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell__num">$10 000+</div>
+        <div class="stat-cell__label">coût/kg pour ramener une charge depuis la Lune</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-cell__num">2028</div>
+        <div class="stat-cell__label">lancement Chang'e-8 : 1er test ISRU chinois réel</div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2 id="section-2">II. L'économie contre le narratif : pourquoi le rapatriement est incohérent</h2>
+
+    <p>
+      Pour évaluer la pertinence du narratif de « prédation lunaire », il faut commencer par
+      la question économique centrale : à quel prix faut-il vendre un minerai sur Terre pour
+      que son extraction et son transport depuis la Lune soient rentables ?
+    </p>
+
+    <p>
+      Le coût actuel de mise en orbite terrestre basse (LEO) avec Falcon 9 de SpaceX est d'environ
+      2 700 dollars par kilogramme — une révolution par rapport aux 54 000 dollars d'Ariane 5.
+      Mais ramener une charge <em>depuis</em> la Lune vers la Terre est une opération d'une
+      complexité et d'un coût infiniment supérieurs : il faut un système de propulsion autonome,
+      une rentrée atmosphérique contrôlée, et l'ensemble du delta-v pour quitter l'orbite lunaire.
+      Les estimations académiques les plus optimistes situent ce coût entre 10 000 et plusieurs
+      dizaines de milliers de dollars par kilogramme dans les architectures actuelles.
+    </p>
+
+    <div class="verdict-card verdict-faux">
+      <div class="verdict-card__header">
+        <span class="badge badge-faux">✗ Faux</span>
+        <span class="claim">Rapatrier des minerais lunaires vers la Terre est économiquement viable à court terme</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>Ian Crawford, professeur de sciences planétaires à Birkbeck College (Université de Londres),
+        auteur de l'étude de référence sur la faisabilité de l'exploitation minière lunaire
+        (<em>Progress in Physical Geography</em>), est explicite : « Il est difficile d'identifier
+        une seule ressource lunaire qui serait suffisamment précieuse pour justifier à elle seule
+        une industrie d'extraction lunaire. »</p>
+        <p>Le cobalt, métal stratégique dont la demande explose avec la transition énergétique,
+        vaut en moyenne 33 420 dollars par tonne métrique sur les marchés mondiaux. Il faudrait
+        donc que son prix soit multiplié par un facteur de 300 à 1 000 pour que le rapatriement
+        lunaire soit rentable — en supposant des concentrations exploitables, qui n'ont pas encore
+        été confirmées. Le platine, à 28,6 millions de dollars la tonne métrique, approche davantage
+        du seuil de viabilité théorique, mais sa concentration dans les échantillons Apollo est
+        infime.</p>
+        <p>La conclusion est sans appel : sauf découverte d'une ressource d'une rareté et d'une
+        valeur exceptionnelles, et d'une réduction drastique des coûts de transport cislunairedepuis
+        la Lune, l'extraction minière lunaire à des fins d'exportation terrestre est économiquement
+        absurde dans l'horizon des cinquante prochaines années.</p>
+      </div>
+    </div>
+
+    <h3>Le cas particulier de l'hélium-3 : entre potentiel réel et mythe entretenu</h3>
+
+    <p>
+      L'hélium-3 est souvent présenté comme l'exception — la ressource dont la valeur justifierait
+      le voyage. Cet isotope est théoriquement précieux pour les réacteurs à fusion nucléaire de
+      type D-³He, qui produiraient de l'énergie propre sans les déchets radioactifs lourds des
+      réacteurs à fusion D-T. Des chercheurs du Wisconsin Center for Space Automation and Robotics
+      (WCSAR) ont estimé qu'un million de tonnes de ³He lunaire pourrait produire 19 millions
+      de GWyr d'énergie électrique — soit environ sept fois la consommation énergétique mondiale
+      prévue pour le XXIe siècle.
+    </p>
+
+    <p>
+      Ces chiffres impressionnants se heurtent cependant à deux obstacles fondamentaux. Le premier
+      est technologique : il n'existe à ce jour aucun réacteur à fusion nucléaire D-³He opérationnel.
+      Les efforts de fusion les plus avancés — ITER, NIF, Commonwealth Fusion Systems — utilisent
+      tous la réaction D-T (deutérium-tritium), bien plus maîtrisée. Brûler de l'³He suppose de
+      résoudre d'abord des problèmes de confinement plasma que la physique nucléaire n'a pas encore
+      surmontés. Le second obstacle est logistique : extraire l'³He du régolithe lunaire implique
+      de chauffer des centaines de millions de tonnes de sol lunaire, sur des centaines de kilomètres
+      carrés, pour récupérer des quantités de gaz dont la concentration ne dépasse pas 20 parties
+      par milliard.
+    </p>
+
+    <blockquote>
+      « L'argument de l'hélium-3 ne tient pas la route. Strip-miner la surface lunaire sur des
+      centaines de kilomètres carrés produirait beaucoup d'³He, mais c'est une ressource fossile.
+      Une fois minée, elle est épuisée. »
+      <cite>— Ian Crawford, professeur de sciences planétaires, Birkbeck College, Université de Londres</cite>
+    </blockquote>
+
+    <p>
+      Cela ne signifie pas que l'hélium-3 soit sans intérêt stratégique à très long terme. La
+      Chine a d'ailleurs annoncé la découverte en 2022 du minéral Changesite-(Y) dans les
+      échantillons de Chang'e-5 — un minéral contenant de l'³He. Mais entre l'intérêt scientifique
+      et l'exploitation commerciale viable, il existe un abîme que ni la physique ni l'économie
+      ne permettent de franchir dans les décennies à venir.
+    </p>
+
+    <!-- SECTION 3 -->
+    <h2 id="section-3">III. Ce que la Chine fait réellement : le programme ILRS décrypté</h2>
+
+    <p>
+      Si le narratif américain de prédation ne résiste pas à l'examen, quelle est la réalité
+      du programme spatial lunaire chinois ? Les documents officiels de la CNSA et les publications
+      académiques associées dessinent un tableau très différent de celui que Washington projette.
+    </p>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?w=800&auto=format&fit=crop&q=70"
+           alt="Station spatiale lunaire ILRS" />
+      <figcaption>La Station de Recherche Lunaire Internationale (ILRS) vise une implantation au pôle Sud lunaire d'ici 2035. — Illustration conceptuelle.</figcaption>
+    </figure>
+
+    <p>
+      Le programme lunaire chinois est structuré en quatre phases. Les trois premières — orbitale,
+      atterrissage, retour d'échantillons — sont achevées avec les missions Chang'e 1 à 5.
+      La quatrième phase, en cours, comprend trois missions emblématiques dont les objectifs
+      sont explicitement centrés sur la science et l'ISRU <em>in situ</em>, pas sur l'exportation.
+    </p>
+
+    <div class="encadre">
+      <div class="encadre__title">Feuille de route lunaire chinoise 2026–2035</div>
+      <p><strong>Chang'e-7 (2026)</strong> — Mission d'exploration du pôle Sud : orbiter, atterrisseur, rover et mini-sonde volante. Objectif principal : détecter et cartographier la présence d'eau glacée dans les zones d'ombre permanente du cratère Shackleton. Six instruments scientifiques internationaux à bord, dont une caméra IA égyptienne et une contribution thaïlandaise.</p>
+      <p><strong>Chang'e-8 (vers 2028)</strong> — Mission de validation technologique ISRU. Premier test réel d'utilisation in situ de ressources lunaires par la Chine : extraction et traitement de régolithe, impression 3D sur place, études de faisabilité agricole. Ce n'est pas une mission d'extraction commerciale — c'est une démonstration technologique.</p>
+      <p><strong>ILRS Phase 1 (2030–2035)</strong> — Établissement d'une infrastructure de base au pôle Sud, en coopération avec la Russie et plus de 10 pays partenaires (Pakistan, Égypte, Thaïlande, Sénégal, Venezuela, Biélorussie, Azerbaïdjan, Serbie, Kazakhstan, Afrique du Sud, Nicaragua). Objectif : base scientifique permanente robotisée avec présence humaine intermittente.</p>
+    </div>
+
+    <p>
+      Ce programme a été co-fondé par la Russie et la Chine, et rassemble en 2026 plus de dix pays
+      membres et quarante organisations internationales, dont des entités occidentales : l'Association
+      internationale de l'observatoire lunaire (Hawaii), la société suisse Nano-SPACE for Cooperation,
+      et le groupe français Thales. L'image d'une Chine agissant secrètement et unilatéralement pour
+      « capturer » la Lune est difficile à concilier avec ce réseau multilatéral en expansion.
+    </p>
+
+    <div class="verdict-card verdict-vrai">
+      <div class="verdict-card__header">
+        <span class="badge badge-vrai">✓ Vrai</span>
+        <span class="claim">L'ISRU chinois vise une présence lunaire durable, pas l'exportation de matières premières</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>Les objectifs officiels de la CNSA pour Chang'e-8 incluent explicitement : la validation
+        des technologies d'utilisation in situ du régolithe, la production d'oxygène à partir
+        d'ilménite (FeTiO₃ + H₂ → Fe + TiO₂ + H₂O, puis électrolyse), et les tests de
+        construction additive. Ces technologies sont identiques à celles que la NASA développe
+        pour Artemis et pour les missions martiennes.</p>
+        <p>Le programme ILRS vise à établir d'ici 2035 « une plateforme de recherche complète
+        avec des fonctions essentielles » opérant en mode « robotisé de long terme avec participation
+        humaine de court terme ». Aucun document officiel ne mentionne d'exportation de ressources
+        vers la Terre comme objectif.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2 id="section-4">IV. Le droit de l'espace contre le narratif territorial</h2>
+
+    <p>
+      Le scénario Nelson — la Chine plante son drapeau au pôle Sud et proclame « c'est notre
+      territoire » — se heurte aussi à un obstacle juridique majeur que l'administrateur de la
+      NASA, qui est également sénateur et juriste de formation, connaît parfaitement.
+    </p>
+
+    <p>
+      Le Traité sur l'espace extra-atmosphérique de 1967 — ratifié à la fois par les États-Unis
+      et la Chine — pose en son article II un principe absolu : « L'espace extra-atmosphérique,
+      y compris la Lune et les autres corps célestes, ne peut faire l'objet d'appropriation
+      nationale par proclamation de souveraineté, ni par voie d'utilisation ou d'occupation,
+      ni par aucun autre moyen. » Victoria Samson, directrice de la Secure World Foundation,
+      organisation dédiée à l'utilisation pacifique de l'espace, l'a dit clairement en réaction
+      aux déclarations Nelson : « La Chine, tout comme les États-Unis, est partie au Traité
+      sur l'espace extra-atmosphérique, qui interdit toute revendication territoriale sur
+      un corps céleste. »
+    </p>
+
+    <div class="verdict-card verdict-incert">
+      <div class="verdict-card__header">
+        <span class="badge badge-incert">? Incertain</span>
+        <span class="claim">Le droit international suffit à prévenir toute appropriation de fait des ressources polaires</span>
+      </div>
+      <div class="verdict-card__body">
+        <p>Le Traité de 1967 interdit la souveraineté, mais ne règle pas explicitement la question
+        de l'exploitation commerciale des ressources spatiales. Les États-Unis ont contourné cette
+        ambiguïté avec le <em>US Commercial Space Launch Competitiveness Act</em> de 2015, qui
+        autorise les citoyens américains à s'approprier les ressources spatiales extraites, sans
+        revendiquer la souveraineté sur le territoire. Les Accords Artemis (signés par 43 pays
+        en 2024, mais pas par la Chine ni la Russie) élargissent ce cadre.</p>
+        <p>Une tension réelle existe donc autour des « zones de sécurité » : si les deux puissances
+        arrivent au pôle Sud à quelques années d'intervalle, la compétition pour les meilleures
+        zones d'accès à la glace et à l'ensoleillement permanent (crêtes de Shackleton) pourrait
+        créer des frictions pratiques, même sans appropriation formelle. C'est la seule dimension
+        du narratif Nelson qui contient une part de réalité géophysique.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2 id="section-5">V. La fonction politique du narratif : financer Artemis par la peur</h2>
+
+    <p>
+      Si le narratif de prédation est techniquement infondé et juridiquement contestable, pourquoi
+      le directeur de la NASA le répète-t-il avec une telle insistance depuis 2021 ?
+      La réponse est moins spatiale que budgétaire.
+    </p>
+
+    <p>
+      Le programme Artemis est chroniquement sous-financé et en retard. Le Government Accountability
+      Office (GAO) américain a produit rapport après rapport signalant des dépassements budgétaires
+      majeurs et des décalages calendaires répétés. Le lanceur SLS, véritable gouffre financier,
+      coûte environ 4 milliards de dollars par lancement — contre 90 millions pour Falcon Heavy.
+      Dans ce contexte, la menace chinoise est le meilleur argument politique pour obtenir
+      du Congrès les crédits nécessaires à la survie du programme.
+    </p>
+
+    <blockquote>
+      « Il est un fait : nous sommes dans une course à l'espace. Et il est vrai que nous ferions
+      mieux de surveiller qu'ils n'arrivent pas sur la Lune sous couvert de recherche scientifique
+      pour dire : "Restez en dehors, nous sommes ici, c'est notre territoire." »
+      <cite>— Bill Nelson, administrateur de la NASA, interview Politico, octobre 2023</cite>
+    </blockquote>
+
+    <p>
+      Cette instrumentalisation du danger chinois à des fins budgétaires n'est pas nouvelle dans
+      l'histoire spatiale américaine. Lors de la première course à l'espace, le sputnik soviétique
+      de 1957 avait généré une panique similaire — et déclenché un flux de financements fédéraux
+      sans précédent pour la NASA naissante. La psychologie est identique : l'adversaire capable
+      et menaçant justifie l'investissement national.
+    </p>
+
+    <p>
+      La différence fondamentale est que l'URSS avait effectivement des ambitions militaires
+      spatiales directes, et que la course à la Lune était un affrontement idéologique
+      bipolaire explicite. La Chine, elle, n'a jamais déclaré vouloir « battre » les États-Unis
+      sur la Lune. Ses documents officiels ne contiennent aucune formulation de ce type.
+      Pékin construit son propre programme, à son rythme, pour ses propres objectifs de
+      légitimité nationale, de démonstration technologique et de présence scientifique.
+    </p>
+
+    <!-- SECTION 6 : SCÉNARIOS -->
+    <h2 id="section-6">VI. Trois scénarios pour 2035 : vers quel ordre lunaire ?</h2>
+
+    <p>
+      L'analyse des capacités techniques, des feuilles de route officielles et des dynamiques
+      politiques permet d'esquisser trois scénarios pour la situation lunaire à l'horizon 2035,
+      date prévue pour l'achèvement de la phase 1 de l'ILRS et pour la consolidation du camp
+      Artemis.
+    </p>
+
+    <div class="scenario-grid">
+      <div class="scenario-card sc-a">
+        <div class="scenario-card__header">Scénario A — Coexistence régulée</div>
+        <div class="scenario-card__body">
+          <div class="scenario-card__title">Deux pôles, un traité</div>
+          <p>Les États-Unis et leurs alliés Artemis s'installent dans un secteur du pôle Sud,
+          la Chine et l'ILRS dans un autre. Des frictions pratiques sur l'accès à certaines
+          zones de glace sont négociées via des mécanismes informels. Le Traité de 1967 tient,
+          enrichi par des normes de comportement ad hoc.</p>
+          <p><strong>Probabilité :</strong> Élevée si Artemis III atterrit avant 2028.</p>
+        </div>
+      </div>
+      <div class="scenario-card sc-b">
+        <div class="scenario-card__header">Scénario B — Retard américain, avantage chinois</div>
+        <div class="scenario-card__body">
+          <div class="scenario-card__title">Pékin installe la norme</div>
+          <p>De nouveaux retards d'Artemis (SLS, financement sous Trump 2) permettent à la Chine
+          d'établir l'ILRS avant tout astronaute américain. Pékin ne revendique pas la souveraineté
+          mais occupe les meilleures zones d'accès à l'eau. Washington dénonce, sans moyen
+          pratique d'intervention.</p>
+          <p><strong>Probabilité :</strong> Modérée, croissante si Artemis glisse après 2030.</p>
+        </div>
+      </div>
+      <div class="scenario-card sc-c">
+        <div class="scenario-card__header">Scénario C — Escalade normative</div>
+        <div class="scenario-card__body">
+          <div class="scenario-card__title">Guerre des cadres juridiques</div>
+          <p>Ni les Accords Artemis ni le cadre ILRS ne parviennent à s'imposer comme norme
+          universelle. La Lune devient un nouveau terrain de compétition juridique et diplomatique,
+          sans conflit armé mais avec une fragmentation croissante du droit spatial international.</p>
+          <p><strong>Probabilité :</strong> Élevée indépendamment des autres scénarios.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCLUSION -->
+    <h2 id="conclusion">Conclusion : déconstruire pour mieux comprendre</h2>
+
+    <p>
+      Le narratif américain sur l'ISRU chinois révèle, dans sa déformation même, quelque chose
+      d'essentiel sur la rivalité sino-américaine : la tendance croissante de Washington à lire
+      les ambitions chinoises à travers le prisme de ses propres logiques — commerciales,
+      territoriales, militaires — plutôt qu'à analyser ce que Pékin dit, écrit et fait réellement.
+    </p>
+
+    <p>
+      Ce que la Chine construit sur la Lune est un programme de présence scientifique permanente,
+      porté par une logique de légitimité nationale et de démonstration technologique, dont
+      l'ISRU est l'ossature technique indispensable — exactement comme c'est le cas pour la NASA.
+      L'hélium-3, le régolithe, la glace d'eau : ces ressources ne seront pas chargées dans
+      des vaisseaux cargo à destination de Shanghai. Elles serviront à maintenir des taikonautes
+      en vie, à construire des abris, à produire du carburant pour explorer plus loin.
+    </p>
+
+    <p>
+      La vraie question stratégique n'est pas de savoir si la Chine « vole » les ressources
+      lunaires. Elle est de savoir si l'humanité sera capable de construire, enfin, un cadre
+      juridique international pour la Lune qui transcende la compétition bipolaire — ou si
+      elle reproduira sur ce nouveau continent les logiques de puissance qui ont structuré
+      la géopolitique terrestre depuis cinq siècles.
+    </p>
+
+    <!-- TAGS -->
+    <div class="article-tags">
+      <span class="article-tags__label">Tags :</span>
+      <span class="tag-pill">Asie</span>
+      <span class="tag-pill">Chine</span>
+      <span class="tag-pill">ISRU</span>
+      <span class="tag-pill">Lune</span>
+      <span class="tag-pill">NASA</span>
+      <span class="tag-pill">Chang'e</span>
+      <span class="tag-pill">ILRS</span>
+      <span class="tag-pill">Artemis</span>
+      <span class="tag-pill">Hélium-3</span>
+    </div>
+
+    <!-- ARTICLES LIÉS -->
+    <div class="related fade-up">
+      <div class="related__title">Articles liés</div>
+      <div class="related-grid">
+        <a href="rivalite-spatiale-sino-americaine.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>La course spatiale sino-américaine : le vrai, le faux, l'incertain</h4>
+            <span class="meta">24 mars 2026 · 14 min</span>
+          </div>
+        </a>
+        <a href="piege-thucydide.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Le piège de Thucydide en Indo-Pacifique</h4>
+            <span class="meta">5 mars 2026 · 14 min</span>
+          </div>
+        </a>
+        <a href="taiwan-2026.html" class="related-card">
+          <div class="related-card__stripe"></div>
+          <div class="related-card__body">
+            <h4>Taïwan 2026 : le scénario d'une escalade maîtrisée</h4>
+            <span class="meta">11 mars 2026 · 14 min</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">Sommaire</div>
+      <ul class="toc-list">
+        <li><a href="#section-1"><span class="toc-num">I.</span> L'ISRU : la science avant la politique</a></li>
+        <li><a href="#section-2"><span class="toc-num">II.</span> L'économie contre le narratif</a></li>
+        <li><a href="#section-3"><span class="toc-num">III.</span> Le programme ILRS décrypté</a></li>
+        <li><a href="#section-4"><span class="toc-num">IV.</span> Le droit de l'espace</a></li>
+        <li><a href="#section-5"><span class="toc-num">V.</span> La fonction politique du narratif</a></li>
+        <li><a href="#section-6"><span class="toc-num">VI.</span> Trois scénarios pour 2035</a></li>
+        <li><a href="#conclusion"><span class="toc-num">—</span> Conclusion</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-title">L'auteur</div>
+      <div class="author-block">
+        <div class="author-block__name">Rédaction AG</div>
+        <div class="author-block__role">Analyste — Rubrique Asie</div>
+        <p>Analyses géopolitiques indépendantes sur la rivalité sino-américaine, la politique spatiale et les dynamiques stratégiques de l'Indo-Pacifique.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h4>Accès Premium</h4>
+      <p>Analyses complètes, archives et notes de terrain réservées aux abonnés.</p>
+      <a href="#">S'abonner →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Analyses Géopolitiques — Site indépendant en géopolitique et sciences politiques.</span>
+    <div class="footer-links">
+      <a href="../index.html">Accueil</a>
+      <a href="#">Abonnement</a>
+      <a href="#">Mentions légales</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    document.getElementById('progress-bar').style.width =
+      (doc.scrollTop / (doc.scrollHeight - doc.clientHeight) * 100) + '%';
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  function shareArticle(platform) {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    const links = {
+      twitter: `https://twitter.com/intent/tweet?url=${url}&text=${title}`,
+      facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    };
+    if (platform === 'copy') {
+      navigator.clipboard.writeText(window.location.href).then(() => alert('Lien copié !'));
+    } else {
+      window.open(links[platform], '_blank', 'width=600,height=400');
+    }
+  }
+</script>
+</body>
+</html>
