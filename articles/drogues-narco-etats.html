@@ -7,55 +7,186 @@
     <meta name="description" content="Analyse complète des narco-États et de l’impact du trafic de drogue sur la gouvernance, la société et l’économie dans le monde.">
     <meta name="keywords" content="narco-états, drogues, trafic de drogue, narcotrafic, corruption, criminalité organisée, cartels">
     <link rel="canonical" href="https://ar.geopolo.com/drogues-narco-etats.html">
-    <style>
+ <style>
+    :root {
+        --primary: #0f172a;
+        --accent: #2563eb;
+        --accent-2: #1d4ed8;
+        --bg: #f8fafc;
+        --text: #1e293b;
+        --muted: #64748b;
+        --card: #ffffff;
+        --border: #e2e8f0;
+        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        --radius: 18px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Inter", Arial, sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        color: var(--text);
+    }
+
+    main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 20px 40px;
+    }
+
+    header {
+        text-align: center;
+        padding: 50px 20px 25px;
+    }
+
+    h1 {
+        color: var(--primary);
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.2;
+        margin: 0 auto 12px;
+        max-width: 900px;
+        letter-spacing: -0.03em;
+    }
+
+    h2 {
+        color: var(--primary);
+        font-size: 1.6rem;
+        margin-top: 40px;
+        margin-bottom: 18px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+        color: var(--primary);
+        font-size: 1.25rem;
+        margin-top: 24px;
+        margin-bottom: 12px;
+    }
+
+    p {
+        margin: 0 0 18px;
+        text-align: justify;
+        font-size: 1.05rem;
+    }
+
+    section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        padding: 26px;
+        margin-bottom: 22px;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 22px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .share-section {
+        max-width: 980px;
+        margin: 0 auto 24px;
+        padding: 24px 20px;
+    }
+
+    .share-section h2 {
+        border-bottom: none;
+        margin-top: 0;
+        margin-bottom: 16px;
+        padding-bottom: 0;
+        text-align: center;
+    }
+
+    .share-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .share-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #fff;
+        border: 1px solid transparent;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+        cursor: pointer;
+    }
+
+    .share-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+        opacity: 0.95;
+    }
+
+    .share-btn:active {
+        transform: translateY(0);
+    }
+
+    .fb { background: linear-gradient(135deg, #1877f2, #145dbf); }
+    .x { background: linear-gradient(135deg, #111827, #374151); }
+    .wa { background: linear-gradient(135deg, #25d366, #128c7e); }
+    .reddit { background: linear-gradient(135deg, #ff4500, #d93a00); }
+    .bluesky { background: linear-gradient(135deg, #0085ff, #005fcc); }
+    .substack { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .copy { background: linear-gradient(135deg, #6b7280, #4b5563); border: none; }
+
+    footer {
+        text-align: center;
+        margin: 50px 0 20px;
+        font-size: 0.9em;
+        color: var(--muted);
+        padding: 0 20px;
+    }
+
+    @media (max-width: 768px) {
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0 20px;
-            background-color: #fdfdfd;
-            color: #333;
+            padding: 0;
         }
-        header {
-            text-align: center;
-            padding: 40px 0 20px 0;
+
+        section, .share-section {
+            padding-left: 16px;
+            padding-right: 16px;
         }
-        h1 {
-            color: #001f3f; /* bleu marine foncé */
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
+
         h2 {
-            color: #001f3f;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #001f3f;
-            padding-bottom: 5px;
+            font-size: 1.35rem;
         }
-        h3 {
-            color: #001f3f;
-            font-size: 1.4em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+
         p {
-            margin-bottom: 15px;
-            text-align: justify;
+            text-align: left;
         }
-        ul {
-            margin: 10px 0 20px 20px;
+
+        .share-buttons {
+            flex-direction: column;
+            align-items: stretch;
         }
-        li {
-            margin-bottom: 10px;
+
+        .share-btn {
+            width: 100%;
         }
-        footer {
-            text-align: center;
-            margin: 50px 0 20px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <header>
@@ -139,4 +270,21 @@
         <section>
             <h2>Des exemples concrets, sombres et complexes</h2>
             <p>La Colombie sous Escobar : attentats spectaculaires, infiltration politique, guerre totale entre cartels et gouvernement. En Afghanistan, la culture du pavot soutient groupes armés et élites locales. Chaque pays demande une analyse spécifique et adaptée.</p>
-        </
+      </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Geopolo. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function copyLink() {
+            const url = "https://ar.geopolo.com/drogues-narco-etats.html";
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Lien copié !");
+            });
+        }
+    </script>
+</body>
+</html>
+
