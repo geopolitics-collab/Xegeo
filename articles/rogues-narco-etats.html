@@ -1,6 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Drogues et Narco-États : plongée au cœur d’un pouvoir sous influence — Analyses Géopolitiques</title>
+  <meta name="description" content="Analyse complète des narco-États et de l’impact du trafic de drogue sur la gouvernance, la société et l’économie dans le monde."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --ink:#0d0e12;--paper:#f5f2eb;--offwhite:#faf8f3;--mid:#6b6860;--light:#a8a39a;--rule:#d8d3c8;
+      --accent:#1e5fa8;--afrique:#c8821a;--amerique:#b83232;--europe:#1e5fa8;--asie:#1a8a6e;--orient:#8b3a8b;
+      --body-max:740px
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Source Serif 4',Georgia,serif;background:var(--offwhite);color:var(--ink);line-height:1.78}
+    a{color:inherit;text-decoration:none}
+    #progress-bar{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:9999;transition:width .1s linear}
+    .topbar{background:var(--ink);color:#9a9591;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:.45rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .topbar a{color:#c8c3bb;transition:color .2s}
+    .topbar a:hover{color:#fff}
+    .masthead{background:var(--offwhite);border-bottom:3px solid var(--ink);padding:1.4rem 2rem 1rem;display:flex;align-items:flex-end;justify-content:space-between;gap:1rem}
+    .masthead__logo{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,3.5vw,2.6rem);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+    .masthead__logo span{display:block;font-size:.55em;font-weight:600;font-style:italic;color:var(--mid)}
+    .masthead__sub{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);text-align:right;line-height:1.7}
+    nav{background:var(--ink);display:flex;flex-wrap:wrap;position:sticky;top:0;z-index:100}
+    nav a{display:flex;align-items:center;gap:.45rem;padding:.7rem 1.1rem;font-family:'DM Mono',monospace;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;color:#c8c3bb;border-right:1px solid #1e2028;transition:background .2s,color .2s}
+    nav a:hover,nav a.active{background:#1a1c24;color:#fff}
+    nav a .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+    nav a[data-r="afrique"] .dot{background:var(--afrique)}
+    nav a[data-r="amerique"] .dot{background:var(--amerique)}
+    nav a[data-r="europe"] .dot{background:var(--europe)}
+    nav a[data-r="asie"] .dot{background:var(--asie)}
+    nav a[data-r="orient"] .dot{background:var(--orient)}
+    nav a.nav-cta{margin-left:auto;background:var(--amerique);color:#fff;border:none;font-weight:500}
+    .article-hero{position:relative;height:clamp(320px,48vw,560px);overflow:hidden;background:var(--ink)}
+    .article-hero__img{width:100%;height:100%;object-fit:cover;filter:grayscale(30%) brightness(.5);transition:transform 8s ease}
+    .article-hero:hover .article-hero__img{transform:scale(1.03)}
+    .article-hero__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,14,18,.96) 35%,rgba(13,14,18,.1) 100%)}
+    .article-hero__content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem;max-width:calc(var(--body-max) + 4rem);margin:0 auto}
+    .article-hero__tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.9rem}
+    .tag-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;color:#fff}
+    .article-hero h1{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3.5vw,2.8rem);font-weight:900;line-height:1.1;color:#fff;margin-bottom:.8rem}
+    .article-hero h1 em{font-style:italic;color:#c8b490}
+    .article-hero__sub{font-size:1rem;color:rgba(255,255,255,.68);font-style:italic;max-width:660px;line-height:1.65}
+    .meta-bar{background:#fff;border-bottom:1px solid var(--rule);padding:.9rem 2rem}
+    .meta-bar__inner{max-width:calc(var(--body-max) + 4rem);margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:1.2rem}
+    .meta-item{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;color:var(--light)}
+    .meta-item strong{color:var(--mid)}
+    .meta-sep{color:var(--rule)}
+    .article-layout{max-width:1200px;margin:0 auto;padding:3rem 2rem;display:grid;grid-template-columns:1fr 270px;gap:4.5rem;align-items:start}
+    .article-body{max-width:var(--body-max)}
+    .article-body p{font-size:1.05rem;line-height:1.84;margin-bottom:1.5rem;color:#1a1b20}
+    .article-body h2{font-family:'Playfair Display',serif;font-size:1.55rem;font-weight:700;line-height:1.2;margin:3rem 0 1rem;padding-top:.6rem;border-top:2px solid var(--ink)}
+    .article-body blockquote{margin:2.5rem 0;padding:1.6rem 2rem;border-left:4px solid var(--accent);background:var(--paper);font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;font-weight:600;line-height:1.55;color:var(--ink)}
+    .article-body blockquote cite{display:block;margin-top:.7rem;font-family:'DM Mono',monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;font-style:normal;font-weight:400;color:var(--light)}
+    .sidebar{position:sticky;top:80px}
+    .sidebar-block{margin-bottom:2.2rem}
+    .sidebar-title{font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);border-bottom:2px solid var(--ink);padding-bottom:.4rem;margin-bottom:1rem}
+    .toc-list{list-style:none}
+    .toc-list li{border-bottom:1px solid var(--rule);padding:.55rem 0;font-size:.82rem;line-height:1.4}
+    .toc-list li a{color:var(--mid);transition:color .2s;display:flex;gap:.5rem;align-items:flex-start}
+    .toc-list li a:hover{color:var(--accent)}
+    .toc-num{font-family:'DM Mono',monospace;font-size:.6rem;color:var(--accent);flex-shrink:0}
+    footer{background:#0d0e12;color:#5e5a54;padding:2.5rem 2rem;font-family:'DM Mono',monospace;font-size:.68rem;letter-spacing:.07em}
+    .footer-inner{max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+  </style>
+</head>
+<body>
+<div id="progress-bar"></div>
+
+<div class="topbar">
+  <span>Analyses Géopolitiques — <strong style="color:#c8c3bb">Puissances &amp; Conflits du XXIe siècle</strong></span>
+  <span><a href="https://geopolitics-ar.nasseralsabri.workers.dev" style="background:#d4a843;color:#0a0a12;padding:.18rem .55rem;font-weight:700;font-size:.72rem;">🌐 عربي</a></span>
+</div>
+
+<header class="masthead">
+  <a href="/index.html" class="masthead__logo">Analyses<br>Géopolitiques<span>Revue stratégique indépendante</span></a>
+  <div class="masthead__sub">Fondée en 2024<br>Tourcoing, France<br>Édition Web · 2026</div>
+</header>
+
+<nav>
+  <a href="/index.html">Accueil</a>
+  <a href="/afr.html" data-r="afrique"><span class="dot"></span>Afrique</a>
+  <a href="/ame.html" data-r="amerique"><span class="dot"></span>Amérique</a>
+  <a href="/eu.html" data-r="europe" class="active"><span class="dot"></span>Europe</a>
+  <a href="/asie.html" data-r="asie"><span class="dot"></span>Asie</a>
+  <a href="/proche-or.html" data-r="orient"><span class="dot"></span>Proche-Orient</a>
+  <a href="/abonnement.html" class="nav-cta">Accès Premium →</a>
+</nav>
+
+<div class="article-hero">
+  <img class="article-hero__img" src="https://pub-a7b1a75f72ab40548a0709f708ca2678.r2.dev/amerique/narco-trafic-drougues.jpg" alt="Drogues et Narco-États">
+  <div class="article-hero__overlay"></div>
+  <div class="article-hero__content">
+    <div class="article-hero__tags"><span class="tag-badge" style="background:#b83232">Amérique · Criminalité organisée</span></div>
+    <h1>Drogues et <em>narco-États</em><br>plongée au cœur d’un pouvoir sous influence</h1>
+    <p class="article-hero__sub">Analyse complète des narco-États et de l’impact du trafic de drogue sur la gouvernance, la société et l’économie dans le monde.</p>
+  </div>
+</div>
+
+<div class="meta-bar">
+  <div class="meta-bar__inner">
+    <span class="meta-item">✍ <strong>Nasser AL SABRI</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">🏛 <strong>ITAB</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">📅 <strong>25 avril 2026</strong></span>
+    <span class="meta-sep">·</span>
+    <span class="meta-item">Rubrique : <strong style="color:var(--accent)">Amérique</strong></span>
+  </div>
+</div>
+
+<div class="article-layout">
+  <article class="article-body">
+    <!-- colle ici le contenu de ton article sur les narco-États -->
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-block">
+      <div class="sidebar-title">Sommaire</div>
+      <ul class="toc-list">
+        <li><a href="#derriere"><span class="toc-num">01</span> Derrière la façade officielle</a></li>
+        <li><a href="#corruption"><span class="toc-num">02</span> Corruption et manipulation</a></li>
+        <li><a href="#violence"><span class="toc-num">03</span> Violence et peur quotidienne</a></li>
+        <li><a href="#economie"><span class="toc-num">04</span> Économie pervertie</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Analyses Géopolitiques</div>
+    <div>Puissances &amp; Conflits du XXIe siècle</div>
+  </div>
+</footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drogues et Narco-États : plongée au cœur d’un pouvoir sous influence</title>
