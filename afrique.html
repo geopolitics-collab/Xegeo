@@ -1490,9 +1490,8 @@ function getBtn(topic) {
   return document.querySelector(`.filter-btn[data-filter="${topic}"]`);
 }
 
-/* ── Newsletter ── */
-function nlSubmit(e) {
-  /* ── Newsletter (connectée au Worker) ── */
+<script>
+/* ── Newsletter (connectée au Worker) ── */
 async function nlSubmit(e) {
   e.preventDefault();
 
@@ -1502,7 +1501,6 @@ async function nlSubmit(e) {
 
   const email = input.value;
 
-  // UI loading
   btn.textContent = '⏳ ...';
   btn.disabled = true;
 
@@ -1531,11 +1529,10 @@ async function nlSubmit(e) {
     }
 
   } catch (err) {
-    btn.textContent = '❌ اتصال فشل';
+    btn.textContent = '❌ فشل الاتصال';
     btn.style.background = '#b91c1c';
     btn.disabled = false;
   }
-}
 }
 </script>
 </body>
