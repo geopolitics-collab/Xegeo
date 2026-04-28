@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>النشرة الإخبارية — Geopolo</title>
+
+<style>
+body {
+  font-family: 'Noto Naskh Arabic', sans-serif;
+  background: #1a1a2a;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.box {
+  max-width: 420px;
+  margin: auto;
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #d4a843;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e6b94a;
+}
+
+#msg {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>📬 النشرة الإخبارية</h1>
+  <p>تحليلات جيوسياسية حصرية مباشرة في بريدك</p>
+
+  <form onsubmit="return sendEmail(this)">
+    <input type="email" placeholder="بريدك الإلكتروني" required>
+    <button type="submit">اشترك الآن</button>
+  </form>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+function sendEmail(form) {
+
+  const input = form.querySelector("input");
+  const btn = form.querySelector("button");
+  const msg = document.getElementById("msg");
+
+  btn.innerText = "⏳ ...";
+  btn.disabled = true;
+
+  fetch("https://floral-math-8fc3.nasseralsabri.workers.dev/subscribe", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: input.value,
+      lang: "ar"
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.message) {
+      msg.innerText = "✅ تم الاشتراك بنجاح";
+      input.value = "";
+      btn.innerText = "✓ تم";
+    } else {
+      msg.innerText = "⚠️ " + data.error;
+      btn.disabled = false;
+    }
+  })
+  .catch(() => {
+    msg.innerText = "❌ خطأ في الاتصال";
+    btn.disabled = false;
+  });
+
+  return false;
+}
+</script>
+
+</body>
+</html>
