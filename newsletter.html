@@ -1,9 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter — Geopolo</title>
+
 <style>
 body {
   margin: 0;
   font-family: 'Georgia', serif;
-  background: radial-gradient(circle at top, #0a0f1c, #05070d 80%);
-  color: #e5e7eb;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,34 +21,34 @@ body {
   max-width: 420px;
   width: 100%;
   padding: 40px 30px;
-  background: rgba(10,15,28,0.85);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 40px rgba(0,0,0,0.8);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
   text-align: center;
 }
 
 h1 {
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+  font-size: 1.9rem;
   margin-bottom: 10px;
-  color: #d4a843;
+  color: #fbbf24;
+  letter-spacing: 1px;
 }
 
 p {
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.6);
-  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 25px;
 }
 
 input {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  background: #0a0f1c;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 6px;
+  padding: 13px;
+  margin-bottom: 12px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
   color: #fff;
   font-size: 0.9rem;
 }
@@ -52,25 +59,84 @@ input::placeholder {
 
 button {
   width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #d4a843, #b88a2f);
+  padding: 13px;
+  background: linear-gradient(135deg, #fbbf24, #d4a843);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: bold;
-  color: #111;
+  color: #111827;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 button:hover {
-  background: #e6b94a;
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(212,168,67,0.4);
+  box-shadow: 0 8px 25px rgba(251,191,36,0.4);
 }
 
 #msg {
   margin-top: 15px;
   font-size: 0.85rem;
-  color: #9ca3af;
+  color: #cbd5f5;
 }
 </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>📡 Briefing Confidentiel</h1>
+  <p>Recevez des analyses géopolitiques exclusives directement dans votre boîte mail</p>
+
+  <form onsubmit="return sendEmail(this)">
+    <input type="email" placeholder="Votre email" required>
+    <button type="submit">S’abonner</button>
+  </form>
+
+  <p id="msg"></p>
+</div>
+
+<script>
+function sendEmail(form) {
+
+  const input = form.querySelector("input");
+  const btn = form.querySelector("button");
+  const msg = document.getElementById("msg");
+
+  btn.innerText = "⏳ Envoi...";
+  btn.disabled = true;
+
+  fetch("https://floral-math-8fc3.nasseralsabri.workers.dev/subscribe", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: input.value,
+      lang: "fr"
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.message) {
+      msg.innerText = "✅ Inscription réussie";
+      input.value = "";
+      btn.innerText = "✓ Inscrit";
+    } else {
+      msg.innerText = "⚠️ " + data.error;
+      btn.disabled = false;
+      btn.innerText = "S’abonner";
+    }
+  })
+  .catch(() => {
+    msg.innerText = "❌ Erreur de connexion";
+    btn.disabled = false;
+    btn.innerText = "S’abonner";
+  });
+
+  return false;
+}
+</script>
+
+</body>
+</html>
