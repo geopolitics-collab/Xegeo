@@ -1492,12 +1492,50 @@ function getBtn(topic) {
 
 /* ── Newsletter ── */
 function nlSubmit(e) {
+  /* ── Newsletter (connectée au Worker) ── */
+async function nlSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = '✓ Inscrit — merci !';
-  btn.style.background = '#059669';
+
+  const form = e.target;
+  const input = form.querySelector('input');
+  const btn = form.querySelector('button');
+
+  const email = input.value;
+
+  // UI loading
+  btn.textContent = '⏳ ...';
   btn.disabled = true;
-  e.target.querySelector('input').value = '';
+
+  try {
+    const res = await fetch("https://floral-math-8fc3.nasseralsabri.workers.dev/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,
+        lang: "ar"
+      })
+    });
+
+    const data = await res.json();
+
+    if (data.message) {
+      btn.textContent = '✓ تم الاشتراك';
+      btn.style.background = '#059669';
+      input.value = '';
+    } else {
+      btn.textContent = '⚠️ خطأ';
+      btn.style.background = '#b91c1c';
+      btn.disabled = false;
+    }
+
+  } catch (err) {
+    btn.textContent = '❌ اتصال فشل';
+    btn.style.background = '#b91c1c';
+    btn.disabled = false;
+  }
+}
 }
 </script>
 </body>
