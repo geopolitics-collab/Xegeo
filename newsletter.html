@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>النشرة الإخبارية — Geopolo</title>
+<title>Newsletter — Geopolo</title>
 
 <style>
 body {
-  font-family: 'Noto Naskh Arabic', sans-serif;
+  font-family: Arial, sans-serif;
   background: #1a1a2a;
   color: white;
   text-align: center;
@@ -57,12 +57,12 @@ button:hover {
 <body>
 
 <div class="box">
-  <h1>📬 النشرة الإخبارية</h1>
-  <p>تحليلات جيوسياسية حصرية مباشرة في بريدك</p>
+  <h1>📬 Newsletter</h1>
+  <p>Recevez des analyses géopolitiques directement dans votre boîte mail</p>
 
   <form onsubmit="return sendEmail(this)">
-    <input type="email" placeholder="بريدك الإلكتروني" required>
-    <button type="submit">اشترك الآن</button>
+    <input type="email" placeholder="Votre email" required>
+    <button type="submit">S’abonner</button>
   </form>
 
   <p id="msg"></p>
@@ -75,7 +75,7 @@ function sendEmail(form) {
   const btn = form.querySelector("button");
   const msg = document.getElementById("msg");
 
-  btn.innerText = "⏳ ...";
+  btn.innerText = "⏳ Envoi...";
   btn.disabled = true;
 
   fetch("https://floral-math-8fc3.nasseralsabri.workers.dev/subscribe", {
@@ -85,23 +85,25 @@ function sendEmail(form) {
     },
     body: JSON.stringify({
       email: input.value,
-      lang: "ar"
+      lang: "fr"
     })
   })
   .then(res => res.json())
   .then(data => {
     if (data.message) {
-      msg.innerText = "✅ تم الاشتراك بنجاح";
+      msg.innerText = "✅ Inscription réussie";
       input.value = "";
-      btn.innerText = "✓ تم";
+      btn.innerText = "✓ Inscrit";
     } else {
       msg.innerText = "⚠️ " + data.error;
       btn.disabled = false;
+      btn.innerText = "S’abonner";
     }
   })
   .catch(() => {
-    msg.innerText = "❌ خطأ في الاتصال";
+    msg.innerText = "❌ Erreur de connexion";
     btn.disabled = false;
+    btn.innerText = "S’abonner";
   });
 
   return false;
