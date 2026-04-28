@@ -1491,15 +1491,53 @@ function getBtn(topic) {
   return document.querySelector(`.filter-btn[data-filter="${topic}"]`);
 }
 
-/* ── Newsletter ── */
-function nlSubmit(e) {
+<script>
+window.nlSubmit = async function (e) {
   e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = '✓ Inscrit — merci !';
-  btn.style.background = '#059669';
+
+  const form = e.target;
+  const input = form.querySelector('input');
+  const btn = form.querySelector('button');
+
+  if (!input || !btn) return;
+
+  const email = input.value;
+
+  btn.innerText = '⏳ ...';
   btn.disabled = true;
-  e.target.querySelector('input').value = '';
-}
+
+  try {
+    const res = await fetch("https://floral-math-8fc3.nasseralsabri.workers.dev/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,
+        lang: "ar"
+      })
+    });
+
+    const data = await res.json();
+
+    if (data.message) {
+      btn.innerText = '✓ تم الاشتراك';
+      btn.style.background = '#059669';
+      input.value = '';
+    } else {
+      btn.innerText = '⚠️ خطأ';
+      btn.disabled = false;
+    }
+
+  } catch (err) {
+    btn.innerText = '❌ فشل';
+    btn.disabled = false;
+  }
+};
+</script>
+
+</body>
+</html>
 </script>
 </body>
 </html>
