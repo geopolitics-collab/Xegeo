@@ -92,7 +92,31 @@
     .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap}.footer-links a{color:#5e5a54;text-transform:uppercase;transition:color .2s}.footer-links a:hover{color:#c8c3bb}
     .fade-up{opacity:0;transform:translateY(18px);transition:opacity .5s ease,transform .5s ease}.fade-up.visible{opacity:1;transform:none}
     @media(max-width:640px){.masthead{flex-direction:column;align-items:flex-start}nav a{font-size:.65rem;padding:.6rem .8rem}.article-layout{padding:2rem 1rem}.article-hero__content{padding:1.5rem 1rem}}
-  </style>
+  
+/* ── SHARE BUTTONS ── */
+.shr-block{margin:2.5rem 0;padding:1.4rem 1.6rem;background:#f9f7f4;border-top:2px solid #e5ddd0;border-bottom:2px solid #e5ddd0}
+.shr-label{font-family:monospace;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:#8a807a;margin-bottom:.9rem;font-weight:600}
+.shr-list{list-style:none;display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0}
+.shr-list li{margin:0;padding:0}
+.shr{display:inline-flex;align-items:center;padding:.36rem .82rem;font-family:monospace;font-size:.68rem;font-weight:600;letter-spacing:.04em;border:1px solid #ccc5bb;background:#fff;color:#3a3530;cursor:pointer;text-decoration:none;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.shr:hover,.shr-cp:hover{background:#0c0d12;color:#fff;border-color:#0c0d12}
+.shr-x:hover{background:#000;border-color:#000}
+.shr-wa:hover{background:#25d366;border-color:#25d366;color:#fff}
+.shr-fb:hover{background:#1877f2;border-color:#1877f2;color:#fff}
+.shr-tg:hover{background:#229ed9;border-color:#229ed9;color:#fff}
+.shr-li:hover{background:#0a66c2;border-color:#0a66c2;color:#fff}
+.shr-rd:hover{background:#ff4500;border-color:#ff4500;color:#fff}
+.shr-bsky:hover{background:#0085ff;border-color:#0085ff;color:#fff}
+.shr-ms:hover{background:#1877f2;border-color:#1877f2;color:#fff}
+.shr-tt:hover{background:#010101;border-color:#010101;color:#fff}
+.shr-sc:hover{background:#fffc00;border-color:#f0e800;color:#000}
+.shr-sg:hover{background:#3a76f0;border-color:#3a76f0;color:#fff}
+.shr-em:hover{background:#555;border-color:#555;color:#fff}
+.shr-cp{background:#fff;border:1px solid #ccc5bb;color:#3a3530;font-family:monospace;font-size:.68rem;font-weight:600;letter-spacing:.04em;padding:.36rem .82rem;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.shr-cp:hover{background:#1a8a6e;border-color:#1a8a6e;color:#fff}
+@media(max-width:580px){.shr,.shr-cp{padding:.3rem .6rem;font-size:.6rem}}
+
+</style>
 </head>
 <body>
 <div id="progress-bar"></div>
@@ -143,6 +167,8 @@
     <div class="ch-label">Chapitre I · L'ampleur des attaques</div>
     <h2 id="ch1">Drones, missiles et mines : l'arsenal houthi</h2>
     <p>Les Houthis ont démontré une sophistication militaire surprenante. Leurs attaques utilisent des drones kamikazes (Shahid iraniens et copies locales), des missiles balistiques et de croisière, et des drones marins. Ces armes proviennent en grande partie d'Iran, via des transferts clandestins documentés par les experts de l'ONU. La combinaison de ces systèmes crée un environnement de menaces multiples qui complique la défense des navires.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7897922032846846" crossorigin="anonymous"></script>
+
 
     <blockquote>
       « Les Houthis ont réussi ce qu'aucun acteur non étatique n'avait réussi depuis longtemps : perturber durablement le commerce maritime mondial. Avec des moyens relativement modestes, ils ont imposé des coûts considérables à l'économie mondiale. »
@@ -191,6 +217,62 @@
     </div>
   </aside>
 </div>
+<div class="shr-block">
+  <div class="shr-label">Partager l'article</div>
+  <ul class="shr-list">
+    <li><a class="shr shr-x"    href="#" onclick="shr('x');return false">𝕏</a></li>
+    <li><a class="shr shr-wa"   href="#" onclick="shr('wa');return false">WhatsApp</a></li>
+    <li><a class="shr shr-fb"   href="#" onclick="shr('fb');return false">Facebook</a></li>
+    <li><a class="shr shr-tg"   href="#" onclick="shr('tg');return false">Telegram</a></li>
+    <li><a class="shr shr-li"   href="#" onclick="shr('li');return false">LinkedIn</a></li>
+    <li><a class="shr shr-rd"   href="#" onclick="shr('rd');return false">Reddit</a></li>
+    <li><a class="shr shr-bsky" href="#" onclick="shr('bsky');return false">Bluesky</a></li>
+    <li><a class="shr shr-ms"   href="#" onclick="shr('ms');return false">Messenger</a></li>
+    <li><a class="shr shr-tt"   href="#" onclick="shr('tt');return false">TikTok</a></li>
+    <li><a class="shr shr-sc"   href="#" onclick="shr('sc');return false">Snapchat</a></li>
+    <li><a class="shr shr-sg"   href="#" onclick="shr('sg');return false">Signal</a></li>
+    <li><a class="shr shr-em"   href="#" onclick="shr('em');return false">Email</a></li>
+    <li><button class="shr-cp"  onclick="shr('cp')">Copier le lien</button></li>
+  </ul>
+</div>
+<script>
+(function(){
+  if(window._shrFn) return;
+  window._shrFn = true;
+  window.shr = function(p){
+    var u = encodeURIComponent(window.location.href);
+    var h = document.querySelector('h1');
+    var t = encodeURIComponent(h ? h.textContent.trim() : document.title);
+    var urls = {
+      x:    'https://twitter.com/intent/tweet?url='+u+'&text='+t,
+      wa:   'https://wa.me/?text='+t+'%20'+u,
+      fb:   'https://www.facebook.com/sharer/sharer.php?u='+u,
+      tg:   'https://t.me/share/url?url='+u+'&text='+t,
+      li:   'https://www.linkedin.com/sharing/share-offsite/?url='+u,
+      rd:   'https://reddit.com/submit?url='+u+'&title='+t,
+      bsky: 'https://bsky.app/intent/compose?text='+t+'%20'+u,
+      ms:   'https://www.facebook.com/dialog/send?link='+u+'&app_id=966242223397198',
+      tt:   'https://www.tiktok.com/share?url='+u,
+      sc:   'https://www.snapchat.com/scan?attachmentUrl='+u,
+      sg:   'https://signal.me/share?url='+u+'&text='+t,
+      em:   'mailto:?subject='+t+'&body='+u
+    };
+    if(p === 'cp'){
+      navigator.clipboard.writeText(window.location.href).then(function(){
+        var btn = document.querySelector('.shr-cp');
+        if(!btn) return;
+        var old = btn.textContent;
+        btn.textContent = '✓ Copié !';
+        btn.style.background = '#1a8a6e';
+        btn.style.color = '#fff';
+        setTimeout(function(){ btn.textContent = old; btn.style.background=''; btn.style.color=''; }, 2200);
+      });
+    } else {
+      window.open(urls[p], '_blank', 'noopener,width=660,height=460');
+    }
+  };
+})();
+</script>
 <footer>
   <div class="footer-inner">
     <span>© 2026 Analyses Géopolitiques — Site indépendant en géopolitique.</span>
