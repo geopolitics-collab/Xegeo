@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opinion — geopolô</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --c: #b84d00;
+      --c-light: #fff4eb;
+      --c-mid: #e05d00;
+      --c-dark: #7a3300;
+      --text: #111827;
+      --text-2: #4b5563;
+      --text-3: #9ca3af;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --bg: #fafaf9;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: "DM Sans", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+    /* ─── TOPBAR ─── */
+    .topbar {
+      background: var(--c-dark);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .topbar a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+    .topbar a:hover { color: #fff; }
+    .topbar-right { display: flex; gap: 1.5rem; }
+
+    /* ─── HEADER ─── */
+    .site-header {
+      background: var(--white);
+      border-bottom: 3px solid var(--c);
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.07);
+    }
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--c);
+      text-decoration: none;
+      letter-spacing: -0.03em;
+    }
+    .logo em { color: var(--c-mid); font-style: normal; }
+
+    /* ─── NAV ─── */
+    nav { display: flex; gap: 0; align-items: center; }
+    nav a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text-2);
+      text-decoration: none;
+      padding: 0.5rem 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 3px solid transparent;
+      transition: color .2s, border-color .2s;
+    }
+    nav a:hover { color: var(--c); }
+    nav a.active {
+      color: var(--c);
+      border-bottom-color: var(--c);
+      font-weight: 700;
+    }
+    .nav-sub {
+      background: var(--c);
+      color: var(--white) !important;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+      border-bottom: none !important;
+      padding: 0.45rem 1rem !important;
+    }
+    .nav-sub:hover { opacity: 0.88; }
+
+    /* ─── RUBRIQUE BANNER ─── */
+    .rubrique-banner {
+      background: var(--c);
+      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .rubrique-name {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .rubrique-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+    .rubrique-sep { color: rgba(255,255,255,0.3); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+    }
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.45);
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 2.5rem;
+      right: 2.5rem;
+      max-width: 720px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--c);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+      margin-bottom: 0.9rem;
+    }
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .hero-chapo {
+      font-family: "Source Serif 4", serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+      font-style: italic;
+      max-width: 620px;
+      margin-bottom: 1rem;
+    }
+    .hero-meta {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── LAYOUT ─── */
+    .page-body {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* ─── ARTICLE ─── */
+    .article-lead {
+      font-family: "Source Serif 4", serif;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text);
+      font-style: italic;
+      border-left: 4px solid var(--c);
+      padding-left: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .article-body p {
+      font-family: "Source Serif 4", serif;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #1f2937;
+      margin-bottom: 1.5rem;
+    }
+    .article-body h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.2rem 0 0.9rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--c);
+    }
+    .article-body em { font-style: italic; color: var(--c-dark); }
+
+    /* SHARE */
+    .share-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1.2rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .share-lbl { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); margin-right: 0.3rem; }
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 3px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .share-btn:hover { opacity: 0.82; }
+    .fb { background: #1877f2; }
+    .tw { background: #000; }
+    .wa { background: #25d366; }
+
+    /* AUTHOR */
+    .author-box {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.2rem 1.4rem;
+      background: var(--c-light);
+      border-radius: 6px;
+      border-left: 4px solid var(--c);
+      margin-top: 2.5rem;
+    }
+    .author-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--c);
+      display: flex; align-items: center; justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem; font-weight: 900; color: #fff;
+      flex-shrink: 0;
+    }
+    .author-info h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.15rem; }
+    .author-info p { font-size: 0.8rem; color: var(--text-2); line-height: 1.4; }
+
+    /* ─── SIDEBAR ─── */
+    .sidebar { display: flex; flex-direction: column; gap: 1.8rem; }
+
+    .sidebar-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--c);
+      border-radius: 4px;
+      padding: 1.4rem;
+    }
+    .sidebar-card h4 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--c);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Stats sidebar */
+    .stat-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--c-light);
+    }
+    .stat-item:last-child { border-bottom: none; }
+    .stat-val {
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--c);
+    }
+    .stat-lbl { font-size: 0.78rem; color: var(--text-2); text-align: right; max-width: 160px; line-height: 1.3; }
+
+    /* Related sidebar */
+    .related-item {
+      display: block;
+      text-decoration: none;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color .2s;
+    }
+    .related-item:last-child { border-bottom: none; }
+    .related-item:hover .related-item-title { color: var(--c); }
+    .related-tag { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--c); margin-bottom: 0.25rem; }
+    .related-item-title { font-family: "Playfair Display", serif; font-size: 0.9rem; font-weight: 700; color: var(--text); line-height: 1.3; }
+
+    /* Newsletter card */
+    .nl-card {
+      background: var(--c);
+      color: #fff;
+      border-radius: 6px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .nl-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #fff;
+      border: none;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+    .nl-card p { font-size: 0.8rem; color: rgba(255,255,255,0.75); line-height: 1.5; margin-bottom: 1rem; }
+    .nl-input {
+      width: 100%;
+      padding: 0.55rem 0.8rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-family: "DM Sans", sans-serif;
+      margin-bottom: 0.5rem;
+      outline: none;
+    }
+    .nl-btn {
+      width: 100%;
+      background: rgba(0,0,0,0.3);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 0.55rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: "DM Sans", sans-serif;
+      letter-spacing: 0.05em;
+      transition: background .2s;
+    }
+    .nl-btn:hover { background: rgba(0,0,0,0.5); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--c-dark);
+      color: rgba(255,255,255,0.75);
+      padding: 3rem 2rem 2rem;
+      margin-top: 4rem;
+    }
+    .footer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .footer-logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+    .footer-desc { font-size: 0.82rem; line-height: 1.6; opacity: 0.65; }
+    footer h5 { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin-bottom: 0.8rem; }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 0.4rem; }
+    footer ul li a { font-size: 0.83rem; color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+    footer ul li a:hover { color: #fff; }
+    .footer-bottom {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      opacity: 0.45;
+    }
+
+    /* ─── FADE-UP ─── */
+    .fade { opacity: 0; transform: translateY(22px); transition: opacity .55s ease, transform .55s ease; }
+    .fade.in { opacity: 1; transform: none; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      .page-body { grid-template-columns: 1fr; }
+      .sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    }
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .hero { height: 340px; }
+      .hero-content { left: 1.2rem; right: 1.2rem; bottom: 1.5rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .sidebar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <span>geopolô &mdash; Média géopolitique mondial</span>
+    <div class="topbar-right">
+      <a href="https://fr.geopolo.com">FR</a>
+      <a href="https://ar.geopolo.com">AR</a>
+      <a href="https://fr.geopolo.com/premium">Premium</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="https://fr.geopolo.com" class="logo">geo<em>polô</em></a>
+    <nav>
+      <a href="sante.html" >Santé</a>
+      <a href="culture.html" >Culture</a>
+      <a href="voyage.html" >Voyage</a>
+      <a href="opinion.html" class="active">Opinion</a>
+      <a href="magazine.html" >Magazine</a>
+      <a href="https://fr.geopolo.com/premium" class="nav-sub">S&rsquo;abonner</a>
+    </nav>
+  </header>
+
+  <!-- RUBRIQUE BANNER -->
+  <div class="rubrique-banner">
+    <span class="rubrique-name">Rubrique</span>
+    <span class="rubrique-sep">/</span>
+    <span class="rubrique-title">Opinion</span>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1400&q=80" alt="Opinion" class="hero-img">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Tribune</div>
+      <h1 class="hero-title">L'ordre libéral est mort. Longue vie à quel ordre ?</h1>
+      <p class="hero-chapo">La rhétorique de la « fin de l'ordre libéral » masque une question plus difficile : par quoi le remplace-t-on ? Une tribune sur le vide normatif qui menace le système international.</p>
+      <div class="hero-meta">
+        <span>&#128197; 15 avril 2026</span>
+        <span>&#9997;&#65039; geopolô</span>
+        <span>&#128336; 7 min de lecture</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE BODY -->
+  <div class="page-body">
+
+    <!-- ARTICLE -->
+    <main>
+      <!-- SHARE -->
+      <div class="share-row fade">
+        <span class="share-lbl">Partager</span>
+        <a class="share-btn fb" href="https://www.facebook.com/sharer/sharer.php?u=https://fr.geopolo.com/opinion/" target="_blank" rel="noopener">Facebook</a>
+        <a class="share-btn tw" href="https://twitter.com/intent/tweet?url=https://fr.geopolo.com/opinion/" target="_blank" rel="noopener">Twitter</a>
+        <a class="share-btn wa" href="https://wa.me/?text=https://fr.geopolo.com/opinion/" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+
+      <p class="article-lead fade">La rhétorique de la « fin de l'ordre libéral » masque une question plus difficile : par quoi le remplace-t-on ? Une tribune sur le vide normatif qui menace le système international.</p>
+
+      <div class="article-body fade">
+        
+        <p><em>Note de la rédaction : Cet article exprime le point de vue de ses auteurs et ne reflète pas nécessairement la position éditoriale de geopolô.</em></p>
+        <p>Depuis une décennie, le constat est devenu un lieu commun des relations internationales : l'ordre libéral — cet assemblage d'institutions multilatérales, de normes commerciales, de règles de droit international et de présupposés idéologiques construit après 1945 — est en crise profonde. Les faits sont là : veto russe et chinois paralysant le Conseil de sécurité, retrait américain des accords commerciaux, montée des puissances révisionnistes, érosion de la démocratie dans des États jadis considérés comme modèles.</p>
+        <p>Ce constat est juste. Ce qui est moins souvent dit, c'est qu'il ne suffit pas. Constater la mort de l'ordre libéral sans s'interroger sur ce qui le remplace, c'est confondre le diagnostic avec le traitement. Or le vide normatif qui se creuse sous nos yeux n'est pas neutre — il n'est pas simplement l'absence d'ordre, il est une invitation à des ordres alternatifs dont certains méritent d'être examinés avec davantage que de la nostalgie pour ce qui précédait.</p>
+        <h3>Le multilatéralisme à géométrie variable</h3>
+        <p>Ce qui émerge n'est pas le chaos que certains redoutent, ni le nouvel ordre multipolaire harmonieux que d'autres espèrent. C'est quelque chose de plus complexe et de moins confortable : un système de coalitions ad hoc, d'accords bilatéraux, de normes sectorielles négociées entre groupes d'États partageant des intérêts spécifiques.</p>
+        <p>Ce multilatéralisme à géométrie variable est inefficient, inégal, souvent injuste envers les États les plus faibles. Mais il présente un avantage que l'ordre libéral perdait progressivement : il ne prétend pas à une universalité qu'il ne peut plus incarner.</p>
+        
+      </div>
+
+      <div class="author-box fade">
+        <div class="author-avatar">g</div>
+        <div class="author-info">
+          <h4>geopolô</h4>
+          <p>Média géopolitique indépendant. Analyses de fond sur les grandes transformations du monde contemporain.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-card fade">
+        <h4>Repères</h4>
+        <div class="stat-item"><span class="stat-val">5</span><span class="stat-lbl">Vetos au Conseil de Sécurité en 2025</span></div>
+<div class="stat-item"><span class="stat-val">140</span><span class="stat-lbl">États du « Sud global »</span></div>
+<div class="stat-item"><span class="stat-val">34%</span><span class="stat-lbl">Commerce mondial hors OMC</span></div>
+<div class="stat-item"><span class="stat-val">2003</span><span class="stat-lbl">Dernière intervention sous mandat ONU</span></div>
+
+      </div>
+
+      <div class="sidebar-card fade">
+        <h4>À lire aussi</h4>
+        <a class="related-item" href="#"><div class="related-tag">Analyse</div><div class="related-item-title">IA et démocratie : 5 risques majeurs</div></a>
+<a class="related-item" href="#"><div class="related-tag">Géopolitique</div><div class="related-item-title">La Chine et l'ONU : révision en cours</div></a>
+<a class="related-item" href="#"><div class="related-tag">Débat</div><div class="related-item-title">Multilatéralisme : autopsie ou réforme ?</div></a>
+
+      </div>
+
+      <div class="nl-card fade">
+        <h4>La Lettre geopolô</h4>
+        <p>Analyses et dossiers — chaque semaine dans votre boîte mail.</p>
+        <input class="nl-input" type="email" placeholder="votre@email.com">
+        <button class="nl-btn">S&rsquo;abonner</button>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a href="https://fr.geopolo.com" class="footer-logo">geopolô</a>
+        <p class="footer-desc">Média géopolitique indépendant. Analyses de fond sur les grandes transformations du monde contemporain. Éditions française et arabe.</p>
+      </div>
+      <div>
+        <h5>Rubriques</h5>
+        <ul>
+          <li><a href="sante.html">Santé</a></li>
+          <li><a href="culture.html">Culture</a></li>
+          <li><a href="voyage.html">Voyage</a></li>
+          <li><a href="opinion.html">Opinion</a></li>
+          <li><a href="magazine.html">Magazine</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>geopolô</h5>
+        <ul>
+          <li><a href="https://fr.geopolo.com/premium">Premium</a></li>
+          <li><a href="https://fr.geopolo.com/a-propos">À propos</a></li>
+          <li><a href="https://ar.geopolo.com">Édition arabe</a></li>
+          <li><a href="https://fr.geopolo.com/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Légal</h5>
+        <ul>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Confidentialité</a></li>
+          <li><a href="#">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 geopolô &mdash; Tous droits réservés</span>
+      <span>fr.geopolo.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); obs.unobserve(e.target); } });
+    }, { threshold: 0.07 });
+    document.querySelectorAll(".fade").forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>

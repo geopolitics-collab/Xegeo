@@ -1,0 +1,2099 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>geopolô - Analyses géopolitiques · Puissances &amp; Conflits du XXIe siècle</title>
+
+  <meta name="description" content="Analyses stratégiques indépendantes sur les rivalités globales, crises régionales et transformations politiques mondiales. Moyen-Orient, Afrique, Europe, Asie, Amériques."/>
+  <meta name="robots" content="index, follow"/>
+
+  <meta property="og:title" content="geopolô — Analyses géopolitiques"/>
+  <meta property="og:description" content="Analyses stratégiques sur les rivalités globales, crises régionales et transformations politiques."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1519817914152-22d216bb9170?w=1200&q=80"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://geopolo.com/"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="geopolô — Analyses géopolitiques"/>
+  <meta name="twitter:description" content="Analyses stratégiques sur les rivalités globales, crises régionales et transformations"/>
+
+  <!-- ✅ AJOUTE ICI -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7897922032846846"
+       crossorigin="anonymous"></script>
+
+</head>
+
+  <!-- Hreflang SEO multilingue -->
+  <link rel="canonical" href="https://geopolo.com/"/>
+  <link rel="alternate" hreflang="fr" href="https://fr.geopolo.com/"/>
+  <link rel="alternate" hreflang="ar" href="https://ar.geopolo.com/"/>
+  <link rel="alternate" hreflang="x-default" href="https://geopolo.com/"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet"/>
+
+  <style>
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS — Sky Blue Light Theme
+═══════════════════════════════════════════════ */
+:root {
+  /* Backgrounds */
+  --bg:          #ffffff;
+  --bg-alt:      #f0f6ff;
+  --bg-soft:     #e8f1fb;
+  --bg-navy:     #0d1b3e;
+
+  /* Sky blues */
+  --sky-50:      #eff6ff;
+  --sky-100:     #dbeafe;
+  --sky-200:     #bfdbfe;
+  --sky-400:     #60a5fa;
+  --sky-600:     #2563eb;
+  --sky-700:     #1d4ed8;
+  --sky-800:     #1e3a8a;
+  --sky-900:     #0d1b3e;
+
+  /* Text */
+  --ink:         #0f172a;
+  --ink-70:      rgba(15,23,42,.7);
+  --ink-40:      rgba(15,23,42,.4);
+  --mid:         #475569;
+  --muted:       #94a3b8;
+
+  /* Accents */
+  --accent:      #2563eb;
+  --accent-dark: #1e3a8a;
+  --gold:        #d97706;
+  --red:         #dc2626;
+
+  /* Region colours */
+  --afrique:     #d97706;
+  --amerique:    #dc2626;
+  --europe:      #2563eb;
+  --asie:        #059669;
+  --orient:      #7c3aed;
+  --moyen-orient:#0891b2;
+  --economie:    #0d9488;
+  --culture:     #be185d;
+  --sante:       #16a34a;
+  --voyage:      #0369a1;
+  --opinions:    #9333ea;
+  --magazine:    #b45309;
+
+  /* Layout */
+  --r:           12px;
+  --r-sm:        8px;
+  --r-lg:        20px;
+  --tr:          .22s ease;
+  --max:         1280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ═══════════════════════════════════════════════
+   TOPBAR
+═══════════════════════════════════════════════ */
+.topbar {
+  background: var(--sky-900);
+  padding: .4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  letter-spacing: .04em;
+  color: var(--sky-400);
+}
+.topbar a { color: var(--sky-400); transition: color var(--tr); }
+.topbar a:hover { color: #fff; }
+.topbar__right { display: flex; gap: 1.2rem; align-items: center; }
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  background: var(--accent);
+  color: #fff !important;
+  padding: .25rem .7rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: .7rem;
+  transition: background var(--tr);
+}
+.lang-btn:hover { background: var(--sky-700); }
+
+/* ═══════════════════════════════════════════════
+   HEADER
+═══════════════════════════════════════════════ */
+.site-header {
+  background: var(--bg);
+  border-bottom: 3px solid var(--sky-800);
+  padding: 1.4rem 2rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.logo-wrap { display: flex; flex-direction: column; gap: .1rem; }
+.logo-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: -.03em;
+  color: var(--sky-900);
+  line-height: 1;
+}
+.logo-wordmark em { font-style: italic; color: var(--accent); }
+.logo-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: .35rem;
+}
+.header-date {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.7;
+}
+.header-date strong {
+  display: block;
+  font-size: .78rem;
+  color: var(--mid);
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════
+   NAV — sticky, sky blue
+═══════════════════════════════════════════════ */
+.site-nav {
+  background: var(--sky-800);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  border-bottom: 2px solid var(--sky-900);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.site-nav::-webkit-scrollbar { display: none; }
+.site-nav a {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .72rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: rgba(255,255,255,.65);
+  white-space: nowrap;
+  transition: background var(--tr), color var(--tr);
+  border-right: 1px solid rgba(255,255,255,.07);
+}
+.site-nav a:hover { background: rgba(255,255,255,.08); color: #fff; }
+.site-nav a.active { background: rgba(255,255,255,.12); color: #fff; font-weight: 600; }
+.site-nav .nd {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.site-nav [data-r="afrique"]     .nd { background: var(--afrique); }
+.site-nav [data-r="amerique"]    .nd { background: var(--amerique); }
+.site-nav [data-r="europe"]      .nd { background: var(--europe); }
+.site-nav [data-r="asie"]        .nd { background: var(--asie); }
+.site-nav [data-r="orient"]      .nd { background: var(--orient); }
+.site-nav [data-r="economie"]    .nd { background: var(--economie); }
+.site-nav [data-r="culture"]     .nd { background: var(--culture); }
+.site-nav [data-r="sante"]       .nd { background: var(--sante); }
+.site-nav [data-r="voyage"]      .nd { background: var(--voyage); }
+.site-nav [data-r="opinions"]    .nd { background: var(--opinions); }
+.site-nav [data-r="magazine"]    .nd { background: var(--magazine); }
+
+/* ═══════════════════════════════════════════════
+   HERO — sky blue, clean, light
+═══════════════════════════════════════════════ */
+.hero {
+  background: linear-gradient(135deg, var(--sky-900) 0%, #1e3a8a 50%, #1d4ed8 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 2rem 4.5rem;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    url('https://images.unsplash.com/photo-1519817914152-22d216bb9170?w=1600&auto=format&fit=crop&q=60')
+    center/cover no-repeat;
+  opacity: .08;
+}
+/* Subtle geometric grid */
+.hero::after {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 4rem;
+  align-items: center;
+}
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--sky-400);
+  margin-bottom: 1.2rem;
+}
+.hero__eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--sky-400);
+  border-radius: 2px;
+}
+.hero__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: 1.4rem;
+}
+.hero__title em { font-style: italic; color: var(--sky-400); }
+.hero__sub {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.65);
+  line-height: 1.8;
+  max-width: 500px;
+  margin-bottom: 2.2rem;
+  font-style: italic;
+}
+.hero__ctas { display: flex; gap: .9rem; flex-wrap: wrap; }
+.btn-hero-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: #fff;
+  color: var(--sky-800);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .85rem 2rem;
+  border-radius: var(--r-sm);
+  transition: background var(--tr), transform var(--tr);
+}
+.btn-hero-primary:hover { background: var(--sky-100); transform: translateY(-2px); }
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.4);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .85rem 1.8rem;
+  border-radius: var(--r-sm);
+  transition: border-color var(--tr), background var(--tr);
+}
+.btn-hero-secondary:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+
+/* Hero featured article card */
+.hero__card {
+  background: rgba(255,255,255,.97);
+  border-radius: var(--r);
+  overflow: hidden;
+  border: none;
+  transition: transform var(--tr);
+}
+.hero__card:hover { transform: translateY(-4px); }
+.hero__card-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+.hero__card-body { padding: 1.4rem; }
+.hero__card-body .tag { margin-bottom: .7rem; }
+.hero__card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: .6rem;
+}
+.hero__card-meta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7rem;
+  color: var(--muted);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.hero__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .9rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--tr);
+}
+.hero__card-link:hover { border-color: var(--accent); }
+
+/* ═══════════════════════════════════════════════
+   TICKER — sky blue variant
+═══════════════════════════════════════════════ */
+.ticker-wrap {
+  background: var(--sky-800);
+  border-bottom: 2px solid var(--sky-900);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: .5rem 0;
+}
+.ticker {
+  display: inline-block;
+  animation: tickerScroll 45s linear infinite;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.7);
+  letter-spacing: .03em;
+}
+.ticker .sep { margin: 0 2.5rem; color: var(--sky-400); }
+@keyframes tickerScroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ═══════════════════════════════════════════════
+   STATS STRIP
+═══════════════════════════════════════════════ */
+.stats-strip {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--sky-100);
+  padding: 1.6rem 2rem;
+}
+.stats-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-block {
+  padding: .8rem 1.2rem;
+  text-align: center;
+  border-right: 1px solid var(--sky-200);
+}
+.stat-block:last-child { border-right: none; }
+.stat-n {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: var(--sky-800);
+  display: block;
+  line-height: 1;
+}
+.stat-l {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .62rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: .3rem;
+}
+
+/* ═══════════════════════════════════════════════
+   LAYOUT HELPERS
+═══════════════════════════════════════════════ */
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+.sec-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 2.2rem;
+  padding-bottom: .8rem;
+  border-bottom: 2px solid var(--sky-800);
+}
+.sec-head h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+.sec-head h2 em { font-style: italic; color: var(--accent); }
+.sec-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .65rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.see-all {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1.5px solid transparent;
+  transition: border-color var(--tr);
+}
+.see-all:hover { border-bottom-color: var(--accent); }
+
+/* Tags */
+.tag {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  padding: .2rem .55rem;
+  border-radius: 4px;
+  margin-bottom: .75rem;
+  color: #fff;
+}
+.tag[data-r="afrique"]     { background: var(--afrique); }
+.tag[data-r="amerique"]    { background: var(--amerique); }
+.tag[data-r="europe"]      { background: var(--europe); }
+.tag[data-r="asie"]        { background: var(--asie); }
+.tag[data-r="orient"]      { background: var(--orient); }
+.tag[data-r="economie"]    { background: var(--economie); }
+.tag[data-r="culture"]     { background: var(--culture); }
+.tag[data-r="sante"]       { background: var(--sante); }
+.tag[data-r="voyage"]      { background: var(--voyage); }
+.tag[data-r="opinions"]    { background: var(--opinions); }
+.tag[data-r="magazine"]    { background: var(--magazine); }
+.tag[data-r="moyen-orient"]{ background: var(--moyen-orient); }
+.meta {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  color: var(--muted);
+  letter-spacing: .04em;
+}
+
+/* ═══════════════════════════════════════════════
+   BREAKING NEWS BANNER
+═══════════════════════════════════════════════ */
+.breaking-banner {
+  background: var(--sky-50);
+  border-top: 3px solid var(--accent);
+  border-bottom: 1px solid var(--sky-100);
+  padding: .75rem 2rem;
+}
+.breaking-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.breaking-badge {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .22rem .65rem;
+  border-radius: 3px;
+}
+.breaking-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.breaking-text a { color: var(--accent); border-bottom: 1px solid transparent; transition: border-color var(--tr); }
+.breaking-text a:hover { border-bottom-color: var(--accent); }
+
+/* ═══════════════════════════════════════════════
+   REGION CARDS — Light glassmorphism on sky bg
+═══════════════════════════════════════════════ */
+.regions-scene {
+  background: linear-gradient(135deg, var(--sky-800) 0%, var(--sky-900) 100%);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.regions-scene::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.regions-scene .inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; }
+.regions-scene .sec-head { border-bottom-color: rgba(255,255,255,.15); margin-bottom: 2.5rem; }
+.regions-scene .sec-head h2 { color: #fff; }
+.regions-scene .sec-head h2 em { color: var(--sky-400); }
+.regions-scene .sec-sub { color: rgba(255,255,255,.4); }
+.regions-scene .see-all { color: var(--sky-400); }
+.regions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+.region-card {
+  background: rgba(255,255,255,.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--r);
+  padding: 1.7rem 1.4rem;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--tr), background var(--tr);
+}
+.region-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--rc-color, rgba(255,255,255,.3));
+  border-radius: var(--r) var(--r) 0 0;
+}
+.region-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,.12);
+}
+.region-card[data-r="afrique"]     { --rc-color: var(--afrique); }
+.region-card[data-r="amerique"]    { --rc-color: var(--amerique); }
+.region-card[data-r="europe"]      { --rc-color: var(--europe); }
+.region-card[data-r="asie"]        { --rc-color: var(--asie); }
+.region-card[data-r="orient"]      { --rc-color: var(--orient); }
+.region-card[data-r="moyen-orient"]{ --rc-color: var(--moyen-orient); }
+.region-card[data-r="economie"]    { --rc-color: var(--economie); }
+.region-card[data-r="culture"]     { --rc-color: var(--culture); }
+.region-card[data-r="sante"]       { --rc-color: var(--sante); }
+.region-card[data-r="voyage"]      { --rc-color: var(--voyage); }
+.region-card[data-r="opinions"]    { --rc-color: var(--opinions); }
+.region-card[data-r="magazine"]    { --rc-color: var(--magazine); }
+.rc-icon { font-size: 1.6rem; margin-bottom: .9rem; display: block; line-height: 1; }
+.rc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .4rem;
+}
+.rc-desc {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .78rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.65;
+}
+.rc-count {
+  margin-top: .9rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .62rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+}
+
+/* ═══════════════════════════════════════════════
+   LATEST — featured + sidebar
+═══════════════════════════════════════════════ */
+.latest-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2.5rem;
+}
+.featured {
+  border: 1px solid var(--sky-100);
+  background: var(--bg);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: border-color var(--tr), transform var(--tr);
+  display: block;
+}
+.featured:hover { border-color: var(--sky-300, #93c5fd); transform: translateY(-3px); }
+.featured__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.featured:hover .featured__img { transform: scale(1.02); }
+.featured-img-wrap { overflow: hidden; }
+.featured__body { padding: 1.7rem; }
+.featured h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: .65rem;
+  letter-spacing: -.01em;
+}
+/* Al Jazeera–style bold lead */
+.featured-bold {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.0rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.65;
+  margin-bottom: .7rem;
+  border-left: 3px solid var(--accent);
+  padding-left: .9rem;
+}
+.featured p.body {
+  font-size: .9rem;
+  color: var(--mid);
+  line-height: 1.75;
+  margin-bottom: .9rem;
+}
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .8rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--tr);
+}
+.read-more:hover { border-bottom-color: var(--accent); }
+
+/* Sidebar article list */
+.art-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--sky-100);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.art-item {
+  background: var(--bg);
+  padding: 1rem 1.15rem;
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--sky-100);
+  transition: background var(--tr);
+}
+.art-item:last-child { border-bottom: none; }
+.art-item:hover { background: var(--sky-50); }
+.art-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--sky-200);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 26px;
+}
+.art-title {
+  font-family: 'Playfair Display', serif;
+  font-size: .9rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: .2rem;
+}
+/* Bold snippet style */
+.art-bold {
+  font-family: 'Source Serif 4', serif;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--mid);
+  line-height: 1.5;
+  margin-top: .2rem;
+}
+
+/* ═══════════════════════════════════════════════
+   MAGAZINE GRID — 3-col article cards
+═══════════════════════════════════════════════ */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.article-card {
+  border: 1px solid var(--sky-100);
+  background: var(--bg);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: transform var(--tr), border-color var(--tr);
+  display: block;
+}
+.article-card:hover { transform: translateY(-4px); border-color: var(--sky-300, #93c5fd); }
+.article-card__stripe { height: 3px; }
+.article-card[data-r="afrique"]     .article-card__stripe { background: var(--afrique); }
+.article-card[data-r="amerique"]    .article-card__stripe { background: var(--amerique); }
+.article-card[data-r="europe"]      .article-card__stripe { background: var(--europe); }
+.article-card[data-r="asie"]        .article-card__stripe { background: var(--asie); }
+.article-card[data-r="orient"]      .article-card__stripe { background: var(--orient); }
+.article-card[data-r="economie"]    .article-card__stripe { background: var(--economie); }
+.article-card[data-r="moyen-orient"].article-card__stripe { background: var(--moyen-orient); }
+.article-card__img {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.article-card:hover .article-card__img { transform: scale(1.03); }
+.article-card__img-wrap { overflow: hidden; }
+.article-card__body { padding: 1.2rem; }
+.article-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: .45rem;
+}
+/* Bold headline style */
+.article-card__bold {
+  font-family: 'Source Serif 4', serif;
+  font-size: .83rem;
+  font-weight: 600;
+  color: var(--mid);
+  line-height: 1.6;
+  margin-bottom: .4rem;
+}
+.article-card__excerpt {
+  font-size: .82rem;
+  color: var(--mid);
+  line-height: 1.7;
+  margin-bottom: .6rem;
+}
+.article-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .8rem;
+  padding-top: .7rem;
+  border-top: 1px solid var(--sky-100);
+}
+.article-card__read {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.paywall-badge {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: #fff;
+  padding: .15rem .5rem;
+  border-radius: 3px;
+}
+
+/* ═══════════════════════════════════════════════
+   THEMATIC ANALYSES SECTION
+═══════════════════════════════════════════════ */
+.thematic-bg {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--sky-100);
+  border-bottom: 1px solid var(--sky-100);
+}
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.4rem;
+}
+.ac {
+  border: 1px solid var(--sky-100);
+  background: var(--bg);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: transform var(--tr), border-color var(--tr);
+  display: block;
+}
+.ac:hover { transform: translateY(-4px); border-color: var(--sky-300, #93c5fd); }
+.ac__stripe { height: 3px; }
+.ac[data-r="afrique"]     .ac__stripe { background: var(--afrique); }
+.ac[data-r="amerique"]    .ac__stripe { background: var(--amerique); }
+.ac[data-r="europe"]      .ac__stripe { background: var(--europe); }
+.ac[data-r="asie"]        .ac__stripe { background: var(--asie); }
+.ac[data-r="orient"]      .ac__stripe { background: var(--orient); }
+.ac[data-r="economie"]    .ac__stripe { background: var(--economie); }
+.ac__body { padding: 1.3rem; }
+.ac__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: .45rem;
+}
+.ac__text { font-size: .83rem; color: var(--mid); line-height: 1.7; }
+
+/* ═══════════════════════════════════════════════
+   AUTHOR BOX
+═══════════════════════════════════════════════ */
+.author-section { background: var(--bg-alt); padding: 3rem 2rem; border-top: 1px solid var(--sky-100); }
+.author-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+}
+.author-card {
+  background: var(--bg);
+  border: 1px solid var(--sky-100);
+  border-radius: var(--r);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--tr);
+}
+.author-card:hover { border-color: var(--sky-300, #93c5fd); }
+.author-card__top { display: flex; align-items: center; gap: .85rem; }
+.author-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--sky-100);
+  border: 2px solid var(--sky-200);
+}
+.author-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.author-role {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+.author-bio {
+  font-size: .85rem;
+  color: var(--mid);
+  line-height: 1.7;
+}
+.btn-author {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1.5px solid var(--sky-200);
+  padding: .45rem 1rem;
+  border-radius: var(--r-sm);
+  width: fit-content;
+  transition: border-color var(--tr), background var(--tr);
+}
+.btn-author:hover { border-color: var(--accent); background: var(--sky-50); }
+
+/* ═══════════════════════════════════════════════
+   SOCIAL SHARE BUTTONS
+═══════════════════════════════════════════════ */
+.social-share {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.social-share__label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .38rem .85rem;
+  border-radius: 20px;
+  border: none;
+  transition: opacity var(--tr), transform var(--tr);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.share-btn:hover { opacity: .88; transform: translateY(-1px); }
+.share-btn.fb  { background: #1877f2; }
+.share-btn.tw  { background: #000; }
+.share-btn.wa  { background: #25d366; }
+.share-btn.sc  { background: #fffc00; color: #000; }
+.share-btn svg { width: 14px; height: 14px; fill: currentColor; }
+
+/* ═══════════════════════════════════════════════
+   QUOTE BANNER — sky blue
+═══════════════════════════════════════════════ */
+.quote-section {
+  background: linear-gradient(135deg, var(--sky-800) 0%, var(--sky-900) 100%);
+  padding: 4.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.quote-section::before {
+  content: '\201C';
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 22rem;
+  font-weight: 900;
+  color: rgba(255,255,255,.03);
+  top: -4rem;
+  left: 2rem;
+  line-height: 1;
+  pointer-events: none;
+}
+.quote-section blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.15rem, 2.6vw, 1.75rem);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.55;
+  max-width: 760px;
+  margin: 0 auto .9rem;
+  color: #e8f1ff;
+  position: relative;
+  z-index: 1;
+}
+.quote-section cite {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--sky-400);
+}
+
+/* ═══════════════════════════════════════════════
+   NEWSLETTER BLOCK
+═══════════════════════════════════════════════ */
+.newsletter-section {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-top: 3px solid var(--accent);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.newsletter-section .eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .8rem;
+}
+.newsletter-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  font-weight: 900;
+  color: var(--sky-900);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin-bottom: .8rem;
+}
+.newsletter-section h2 em { font-style: italic; color: var(--accent); }
+.newsletter-section p {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--mid);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+.newsletter-form {
+  display: flex;
+  gap: .6rem;
+  max-width: 460px;
+  margin: 0 auto 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.newsletter-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  padding: .9rem 1.2rem;
+  border: 1.5px solid var(--sky-200);
+  border-radius: var(--r-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .9rem;
+  color: var(--ink);
+  background: #fff;
+  outline: none;
+  transition: border-color var(--tr);
+}
+.newsletter-form input[type="email"]:focus { border-color: var(--accent); }
+.newsletter-form input::placeholder { color: var(--muted); }
+.btn-newsletter {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: .9rem 1.8rem;
+  border-radius: var(--r-sm);
+  font-family: 'DM Sans', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--tr), transform var(--tr);
+}
+.btn-newsletter:hover { background: var(--sky-700); transform: translateY(-2px); }
+.newsletter-perks {
+  display: flex;
+  justify-content: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+.newsletter-perk {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  color: var(--mid);
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+}
+.newsletter-perk::before { content: '✓'; color: var(--accent); font-weight: 700; }
+
+/* ═══════════════════════════════════════════════
+   MAGAZINE / PDF SECTION
+═══════════════════════════════════════════════ */
+.magazine-section {
+  background: var(--bg);
+  border-top: 1px solid var(--sky-100);
+}
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.magazine-card {
+  border: 1px solid var(--sky-100);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: transform var(--tr), border-color var(--tr);
+  background: var(--bg);
+}
+.magazine-card:hover { transform: translateY(-4px); border-color: var(--magazine); }
+.magazine-card__cover {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: var(--sky-100);
+}
+.magazine-card__body { padding: 1rem; }
+.magazine-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: .35rem;
+  line-height: 1.3;
+}
+.magazine-card__price {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--magazine);
+}
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  margin-top: .75rem;
+  background: var(--sky-900);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: .5rem 1rem;
+  border-radius: var(--r-sm);
+  border: none;
+  cursor: pointer;
+  transition: background var(--tr);
+  width: 100%;
+  justify-content: center;
+}
+.btn-buy:hover { background: var(--accent); }
+
+/* ═══════════════════════════════════════════════
+   PREMIUM CTA
+═══════════════════════════════════════════════ */
+.premium-section {
+  background: var(--sky-900);
+  padding: 5.5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.premium-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.premium-section .eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--sky-400);
+  margin-bottom: .9rem;
+  position: relative;
+}
+.premium-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin-bottom: .8rem;
+  position: relative;
+}
+.premium-section h2 em { font-style: italic; color: var(--sky-400); }
+.premium-section__desc {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.02rem;
+  font-style: italic;
+  color: rgba(255,255,255,.55);
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.8;
+  position: relative;
+}
+.premium-feats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.pf {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+.pf::before { content: '✓'; color: var(--sky-400); font-weight: 700; }
+.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 1.1rem 2.8rem;
+  border-radius: var(--r-sm);
+  position: relative;
+  transition: background var(--tr), transform var(--tr);
+}
+.btn-premium:hover { background: var(--sky-700); transform: translateY(-3px); }
+
+/* Access subscriber badge */
+.subscriber-gate {
+  background: var(--sky-50);
+  border: 1.5px solid var(--sky-200);
+  border-radius: var(--r);
+  padding: 1.5rem;
+  text-align: center;
+  margin: 1.2rem 0;
+}
+.subscriber-gate__icon { font-size: 1.8rem; margin-bottom: .6rem; display: block; }
+.subscriber-gate__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--sky-900);
+  margin-bottom: .4rem;
+}
+.subscriber-gate__text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  color: var(--mid);
+  margin-bottom: 1rem;
+}
+.btn-gate {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  background: var(--accent);
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .65rem 1.5rem;
+  border-radius: var(--r-sm);
+  border: none;
+  transition: background var(--tr);
+}
+.btn-gate:hover { background: var(--sky-700); }
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+.site-footer {
+  background: var(--sky-900);
+  padding: 3.5rem 2rem 2rem;
+}
+.footer-grid {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer-brand-col .logo-wordmark {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: .6rem;
+}
+.footer-brand-col .logo-wordmark em { color: var(--sky-400); }
+.footer-tagline {
+  font-family: 'Source Serif 4', serif;
+  font-size: .85rem;
+  font-style: italic;
+  color: rgba(255,255,255,.4);
+  line-height: 1.7;
+  max-width: 280px;
+}
+.footer-col h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 1rem;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.footer-col ul li a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  color: rgba(255,255,255,.55);
+  transition: color var(--tr);
+}
+.footer-col ul li a:hover { color: #fff; }
+.footer-bottom {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .05em;
+  color: rgba(255,255,255,.25);
+}
+.footer-bottom a { color: rgba(255,255,255,.35); transition: color var(--tr); }
+.footer-bottom a:hover { color: rgba(255,255,255,.7); }
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.fade-up.visible { opacity: 1; transform: none; }
+.fade-up.d1 { transition-delay: .08s; }
+.fade-up.d2 { transition-delay: .16s; }
+.fade-up.d3 { transition-delay: .24s; }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media(max-width:1024px) {
+  .hero__inner { grid-template-columns: 1fr; }
+  .hero__card { max-width: 460px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .article-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width:860px) {
+  .latest-layout { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-block { border-right: none; border-bottom: 1px solid var(--sky-100); }
+  .stat-block:nth-child(2n) { border-right: none; }
+}
+@media(max-width:640px) {
+  .site-header { padding: 1.1rem; flex-direction: column; align-items: flex-start; }
+  .wrap { padding: 2.5rem 1.1rem; }
+  .regions-scene { padding: 2.5rem 1.1rem; }
+  .premium-section, .newsletter-section { padding: 3rem 1.1rem; }
+  .premium-feats { flex-direction: column; align-items: center; }
+  .article-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .topbar { padding: .38rem 1rem; font-size: .66rem; }
+  .hero { padding: 3rem 1.1rem 2.5rem; }
+}
+  </style>
+</head>
+<body>
+
+<!-- ══════ TOPBAR ══════ -->
+<div class="topbar">
+  <span>geopolô &mdash; Analyses stratégiques indépendantes · 2026</span>
+  <div class="topbar__right">
+    <a href="https://ar.geopolo.com/" hreflang="ar" lang="ar" rel="alternate" aria-label="النسخة العربية" class="lang-btn">🌐 العربية</a>
+    <a href="https://fr.geopolo.com/" hreflang="fr" rel="alternate">Français</a>
+    <a href="/abonnement.html">Premium</a>
+     <a href="/contact.html">Contact</a>
+  </div>
+</div>
+
+<!-- ══════ HEADER ══════ -->
+<header class="site-header">
+  <a href="/index.html" class="logo-wrap">
+    <div class="logo-wordmark">geo<em>polô</em></div>
+    <div class="logo-sub">Revue géopolitique indépendante</div>
+  </a>
+  <div class="header-date">
+    <strong>Mardi 14 avril 2026</strong>
+    Actualité géopolitique mondiale
+  </div>
+</header>
+
+<!-- ══════ NAV ══════ -->
+<nav class="site-nav" role="navigation" aria-label="Navigation principale"> 
+  <a href="/index.html" class="active">Accueil</a>
+  <a href="/proche-or.html" data-r="moyen-orient"><span class="nd"></span>Moyen-Orient</a>
+  <a href="/eu.html" data-r="europe"><span class="nd"></span>Europe</a>
+  <a href="/afrique.html" data-r="afrique"><span class="nd"></span>Afrique</a>
+  <a href="/asie.html" data-r="asie"><span class="nd"></span>Asie</a>
+  <a href="/ame.html" data-r="amerique"><span class="nd"></span>Amériques</a>
+  <a href="/economie.html" data-r="economie"><span class="nd"></span>Économie</a>
+  <a href="/culture.html" data-r="culture"><span class="nd"></span>Culture</a>
+  <a href="/sante.html" data-r="sante"><span class="nd"></span>Santé</a>
+  <a href="/voyage.html" data-r="voyage"><span class="nd"></span>Voyage</a>
+  <a href="/opinion.html" data-r="opinions"><span class="nd"></span>Opinions</a>
+  <a href="/magazine.html" data-r="magazine"><span class="nd"></span>Magazine</a>
+</nav>
+
+<!-- ══════ BREAKING ══════ -->
+<div class="breaking-banner">
+  <div class="breaking-inner">
+    <span class="breaking-badge">À la une</span>
+    <p class="breaking-text">
+      <a href="/articles/iran-nucleaire-2026.html">Iran : nouvelles négociations sur le dossier nucléaire — Vienne attend une réponse de Téhéran d'ici 72 heures</a>
+    </p>
+  </div>
+</div>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">Analyse stratégique · 2026</p>
+      <h1 class="hero__title">
+        Comprendre les puissances<br>
+        et conflits du <em>XXI<sup>e</sup> siècle</em>
+      </h1>
+      <p class="hero__sub">
+        Analyses stratégiques indépendantes sur les rivalités globales,
+        crises régionales et transformations politiques mondiales.
+      </p>
+      <div class="hero__ctas">
+        <a href="/abonnement.html" class="btn-hero-primary">Accès Premium →</a>
+        <a href="#derniers-articles" class="btn-hero-secondary">Découvrir →</a>
+      </div>
+    </div>
+    <a href="/articles/axe-sino-russo-iranien.html" class="hero__card">
+      <div class="hero__card-img-wrap" style="overflow:hidden">
+        <img class="hero__card-img"
+          src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=700&auto=format&fit=crop&q=75"
+          alt="L'axe sino-russo-iranien"
+          loading="eager"/>
+      </div>
+      <div class="hero__card-body">
+        <span class="tag" data-r="asie">Asie · Analyse</span>
+        <div class="hero__card-title">L'axe sino-russo-iranien : anatomie d'une alliance contre l'ordre libéral</div>
+        <div class="hero__card-meta">22 mars 2026 &nbsp;·&nbsp; 12 min de lecture</div>
+        <div class="hero__card-link">Lire l'analyse →</div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════ TICKER ══════ -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span class="sep">▸</span> Sahel : retrait français et recomposition des alliances sécuritaires &nbsp;&nbsp;
+    <span class="sep">▸</span> Détroit de Taïwan : nouvelles tensions après les manœuvres du PLA &nbsp;&nbsp;
+    <span class="sep">▸</span> Ukraine : bilan d'hiver, lignes de front et perspectives de négociation &nbsp;&nbsp;
+    <span class="sep">▸</span> Iran : dossier nucléaire, nouvelles négociations à Vienne &nbsp;&nbsp;
+    <span class="sep">▸</span> Brésil–Chine : accord commercial et reconfiguration de l'axe Sud-Sud &nbsp;&nbsp;
+    <span class="sep">▸</span> OTAN : débat sur la doctrine nucléaire européenne &nbsp;&nbsp;
+    <span class="sep">▸</span> Arabie saoudite : Vision 2030 et normalisation avec Israël &nbsp;&nbsp;
+    <span class="sep">▸</span> Sahel : retrait français et recomposition des alliances sécuritaires &nbsp;&nbsp;
+    <span class="sep">▸</span> Détroit de Taïwan : nouvelles tensions après les manœuvres du PLA &nbsp;&nbsp;
+    <span class="sep">▸</span> Ukraine : bilan d'hiver, lignes de front et perspectives de négociation &nbsp;&nbsp;
+    <span class="sep">▸</span> Iran : dossier nucléaire, nouvelles négociations à Vienne &nbsp;&nbsp;
+    <span class="sep">▸</span> Brésil–Chine : accord commercial et reconfiguration de l'axe Sud-Sud &nbsp;&nbsp;
+    <span class="sep">▸</span> OTAN : débat sur la doctrine nucléaire européenne &nbsp;&nbsp;
+    <span class="sep">▸</span> Arabie saoudite : Vision 2030 et normalisation avec Israël &nbsp;&nbsp;
+  </div>
+</div>
+
+<!-- ══════ STATS ══════ -->
+<div class="stats-strip fade-up">
+  <div class="stats-inner">
+    <div class="stat-block"><span class="stat-n">80+</span><div class="stat-l">Analyses publiées</div></div>
+    <div class="stat-block"><span class="stat-n">11</span><div class="stat-l">Rubriques couvertes</div></div>
+    <div class="stat-block"><span class="stat-n">3</span><div class="stat-l">Langues disponibles</div></div>
+    <div class="stat-block"><span class="stat-n">2026</span><div class="stat-l">Mise à jour continue</div></div>
+  </div>
+</div>
+
+<!-- ══════ REGIONS ══════ -->
+<section class="regions-scene" aria-labelledby="regions-title">
+  <div class="inner">
+    <div class="sec-head fade-up">
+      <div>
+        <h2 id="regions-title">Analyses par <em>région</em></h2>
+        <div class="sec-sub">Sélectionnez une zone géographique</div>
+      </div>
+      <a href="/regions.html" class="see-all">Voir toutes →</a>
+    </div>
+    <div class="regions-grid">
+      <a href="/moyen-orient.html" class="region-card fade-up d1" data-r="moyen-orient">
+        <span class="rc-icon">🕌</span>
+        <div class="rc-title">Moyen-Orient</div>
+        <div class="rc-desc">Iran, Israël, Golfe persique, conflit en Palestine, fractures confessionnelles.</div>
+        <div class="rc-count">24 analyses · quotidien</div>
+      </a>
+      <a href="/europe.html" class="region-card fade-up d1" data-r="europe">
+        <span class="rc-icon">🏛</span>
+        <div class="rc-title">Europe</div>
+        <div class="rc-desc">Union européenne, OTAN, Russie, tensions souverainistes, recomposition atlantique.</div>
+        <div class="rc-count">18 analyses · hebdo</div>
+      </a>
+      <a href="/afrique.html" class="region-card fade-up d2" data-r="afrique">
+        <span class="rc-icon">🌍</span>
+        <div class="rc-title">Afrique</div>
+        <div class="rc-desc">Sahel post-français, migrations, influences russe et chinoise, recompositions.</div>
+        <div class="rc-count">14 analyses · hebdo</div>
+      </a>
+      <a href="/asie.html" class="region-card fade-up d2" data-r="asie">
+        <span class="rc-icon">🌏</span>
+        <div class="rc-title">Asie</div>
+        <div class="rc-desc">Rivalité Chine–États-Unis, Indo-Pacifique, routes maritimes et BRICS asiatiques.</div>
+        <div class="rc-count">16 analyses · hebdo</div>
+      </a>
+      <a href="/ameriques.html" class="region-card fade-up d3" data-r="amerique">
+        <span class="rc-icon">🌎</span>
+        <div class="rc-title">Amériques</div>
+        <div class="rc-desc">Politique étrangère américaine, Amérique latine, alliances hémisphériques.</div>
+        <div class="rc-count">11 analyses · hebdo</div>
+      </a>
+      <a href="/economie.html" class="region-card fade-up d3" data-r="economie">
+        <span class="rc-icon">📊</span>
+        <div class="rc-title">Économie</div>
+        <div class="rc-desc">Commerce mondial, sanctions, dédollarisation, nouvelles routes économiques.</div>
+        <div class="rc-count">12 analyses · hebdo</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ RUBRIQUES SUPPLÉMENTAIRES ══════ -->
+<section class="wrap fade-up" aria-labelledby="rubriques-title">
+  <div class="sec-head">
+    <h2 id="rubriques-title">Nouvelles <em>rubriques</em></h2>
+    <span class="sec-sub">Éditorial & vie culturelle</span>
+  </div>
+  <div class="regions-grid" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr));">
+    <a href="/culture.html" class="region-card fade-up d1" data-r="culture" style="background:rgba(190,24,93,.08);border:1px solid rgba(190,24,93,.18);backdrop-filter:none;">
+      <span class="rc-icon">🎭</span>
+      <div class="rc-title" style="color:var(--culture)">Culture</div>
+      <div class="rc-desc" style="color:var(--mid)">Cinéma, littérature, arts et identités culturelles face à la mondialisation.</div>
+      <div class="rc-count" style="color:var(--muted)">Nouveau</div>
+    </a>
+    <a href="/sante.html" class="region-card fade-up d2" data-r="sante" style="background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.18);backdrop-filter:none;">
+      <span class="rc-icon">🏥</span>
+      <div class="rc-title" style="color:var(--sante)">Santé</div>
+      <div class="rc-desc" style="color:var(--mid)">Géopolitique de la santé, pandémies, accès aux médicaments et diplomatie sanitaire.</div>
+      <div class="rc-count" style="color:var(--muted)">Nouveau</div>
+    </a>
+    <a href="/voyage.html" class="region-card fade-up d3" data-r="voyage" style="background:rgba(3,105,161,.08);border:1px solid rgba(3,105,161,.18);backdrop-filter:none;">
+      <span class="rc-icon">✈️</span>
+      <div class="rc-title" style="color:var(--voyage)">Voyage</div>
+      <div class="rc-desc" style="color:var(--mid)">Reportages et analyses des territoires en tension, zones de transit et corridors.</div>
+      <div class="rc-count" style="color:var(--muted)">Nouveau</div>
+    </a>
+    <a href="/opinions.html" class="region-card fade-up d1" data-r="opinions" style="background:rgba(147,51,234,.08);border:1px solid rgba(147,51,234,.18);backdrop-filter:none;">
+      <span class="rc-icon">✍️</span>
+      <div class="rc-title" style="color:var(--opinions)">Opinions</div>
+      <div class="rc-desc" style="color:var(--mid)">Tribunes, éditoriaux et points de vue d'experts indépendants.</div>
+      <div class="rc-count" style="color:var(--muted)">Nouveau</div>
+    </a>
+    <a href="/magazine.html" class="region-card fade-up d2" data-r="magazine" style="background:rgba(180,83,9,.08);border:1px solid rgba(180,83,9,.18);backdrop-filter:none;">
+      <span class="rc-icon">📰</span>
+      <div class="rc-title" style="color:var(--magazine)">Magazine PDF</div>
+      <div class="rc-desc" style="color:var(--mid)">Éditions numériques premium à télécharger — dossiers stratégiques exclusifs.</div>
+      <div class="rc-count" style="color:var(--muted)">Boutique</div>
+    </a>
+  </div>
+</section>
+
+<!-- ══════ DERNIERS ARTICLES ══════ -->
+<div class="wrap fade-up" id="derniers-articles">
+  <div class="sec-head">
+    <h2>Dernières <em>analyses</em></h2>
+    <a href="/tous-les-articles.html" class="see-all">Tout voir →</a>
+  </div>
+  <div class="latest-layout">
+    <!-- Featured -->
+    <div>
+      <a href="/articles/axe-sino-russo-iranien.html" class="featured" style="display:block;">
+        <div class="featured-img-wrap">
+          <img class="featured__img"
+            src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=900&auto=format&fit=crop&q=70"
+            alt="L'axe sino-russo-iranien"
+            loading="lazy"/>
+        </div>
+        <div class="featured__body">
+          <span class="tag" data-r="asie">Asie</span>
+          <h2 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;line-height:1.2;margin-bottom:.7rem;">
+            L'axe sino-russo-iranien : anatomie d'une alliance — causes structurelles et enjeux régionaux
+          </h2>
+          <p class="featured-bold">
+            Trois puissances révisionnistes unies par le refus de l'ordre libéral occidental construisent, depuis 2022, une coalition qui redessine la géopolitique du XXI<sup>e</sup> siècle.
+          </p>
+          <p class="body">
+            De la rupture sino-soviétique aux drones iraniens en Ukraine, de la coopération technologique à la coordination diplomatique à l'ONU — cette analyse retrace les fondements d'une alliance contre nature.
+          </p>
+          <div class="meta">22 mars 2026 &nbsp;·&nbsp; Lecture : 12 min &nbsp;·&nbsp; <strong>geopolô</strong></div>
+
+          <!-- Social share -->
+          <div class="social-share" style="margin-top:1.1rem">
+            <span class="social-share__label">Partager</span>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://fr.geopolo.com/articles/axe-sino-russo-iranien.html" target="_blank" rel="noopener" class="share-btn fb">
+              <svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.41 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+              Facebook
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=https://fr.geopolo.com/articles/axe-sino-russo-iranien.html&text=L%27axe+sino-russo-iranien+%7C+geopolô" target="_blank" rel="noopener" class="share-btn tw">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Twitter / X
+            </a>
+            <a href="https://wa.me/?text=https://fr.geopolo.com/articles/axe-sino-russo-iranien.html" target="_blank" rel="noopener" class="share-btn wa">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+            <a href="https://www.snapchat.com/scan?attachmentUrl=https://fr.geopolo.com/articles/axe-sino-russo-iranien.html" target="_blank" rel="noopener" class="share-btn sc">
+              <svg viewBox="0 0 24 24"><path d="M12.166.006C9.338.006 6.366 1.3 4.665 3.693c-.933 1.3-1.366 2.866-1.366 4.9v1.1c0 .3-.066.633-.266.9-.233.3-.566.433-.9.5-.466.066-.766.2-.966.4-.233.2-.366.5-.366.8 0 .566.5.9 1 1.066.133.033.3.1.433.167.433.166.666.466.766.8.3 1.1 1.433 2.133 2.333 2.566.7.333.9.7.9 1.1 0 .4-.3.733-.666.933-.433.233-.933.366-1.433.433a3.36 3.36 0 00-1.266.533c-.6.433-.633 1.2-.033 1.5.066.033.133.066.2.066.466.166.966.3 1.466.433.566.133 1.066.4 1.5.8.233.2.333.5.4.8.066.3.133.533.366.666.2.133.5.167.8.1.3-.1.566-.266.8-.466.433-.3.833-.466 1.2-.5h.133c.133 0 .266.033.4.066.366.1.7.266 1.033.466.1.066.233.1.4.133.366.1.7 0 .9-.3.133-.2.2-.466.266-.733.066-.3.166-.6.4-.8.433-.4.933-.666 1.5-.8.5-.133 1-.266 1.466-.433.066-.033.133-.033.2-.066.6-.3.566-1.066-.033-1.5-.366-.266-.8-.433-1.266-.533-.5-.066-1-.2-1.433-.433-.366-.2-.666-.533-.666-.933 0-.4.2-.766.9-1.1.9-.433 2.033-1.466 2.333-2.566.1-.333.333-.633.766-.8.133-.066.3-.133.433-.166.5-.166 1-.5 1-1.066 0-.3-.133-.6-.366-.8-.2-.2-.5-.333-.966-.4-.333-.066-.666-.2-.9-.5-.2-.266-.266-.6-.266-.9v-1.1C19.5 2.3 16.3.007 12.166.006"/></svg>
+              Snapchat
+            </a>
+          </div>
+
+          <a href="/articles/axe-sino-russo-iranien.html" class="read-more">Lire l'analyse complète →</a>
+        </div>
+      </a>
+    </div>
+
+    <!-- Sidebar -->
+    <aside>
+      <div class="art-list">
+        <a href="/articles/guerre-ukraine.html" class="art-item">
+          <div class="art-num">01</div>
+          <div>
+            <span class="tag" data-r="europe" style="font-size:.58rem;padding:.15rem .45rem;margin-bottom:.4rem;">Europe</span>
+            <div class="art-title">Guerre en Ukraine : bilan stratégique après deux années</div>
+            <div class="art-bold">Le front se stabilise mais l'issue reste incertaine.</div>
+            <div class="meta">18 mars 2026</div>
+          </div>
+        </a>
+        <a href="/articles/iran-arabie-saoudite.html" class="art-item">
+          <div class="art-num">02</div>
+          <div>
+            <span class="tag" data-r="moyen-orient" style="font-size:.58rem;padding:.15rem .45rem;margin-bottom:.4rem;">Moyen-Orient</span>
+            <div class="art-title">Iran–Arabie Saoudite : la détente de façade et ses limites</div>
+            <div class="art-bold">La réconciliation sino-brésilienne cache des tensions réelles.</div>
+            <div class="meta">15 mars 2026</div>
+          </div>
+        </a>
+        <a href="/articles/taiwan-2026.html" class="art-item">
+          <div class="art-num">03</div>
+          <div>
+            <span class="tag" data-r="asie" style="font-size:.58rem;padding:.15rem .45rem;margin-bottom:.4rem;">Asie</span>
+            <div class="art-title">Taïwan 2026 : le scénario d'une escalade maîtrisée</div>
+            <div class="art-bold">Pékin teste les lignes rouges américaines.</div>
+            <div class="meta">11 mars 2026</div>
+          </div>
+        </a>
+        <a href="/articles/doctrine-trump.html" class="art-item">
+          <div class="art-num">04</div>
+          <div>
+            <span class="tag" data-r="amerique" style="font-size:.58rem;padding:.15rem .45rem;margin-bottom:.4rem;">Amériques</span>
+            <div class="art-title">La doctrine Trump 2.0 : isolationnisme ou réalisme offensif ?</div>
+            <div class="art-bold">Washington redéfinit ses alliances sur tous les fronts.</div>
+            <div class="meta">7 mars 2026</div>
+          </div>
+        </a>
+        <a href="/articles/wagner-afrique.html" class="art-item">
+          <div class="art-num">05</div>
+          <div>
+            <span class="tag" data-r="afrique" style="font-size:.58rem;padding:.15rem .45rem;margin-bottom:.4rem;">Afrique</span>
+            <div class="art-title">Wagner en Afrique centrale : implantation durable ou fragilité structurelle ?</div>
+            <div class="art-bold">Le groupe paramilitaire s'étend malgré la mort de Prigojine.</div>
+            <div class="meta">3 mars 2026</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Subscriber gate example -->
+      <div class="subscriber-gate" style="margin-top:1.2rem;">
+        <span class="subscriber-gate__icon">🔒</span>
+        <div class="subscriber-gate__title">Contenu réservé aux abonnés</div>
+        <div class="subscriber-gate__text">Accédez à l'ensemble des analyses stratégiques et dossiers exclusifs.</div>
+        <a href="/abonnement.html" class="btn-gate">Accès Premium →</a>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══════ ARTICLES EN GRILLE ══════ -->
+<div class="thematic-bg">
+  <div class="wrap fade-up">
+    <div class="sec-head">
+      <h2>Analyses <em>thématiques</em></h2>
+      <a href="/analyses.html" class="see-all">Tout voir →</a>
+    </div>
+    <div class="article-grid">
+
+      <a href="/articles/otan-post-americaine.html" class="article-card fade-up d1" data-r="europe">
+        <div class="article-card__stripe"></div>
+        <div class="article-card__img-wrap">
+          <img class="article-card__img"
+            src="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?w=600&auto=format&fit=crop&q=70"
+            alt="L'OTAN face à l'ère post-américaine" loading="lazy"/>
+        </div>
+        <div class="article-card__body">
+          <span class="tag" data-r="europe">Europe</span>
+          <div class="article-card__title">L'OTAN face à l'ère post-américaine</div>
+          <p class="article-card__bold">L'article 5 résistera-t-il à un désengagement partiel de Washington ?</p>
+          <p class="article-card__excerpt">Les capitales européennes testent une doctrine d'autonomie stratégique sans en assumer les coûts.</p>
+          <div class="article-card__footer">
+            <span class="article-card__read">9 min →</span>
+            <span class="meta">14 avr. 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/articles/golfe-2026.html" class="article-card fade-up d2" data-r="moyen-orient">
+        <div class="article-card__stripe"></div>
+        <div class="article-card__img-wrap">
+          <img class="article-card__img"
+            src="https://images.unsplash.com/photo-1518684079-3c830dcef090?w=600&auto=format&fit=crop&q=70"
+            alt="Golfe 2026" loading="lazy"/>
+        </div>
+        <div class="article-card__body">
+          <span class="tag" data-r="moyen-orient">Moyen-Orient</span>
+          <div class="article-card__title">Golfe 2026 : les monarchies pétrolières à l'heure de la transition</div>
+          <p class="article-card__bold">Vision 2030, diversification économique, normalisation avec Israël.</p>
+          <p class="article-card__excerpt">Les pays du Golfe jouent sur plusieurs tableaux tout en gérant des tensions internes croissantes.</p>
+          <div class="article-card__footer">
+            <span class="article-card__read">11 min →</span>
+            <span class="paywall-badge">Premium</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/articles/bresil-chine.html" class="article-card fade-up d3" data-r="amerique">
+        <div class="article-card__stripe"></div>
+        <div class="article-card__img-wrap">
+          <img class="article-card__img"
+            src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&auto=format&fit=crop&q=70"
+            alt="Brésil–Chine" loading="lazy"/>
+        </div>
+        <div class="article-card__body">
+          <span class="tag" data-r="amerique">Amériques</span>
+          <div class="article-card__title">Brésil–Chine : l'axe du Sud global</div>
+          <p class="article-card__bold">L'accord commercial sino-brésilien de 2025 redessine l'Atlantique Sud.</p>
+          <p class="article-card__excerpt">Implications pour les équilibres de puissance dans l'hémisphère occidental.</p>
+          <div class="article-card__footer">
+            <span class="article-card__read">8 min →</span>
+            <span class="meta">30 mars 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/articles/aes-sahel.html" class="article-card fade-up d1" data-r="afrique">
+        <div class="article-card__stripe"></div>
+        <div class="article-card__img-wrap">
+          <img class="article-card__img"
+            src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=600&auto=format&fit=crop&q=70"
+            alt="L'AES" loading="lazy"/>
+        </div>
+        <div class="article-card__body">
+          <span class="tag" data-r="afrique">Afrique</span>
+          <div class="article-card__title">L'AES : alliance de façade ou bloc régional durable ?</div>
+          <p class="article-card__bold">Mali, Burkina et Niger testent leur souveraineté collective.</p>
+          <p class="article-card__excerpt">La création de l'Alliance des États du Sahel constitue-t-elle une rupture géopolitique réelle ?</p>
+          <div class="article-card__footer">
+            <span class="article-card__read">10 min →</span>
+            <span class="paywall-badge">Premium</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/articles/thucydide-indo-pacifique.html" class="article-card fade-up d2" data-r="asie">
+        <div class="article-card__stripe"></div>
+        <div class="article-card__img-wrap">
+          <img class="article-card__img"
+            src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&auto=format&fit=crop&q=70"
+            alt="Piège de Thucydide" loading="lazy"/>
+        </div>
+        <div class="article-card__body">
+          <span class="tag" data-r="asie">Asie</span>
+          <div class="article-card__title">Le piège de Thucydide en Indo-Pacifique</div>
+          <p class="article-card__bold">La rivalité sino-américaine rejoue-t-elle la dynamique Sparte-Athènes ?</p>
+          <p class="article-card__excerpt">Graham Allison avait posé la question en 2017 ; les événements de 2024–2026 y répondent.</p>
+          <div class="article-card__footer">
+            <span class="article-card__read">14 min →</span>
+            <span class="meta">5 avr. 2026</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/articles/russie-economie-guerre.html" class="article-card fade-up d3" data-r="europe">
+        <div class="article-card__stripe"></div>
+        <div class="article-card__img-wrap">
+          <img class="article-card__img"
+            src="https://images.unsplash.com/photo-1589396575653-c09c794ff6a6?w=600&auto=format&fit=crop&q=70"
+            alt="Russie 2026" loading="lazy"/>
+        </div>
+        <div class="article-card__body">
+          <span class="tag" data-r="europe">Europe</span>
+          <div class="article-card__title">Russie 2026 : économie de guerre et horizon politique</div>
+          <p class="article-card__bold">Le régime Poutine a transformé l'économie russe — à quel prix ?</p>
+          <p class="article-card__excerpt">Trois ans après l'invasion, la question de la soutenabilité économique s'impose désormais.</p>
+          <div class="article-card__footer">
+            <span class="article-card__read">13 min →</span>
+            <span class="paywall-badge">Premium</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════ AUTEURS ══════ -->
+<section class="author-section fade-up" aria-labelledby="auteurs-title">
+  <div style="max-width:var(--max);margin:0 auto;padding:0 2rem;">
+    <div class="sec-head" style="margin-bottom:2rem;">
+      <h2 id="auteurs-title">Notre <em>équipe</em> éditoriale</h2>
+      <a href="/auteurs.html" class="see-all">Voir tous →</a>
+    </div>
+    <div class="author-grid">
+      <div class="author-card fade-up d1">
+        <div class="author-card__top">
+          <img class="author-avatar"
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80"
+            alt="Rédaction geopolô"/>
+          <div>
+            <div class="author-name">geopolô</div>
+            <div class="author-role">Rédaction stratégique</div>
+          </div>
+        </div>
+        <p class="author-bio">Analyses géopolitiques indépendantes depuis 2021. Couverture de l'ensemble des zones de tensions mondiales.</p>
+        <a href="/auteurs.html" class="btn-author">Voir tous les articles →</a>
+      </div>
+      <div class="author-card fade-up d2">
+        <div class="author-card__top">
+          <img class="author-avatar"
+            src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&auto=format&fit=crop&q=80"
+            alt="Analyste Moyen-Orient"/>
+          <div>
+            <div class="author-name">Correspondant Moyen-Orient</div>
+            <div class="author-role">Expert régional</div>
+          </div>
+        </div>
+        <p class="author-bio">Suivi des crises du Golfe, de l'Iran et de la Palestine. Analyses de fond sur les dynamiques confessionnelles.</p>
+        <a href="/auteurs/moyen-orient.html" class="btn-author">Voir les articles →</a>
+      </div>
+      <div class="author-card fade-up d3">
+        <div class="author-card__top">
+          <img class="author-avatar"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+            alt="Analyste Afrique"/>
+          <div>
+            <div class="author-name">Correspondant Afrique</div>
+            <div class="author-role">Sahel & Afrique centrale</div>
+          </div>
+        </div>
+        <p class="author-bio">Spécialiste du Sahel, des groupes armés et des recompositions politiques post-France en Afrique subsaharienne.</p>
+        <a href="/auteurs/afrique.html" class="btn-author">Voir les articles →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ MAGAZINE / PDF ══════ -->
+<section class="magazine-section fade-up" aria-labelledby="magazine-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="magazine-title"><em>Magazine</em> PDF — Éditions numériques</h2>
+      <a href="/magazine.html" class="see-all">Voir la boutique →</a>
+    </div>
+    <div class="magazine-grid">
+      <div class="magazine-card">
+        <img class="magazine-card__cover"
+          src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=400&auto=format&fit=crop&q=70"
+          alt="Dossier Moyen-Orient 2026" loading="lazy"/>
+        <div class="magazine-card__body">
+          <div class="magazine-card__title">Dossier Moyen-Orient 2026 — 80 pages</div>
+          <div class="magazine-card__price">9,90 €</div>
+          <a href="/magazine/moyen-orient-2026.html" class="btn-buy">📥 Télécharger</a>
+        </div>
+      </div>
+      <div class="magazine-card">
+        <img class="magazine-card__cover"
+          src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&auto=format&fit=crop&q=70"
+          alt="Rapport OTAN 2026" loading="lazy"/>
+        <div class="magazine-card__body">
+          <div class="magazine-card__title">Rapport OTAN 2026 — L'ère post-américaine</div>
+          <div class="magazine-card__price">7,90 €</div>
+          <a href="/magazine/otan-2026.html" class="btn-buy">📥 Télécharger</a>
+        </div>
+      </div>
+      <div class="magazine-card">
+        <img class="magazine-card__cover"
+          src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?w=400&auto=format&fit=crop&q=70"
+          alt="Dossier Afrique 2026" loading="lazy"/>
+        <div class="magazine-card__body">
+          <div class="magazine-card__title">Dossier Afrique — Sahel & Wagner 2026</div>
+          <div class="magazine-card__price">8,90 €</div>
+          <a href="/magazine/afrique-2026.html" class="btn-buy">📥 Télécharger</a>
+        </div>
+      </div>
+      <div class="magazine-card">
+        <img class="magazine-card__cover"
+          src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?w=400&auto=format&fit=crop&q=70"
+          alt="Dossier Asie-Pacifique 2026" loading="lazy"/>
+        <div class="magazine-card__body">
+          <div class="magazine-card__title">Asie-Pacifique : la grande rivalité 2026</div>
+          <div class="magazine-card__price">9,90 €</div>
+          <a href="/magazine/asie-2026.html" class="btn-buy">📥 Télécharger</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CITATION ══════ -->
+<section class="quote-section fade-up">
+  <blockquote>
+    L'État est une communauté de personnes libres, réunies pour jouir du droit
+    et liées par l'intérêt commun.
+  </blockquote>
+  <cite>— Cicéron, <em>De Re Publica</em> &nbsp;·&nbsp; Fil directeur de nos analyses</cite>
+</section>
+
+<!-- ══════ NEWSLETTER ══════ -->
+<section class="newsletter-section fade-up" id="newsletter">
+  <p class="eyebrow">Newsletter gratuite</p>
+  <h2>Ne manquez aucune<br><em>analyse stratégique</em></h2>
+  <p>Recevez chaque semaine nos analyses géopolitiques, dossiers exclusifs et points de vue d'experts directement dans votre boîte mail.</p>
+  <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+    <input type="email" placeholder="votre@email.com" required autocomplete="email" aria-label="Adresse e-mail"/>
+    <button type="submit" class="btn-newsletter">S'abonner →</button>
+  </form>
+  <div class="newsletter-perks">
+    <span class="newsletter-perk">Analyses hebdomadaires</span>
+    <span class="newsletter-perk">Dossiers exclusifs</span>
+    <span class="newsletter-perk">Gratuit · Sans spam</span>
+    <span class="newsletter-perk">Résiliable en 1 clic</span>
+  </div>
+</section>
+
+<!-- ══════ PREMIUM CTA ══════ -->
+<section class="premium-section fade-up">
+  <p class="eyebrow">Accès Premium · Analyses exclusives</p>
+  <h2>Allez au-delà<br>du <em>titre</em></h2>
+  <p class="premium-section__desc">
+    Accédez à l'ensemble des analyses, aux archives complètes
+    et aux dossiers stratégiques inédits de geopolô.
+  </p>
+  <div class="premium-feats">
+    <span class="pf">Analyses hebdomadaires exclusives</span>
+    <span class="pf">Archives complètes sans restriction</span>
+    <span class="pf">Dossiers PDF téléchargeables</span>
+    <span class="pf">Lettre stratégique mensuelle</span>
+    <span class="pf">Accès magazine numérique</span>
+  </div>
+  <a href="/abonnement.html" class="btn-premium">Accès Premium →</a>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <div class="logo-wordmark">geo<em>polô</em></div>
+      <p class="footer-tagline">
+        Revue géopolitique indépendante. Analyses stratégiques sur les puissances et conflits du XXI<sup>e</sup> siècle.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4>Rubriques</h4>
+      <ul>
+        <li><a href="/proche-or.html">Moyen-Orient</a></li>
+        <li><a href="/eu.html">Europe</a></li>
+        <li><a href="/afrique.html">Afrique</a></li>
+        <li><a href="/asie.html">Asie</a></li>
+        <li><a href="/ame.html">Amériques</a></li>
+        <li><a href="/economie.html">Économie</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Nouvelles rubriques</h4>
+      <ul>
+        <li><a href="/culture.html">Culture</a></li>
+        <li><a href="/sante.html">Santé</a></li>
+        <li><a href="/voyage.html">Voyage</a></li>
+        <li><a href="/opinion.html">Opinions</a></li>
+        <li><a href="/magazine.html">Magazine PDF</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>geopolô</h4>
+      <ul>
+        <li><a href="/abonnement.html">Abonnement Premium</a></li>
+        <li><a href="/auteurs.html">Équipe éditoriale</a></li>
+        <li><a href="/a-propos.html">À propos</a></li>
+        <li> <a href="/contact.html">Contact</a></li>
+        <li><a href="/mentions-legales.html">Mentions légales</a></li>
+        <li><a href="https://ar.geopolo.com/" hreflang="ar">النسخة العربية</a></li>
+        <li><a href="https://fr.geopolo.com/" hreflang="fr">Version française</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 geopolô — Revue stratégique indépendante.</span>
+    <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="/confidentialite.html">Confidentialité</a>
+       <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Scroll reveal */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+/* Newsletter */
+function handleNewsletter(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = '✓ Inscrit !';
+  btn.style.background = '#059669';
+  btn.disabled = true;
+  e.target.querySelector('input').value = '';
+}
+
+/* Live date in header */
+const d = new Date();
+const days = ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
+const months = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+const el = document.querySelector('.header-date strong');
+if (el) el.textContent = days[d.getDay()] + ' ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+</script>
+</body>
+</html>
